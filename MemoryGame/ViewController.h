@@ -10,4 +10,19 @@
 
 @interface ViewController : UIViewController
 
+@property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *imageviews;
+@property (retain) IBOutlet UINavigationBar *topToolbar;
+@property (retain) IBOutlet UINavigationBar *bottomToolbar;
+@property (retain) NSArray *cards;
+@property (retain) NSMutableArray *assignments;
+
+@property (assign) NSInteger flippedCards;
+@property (assign) NSInteger lastCardIndex;
+@property (assign) NSInteger currentCardIndex;
+@property (assign) NSInteger pairsFound;
+
+-(IBAction)cardClicked:(id)sender;
+-(void)flipCardsBack:(NSTimer*)theTimer;
+
+
 @end

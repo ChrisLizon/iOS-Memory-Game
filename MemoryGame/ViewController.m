@@ -7,8 +7,16 @@
 //
 
 #import "ViewController.h"
+#import <stdlib.h>
+
+
 
 @implementation ViewController
+
+
+
+@synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
+@synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,6 +30,111 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+   cards = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Card0.png"],
+                                                    [UIImage imageNamed:@"Card1.png"],
+                                                    [UIImage imageNamed:@"Card2.png"],
+                                                    [UIImage imageNamed:@"Card3.png"],
+                                                    [UIImage imageNamed:@"Card4.png"],
+                                                    [UIImage imageNamed:@"Card5.png"],
+                                                    [UIImage imageNamed:@"Card6.png"],
+                                                    [UIImage imageNamed:@"Card7.png"],
+                                                    [UIImage imageNamed:@"CardBack.png"],
+                      
+                                                        nil];
+    
+
+    
+    //assignments = (NSInteger*) calloc(8, sizeof(NSInteger));
+    
+    
+    assignments = [[NSMutableArray alloc]initWithCapacity:16];
+    
+    flippedCards = 0;
+    
+    for(int i = 0; i < 16; i++){
+        
+        [assignments addObject:[[NSNumber alloc] initWithInt:-1 ]];
+    }
+    
+    
+    for(int i = 0; i < 8; i++){
+        
+        for(int j = 0; j <2; j++){
+        
+            int randomSlot = random() % 16;
+            while([[assignments objectAtIndex:randomSlot] intValue] != -1){
+                randomSlot = random() % 16;
+            }
+            printf("Assigning %d to slot %d\n", i, randomSlot);
+            [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
+            printf("Slot %d now contains %d\n", randomSlot, [[assignments objectAtIndex:randomSlot] intValue]);
+        }
+        
+    }
+    
+//    for(int i = 0; i < 8; i++){
+//    
+//        [[imageviews objectAtIndex: i] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
+//        [[imageviews objectAtIndex: i+8] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
+//        
+//    }
+    
+    
+    [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+}
+
+
+- (IBAction)cardClicked:(id)sender{
+    
+    //get the car index from the UIButton's tag value.
+    
+    NSInteger index = [sender tag];
+    
+ 
+    [sender setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateNormal];
+    [sender setEnabled:NO];
+    flippedCards ++;
+    
+    if(flippedCards == 2){
+        if([[assignments objectAtIndex:index] integerValue] ==
+           [[assignments objectAtIndex:lastCardIndex]integerValue]){
+            [[imageviews objectAtIndex:index] setHidden: true];
+            [[imageviews objectAtIndex:lastCardIndex] setHidden: true];
+            pairsFound++;
+        }else{
+            currentCardIndex = index; 
+            
+            for(int i = 0; i < 16; i++){
+                [[imageviews objectAtIndex:i]setEnabled:NO];
+            }
+
+           [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                      target:self 
+                                                    selector:@selector(flipCardsBack:) 
+                                                    userInfo:nil 
+                                                     repeats:NO];
+            
+            
+        }
+          flippedCards = 0;
+    }else{
+        
+        lastCardIndex = index;
+    }
+    
+    
+}
+
+- (void) flipCardsBack:(NSTimer*)theTimer{
+
+    [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+    [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+    for(int i = 0; i < 16; i++){
+        [[imageviews objectAtIndex:i]setEnabled:YES];
+    }
+    
 }
 
 - (void)viewDidUnload
