@@ -99,11 +99,13 @@
     
     if(flippedCards == 2){
         currentCardIndex = index; 
-            
+        
+        //disable all the cards for the next second
         for(int i = 0; i < 16; i++){
             [[imageviews objectAtIndex:i]setEnabled:NO];
         }
-
+        
+        //set up a timer to turn the cards back over after 1 second
         [NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self 
                                        selector:@selector(flipCardsBack:) 
@@ -133,6 +135,7 @@
 
     }
     
+    //re-enable all the cards
     for(int i = 0; i < 16; i++){
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
