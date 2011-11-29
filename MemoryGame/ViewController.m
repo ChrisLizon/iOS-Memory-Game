@@ -98,27 +98,20 @@
     flippedCards ++;
     
     if(flippedCards == 2){
-        if([[assignments objectAtIndex:index] integerValue] ==
-           [[assignments objectAtIndex:lastCardIndex]integerValue]){
-            [[imageviews objectAtIndex:index] setHidden: true];
-            [[imageviews objectAtIndex:lastCardIndex] setHidden: true];
-            pairsFound++;
-        }else{
-            currentCardIndex = index; 
+        currentCardIndex = index; 
             
-            for(int i = 0; i < 16; i++){
-                [[imageviews objectAtIndex:i]setEnabled:NO];
-            }
-
-           [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                      target:self 
-                                                    selector:@selector(flipCardsBack:) 
-                                                    userInfo:nil 
-                                                     repeats:NO];
-            
-            
+        for(int i = 0; i < 16; i++){
+            [[imageviews objectAtIndex:i]setEnabled:NO];
         }
-          flippedCards = 0;
+
+        [NSTimer scheduledTimerWithTimeInterval:1.0
+                                         target:self 
+                                       selector:@selector(flipCardsBack:) 
+                                       userInfo:nil 
+                                        repeats:NO];
+        
+    
+        flippedCards = 0;
     }else{
         
         lastCardIndex = index;
@@ -128,9 +121,18 @@
 }
 
 - (void) flipCardsBack:(NSTimer*)theTimer{
+    if([[assignments objectAtIndex:currentCardIndex] integerValue] ==
+       [[assignments objectAtIndex:lastCardIndex]integerValue]){
+        [[imageviews objectAtIndex:currentCardIndex] setHidden: true];
+        [[imageviews objectAtIndex:lastCardIndex] setHidden: true];
+        pairsFound++;
+    }else{
+        
+        [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+        [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
 
-    [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
-    [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+    }
+    
     for(int i = 0; i < 16; i++){
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
