@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404D3D331486D25800998730 /* Card0.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2A1486D25800998730 /* Card0.png */; };
+		404D3D341486D25800998730 /* Card1.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2B1486D25800998730 /* Card1.png */; };
+		404D3D351486D25800998730 /* Card2.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2C1486D25800998730 /* Card2.png */; };
+		404D3D361486D25800998730 /* Card3.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2D1486D25800998730 /* Card3.png */; };
+		404D3D371486D25800998730 /* Card4.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2E1486D25800998730 /* Card4.png */; };
+		404D3D381486D25800998730 /* Card5.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2F1486D25800998730 /* Card5.png */; };
+		404D3D391486D25900998730 /* Card6.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D301486D25800998730 /* Card6.png */; };
+		404D3D3A1486D25900998730 /* Card7.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D311486D25800998730 /* Card7.png */; };
+		404D3D3B1486D25900998730 /* CardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D321486D25800998730 /* CardBack.png */; };
 		9A1A6F1E1472EEA70045588E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1D1472EEA70045588E /* UIKit.framework */; };
 		9A1A6F201472EEA70045588E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1F1472EEA70045588E /* Foundation.framework */; };
 		9A1A6F221472EEA70045588E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F211472EEA70045588E /* CoreGraphics.framework */; };
 		9A1A6F281472EEA70045588E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F261472EEA70045588E /* InfoPlist.strings */; };
 		9A1A6F2A1472EEA70045588E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F291472EEA70045588E /* main.m */; };
 		9A1A6F2E1472EEA80045588E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F2D1472EEA80045588E /* AppDelegate.m */; };
-		9A1A6F311472EEA80045588E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F301472EEA80045588E /* ViewController.m */; };
-		9A1A6F341472EEA80045588E /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F321472EEA80045588E /* ViewController_iPhone.xib */; };
+		9A1A6F311472EEA80045588E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F301472EEA80045588E /* GameViewController.m */; };
+		9A1A6F341472EEA80045588E /* GameViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F321472EEA80045588E /* GameViewController_iPhone.xib */; };
 		9A1A6F371472EEA80045588E /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F351472EEA80045588E /* ViewController_iPad.xib */; };
 		9A1A6F3F1472EEA80045588E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */; };
 		9A1A6F401472EEA80045588E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1D1472EEA70045588E /* UIKit.framework */; };
@@ -23,15 +32,6 @@
 		9A1A6F4C1472EEA80045588E /* MemoryGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F4B1472EEA80045588E /* MemoryGameTests.m */; };
 		9A1A6F701472F2D60045588E /* Application_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F6F1472F2D60045588E /* Application_Icon.png */; };
 		9A1A6F721472F2DC0045588E /* Application_Icon_HR.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */; };
-		9A1A6F7C1472F3730045588E /* Card0.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F731472F3730045588E /* Card0.png */; };
-		9A1A6F7D1472F3730045588E /* Card1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F741472F3730045588E /* Card1.png */; };
-		9A1A6F7E1472F3730045588E /* Card2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F751472F3730045588E /* Card2.png */; };
-		9A1A6F7F1472F3730045588E /* Card3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F761472F3730045588E /* Card3.png */; };
-		9A1A6F801472F3730045588E /* Card4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F771472F3730045588E /* Card4.png */; };
-		9A1A6F811472F3730045588E /* Card5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F781472F3730045588E /* Card5.png */; };
-		9A1A6F821472F3730045588E /* Card6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F791472F3730045588E /* Card6.png */; };
-		9A1A6F831472F3730045588E /* Card7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F7A1472F3730045588E /* Card7.png */; };
-		9A1A6F841472F3730045588E /* CardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F7B1472F3730045588E /* CardBack.png */; };
 		9A1A6F861472F3950045588E /* App_Store_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F851472F3950045588E /* App_Store_Icon.png */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		404D3D2A1486D25800998730 /* Card0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card0.png; sourceTree = "<group>"; };
+		404D3D2B1486D25800998730 /* Card1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card1.png; sourceTree = "<group>"; };
+		404D3D2C1486D25800998730 /* Card2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card2.png; sourceTree = "<group>"; };
+		404D3D2D1486D25800998730 /* Card3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card3.png; sourceTree = "<group>"; };
+		404D3D2E1486D25800998730 /* Card4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card4.png; sourceTree = "<group>"; };
+		404D3D2F1486D25800998730 /* Card5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card5.png; sourceTree = "<group>"; };
+		404D3D301486D25800998730 /* Card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card6.png; sourceTree = "<group>"; };
+		404D3D311486D25800998730 /* Card7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card7.png; sourceTree = "<group>"; };
+		404D3D321486D25800998730 /* CardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBack.png; sourceTree = "<group>"; };
 		9A1A6F191472EEA70045588E /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1A6F1D1472EEA70045588E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A1A6F1F1472EEA70045588E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,9 +65,9 @@
 		9A1A6F2B1472EEA70045588E /* MemoryGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryGame-Prefix.pch"; sourceTree = "<group>"; };
 		9A1A6F2C1472EEA80045588E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A1A6F2D1472EEA80045588E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9A1A6F2F1472EEA80045588E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9A1A6F301472EEA80045588E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9A1A6F331472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		9A1A6F2F1472EEA80045588E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		9A1A6F301472EEA80045588E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		9A1A6F331472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameViewController_iPhone.xib; sourceTree = "<group>"; };
 		9A1A6F361472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		9A1A6F3D1472EEA80045588E /* MemoryGameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,15 +77,6 @@
 		9A1A6F4B1472EEA80045588E /* MemoryGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryGameTests.m; sourceTree = "<group>"; };
 		9A1A6F6F1472F2D60045588E /* Application_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Application_Icon.png; sourceTree = "<group>"; };
 		9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Application_Icon_HR.png; sourceTree = "<group>"; };
-		9A1A6F731472F3730045588E /* Card0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card0.png; path = Images/Card0.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F741472F3730045588E /* Card1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card1.png; path = Images/Card1.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F751472F3730045588E /* Card2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card2.png; path = Images/Card2.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F761472F3730045588E /* Card3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card3.png; path = Images/Card3.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F771472F3730045588E /* Card4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card4.png; path = Images/Card4.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F781472F3730045588E /* Card5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card5.png; path = Images/Card5.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F791472F3730045588E /* Card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card6.png; path = Images/Card6.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F7A1472F3730045588E /* Card7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Card7.png; path = Images/Card7.png; sourceTree = SOURCE_ROOT; };
-		9A1A6F7B1472F3730045588E /* CardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CardBack.png; path = Images/CardBack.png; sourceTree = SOURCE_ROOT; };
 		9A1A6F851472F3950045588E /* App_Store_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Store_Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404D3D291486D25800998730 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				404D3D2A1486D25800998730 /* Card0.png */,
+				404D3D2B1486D25800998730 /* Card1.png */,
+				404D3D2C1486D25800998730 /* Card2.png */,
+				404D3D2D1486D25800998730 /* Card3.png */,
+				404D3D2E1486D25800998730 /* Card4.png */,
+				404D3D2F1486D25800998730 /* Card5.png */,
+				404D3D301486D25800998730 /* Card6.png */,
+				404D3D311486D25800998730 /* Card7.png */,
+				404D3D321486D25800998730 /* CardBack.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +159,9 @@
 			children = (
 				9A1A6F2C1472EEA80045588E /* AppDelegate.h */,
 				9A1A6F2D1472EEA80045588E /* AppDelegate.m */,
-				9A1A6F2F1472EEA80045588E /* ViewController.h */,
-				9A1A6F301472EEA80045588E /* ViewController.m */,
-				9A1A6F321472EEA80045588E /* ViewController_iPhone.xib */,
+				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
+				9A1A6F301472EEA80045588E /* GameViewController.m */,
+				9A1A6F321472EEA80045588E /* GameViewController_iPhone.xib */,
 				9A1A6F351472EEA80045588E /* ViewController_iPad.xib */,
 				9A1A6F241472EEA70045588E /* Supporting Files */,
 			);
@@ -194,15 +210,7 @@
 		9A1A6F561472EF160045588E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9A1A6F731472F3730045588E /* Card0.png */,
-				9A1A6F741472F3730045588E /* Card1.png */,
-				9A1A6F751472F3730045588E /* Card2.png */,
-				9A1A6F761472F3730045588E /* Card3.png */,
-				9A1A6F771472F3730045588E /* Card4.png */,
-				9A1A6F781472F3730045588E /* Card5.png */,
-				9A1A6F791472F3730045588E /* Card6.png */,
-				9A1A6F7A1472F3730045588E /* Card7.png */,
-				9A1A6F7B1472F3730045588E /* CardBack.png */,
+				404D3D291486D25800998730 /* Icons */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -278,20 +286,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1A6F281472EEA70045588E /* InfoPlist.strings in Resources */,
-				9A1A6F341472EEA80045588E /* ViewController_iPhone.xib in Resources */,
+				9A1A6F341472EEA80045588E /* GameViewController_iPhone.xib in Resources */,
 				9A1A6F371472EEA80045588E /* ViewController_iPad.xib in Resources */,
 				9A1A6F701472F2D60045588E /* Application_Icon.png in Resources */,
 				9A1A6F721472F2DC0045588E /* Application_Icon_HR.png in Resources */,
-				9A1A6F7C1472F3730045588E /* Card0.png in Resources */,
-				9A1A6F7D1472F3730045588E /* Card1.png in Resources */,
-				9A1A6F7E1472F3730045588E /* Card2.png in Resources */,
-				9A1A6F7F1472F3730045588E /* Card3.png in Resources */,
-				9A1A6F801472F3730045588E /* Card4.png in Resources */,
-				9A1A6F811472F3730045588E /* Card5.png in Resources */,
-				9A1A6F821472F3730045588E /* Card6.png in Resources */,
-				9A1A6F831472F3730045588E /* Card7.png in Resources */,
-				9A1A6F841472F3730045588E /* CardBack.png in Resources */,
 				9A1A6F861472F3950045588E /* App_Store_Icon.png in Resources */,
+				404D3D331486D25800998730 /* Card0.png in Resources */,
+				404D3D341486D25800998730 /* Card1.png in Resources */,
+				404D3D351486D25800998730 /* Card2.png in Resources */,
+				404D3D361486D25800998730 /* Card3.png in Resources */,
+				404D3D371486D25800998730 /* Card4.png in Resources */,
+				404D3D381486D25800998730 /* Card5.png in Resources */,
+				404D3D391486D25900998730 /* Card6.png in Resources */,
+				404D3D3A1486D25900998730 /* Card7.png in Resources */,
+				404D3D3B1486D25900998730 /* CardBack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +336,7 @@
 			files = (
 				9A1A6F2A1472EEA70045588E /* main.m in Sources */,
 				9A1A6F2E1472EEA80045588E /* AppDelegate.m in Sources */,
-				9A1A6F311472EEA80045588E /* ViewController.m in Sources */,
+				9A1A6F311472EEA80045588E /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,12 +367,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9A1A6F321472EEA80045588E /* ViewController_iPhone.xib */ = {
+		9A1A6F321472EEA80045588E /* GameViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9A1A6F331472EEA80045588E /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = GameViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 		9A1A6F351472EEA80045588E /* ViewController_iPad.xib */ = {
@@ -512,6 +520,7 @@
 				9A1A6F511472EEA80045588E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A1A6F521472EEA80045588E /* Build configuration list for PBXNativeTarget "MemoryGameTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +529,7 @@
 				9A1A6F541472EEA80045588E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
