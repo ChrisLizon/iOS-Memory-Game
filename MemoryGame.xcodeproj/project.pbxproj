@@ -120,6 +120,13 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		404D3D401486D6B600998730 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +164,7 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				404D3D401486D6B600998730 /* View Controllers */,
 				9A1A6F2C1472EEA80045588E /* AppDelegate.h */,
 				9A1A6F2D1472EEA80045588E /* AppDelegate.m */,
 				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
