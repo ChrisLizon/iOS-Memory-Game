@@ -15,6 +15,6 @@
 
 @property (retain,nonatomic)IBOutlet UIButton *playButton;
 @property (retain) GameViewController *gameScreen;
--(IBAction) buttonClick:(id)sender;
+-(IBAction) singlePlayerGame:(id)sender;
 
 @end

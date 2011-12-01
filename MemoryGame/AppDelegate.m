@@ -13,23 +13,28 @@
 
 @implementation AppDelegate
 
-@synthesize window = _window;
-@synthesize gameViewController = _viewController;
-@synthesize menuViewController = _menuViewController;
+@synthesize window; //= _window;
+@synthesize gameViewController; //= _viewController;
+@synthesize menuViewController; //= _menuViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-    //self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
-    self.window.rootViewController = self.gameViewController;
-    //self.window.rootViewController = self.menuViewController;
+    self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+    //self.window.rootViewController = self.gameViewController;
+    self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 //- (void)menuToGameView 
+-(void) goToGame{
+    
+    self.window.rootViewController = self.gameViewController;
+
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

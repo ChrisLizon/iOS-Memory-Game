@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "GameViewController.h"
+#import "AppDelegate.h"
 
 @implementation MenuViewController
 
@@ -22,12 +23,10 @@
     return self;
 }
 
--(IBAction) buttonClick:(id)sender{
-    //GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-    //self.gameScreen = [GameViewController alloc];
-    self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+-(IBAction) singlePlayerGame:(id)sender{
     
-    [self.navigationController pushViewController:gameScreen animated:YES];
+    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	[mainDelegate goToGame];
 }
 
 - (void)didReceiveMemoryWarning
