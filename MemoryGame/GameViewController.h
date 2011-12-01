@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GameViewController : UIViewController
 
 @property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *imageviews;
 @property (retain) IBOutlet UINavigationBar *topToolbar;
@@ -22,7 +22,7 @@
 @property (assign) NSInteger pairsFound;
 
 -(IBAction)cardClicked:(id)sender;
--(void)flipCardsBack:(NSTimer*)theTimer;
+-(void)flipCardsBack;
 
 
 @end

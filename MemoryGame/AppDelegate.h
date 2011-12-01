@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class GameViewController,MenuViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) GameViewController *gameViewController;
+
+@property(strong, nonatomic) MenuViewController *menuViewController;
 
 @end

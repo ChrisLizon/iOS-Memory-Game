@@ -9,25 +9,27 @@
 #import "AppDelegate.h"
 
 #import "GameViewController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize gameViewController = _viewController;
+@synthesize menuViewController = _menuViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+    //self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+    self.window.rootViewController = self.gameViewController;
+    //self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+//- (void)menuToGameView 
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

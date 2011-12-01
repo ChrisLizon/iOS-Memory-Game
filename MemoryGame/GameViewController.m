@@ -11,8 +11,7 @@
 
 
 
-@implementation ViewController
-
+@implementation GameViewController
 
 
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
@@ -51,7 +50,7 @@
     
     assignments = [[NSMutableArray alloc]initWithCapacity:16];
     
-    flippedCards = 0;
+    
     
     for(int i = 0; i < 16; i++){
         
@@ -73,6 +72,8 @@
         }
         
     }
+    
+    flippedCards = 0;
     
 //    for(int i = 0; i < 8; i++){
 //    
@@ -108,7 +109,7 @@
         //set up a timer to turn the cards back over after 1 second
         [NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self 
-                                       selector:@selector(flipCardsBack:) 
+                                       selector:@selector(flipCardsBack) 
                                        userInfo:nil 
                                         repeats:NO];
         
@@ -122,7 +123,7 @@
     
 }
 
-- (void) flipCardsBack:(NSTimer*)theTimer{
+- (void) flipCardsBack{
     if([[assignments objectAtIndex:currentCardIndex] integerValue] ==
        [[assignments objectAtIndex:lastCardIndex]integerValue]){
         [[imageviews objectAtIndex:currentCardIndex] setHidden: true];
