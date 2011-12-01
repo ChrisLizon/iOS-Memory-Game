@@ -21,7 +21,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
     self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
     //self.window.rootViewController = self.gameViewController;
     self.window.rootViewController = self.menuViewController;
@@ -31,8 +31,11 @@
 
 //- (void)menuToGameView 
 -(void) goToGame{
-    
-    self.window.rootViewController = self.gameViewController;
+    [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+            self.window.rootViewController = self.gameViewController;
+
+    } completion:nil];
+//    self.window.rootViewController = self.gameViewController;
 
 }
 

@@ -25,7 +25,7 @@
 		9A1A6F2A1472EEA70045588E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F291472EEA70045588E /* main.m */; };
 		9A1A6F2E1472EEA80045588E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F2D1472EEA80045588E /* AppDelegate.m */; };
 		9A1A6F311472EEA80045588E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F301472EEA80045588E /* GameViewController.m */; };
-		9A1A6F341472EEA80045588E /* GameViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F321472EEA80045588E /* GameViewController_iPhone.xib */; };
+		9A1A6F341472EEA80045588E /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F321472EEA80045588E /* GameViewController.xib */; };
 		9A1A6F3F1472EEA80045588E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */; };
 		9A1A6F401472EEA80045588E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1D1472EEA70045588E /* UIKit.framework */; };
 		9A1A6F411472EEA80045588E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1F1472EEA70045588E /* Foundation.framework */; };
@@ -71,7 +71,7 @@
 		9A1A6F2D1472EEA80045588E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A1A6F2F1472EEA80045588E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		9A1A6F301472EEA80045588E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		9A1A6F331472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameViewController_iPhone.xib; sourceTree = "<group>"; };
+		9A1A6F331472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameViewController.xib; sourceTree = "<group>"; };
 		9A1A6F3D1472EEA80045588E /* MemoryGameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9A1A6F461472EEA80045588E /* MemoryGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryGameTests-Info.plist"; sourceTree = "<group>"; };
@@ -107,6 +107,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4002EC7E148756C000B0CF31 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F321472EEA80045588E /* GameViewController.xib */,
+				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
+				9A1A6F301472EEA80045588E /* GameViewController.m */,
+			);
+			name = GameView;
+			sourceTree = "<group>";
+		};
 		404D3D291486D25800998730 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,24 +133,23 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
-		404D3D401486D6B600998730 /* View Controllers */ = {
+		404D3D401486D6B600998730 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
-				9A1A6F301472EEA80045588E /* GameViewController.m */,
+				404D3D461486DCB300998730 /* MenuView.xib */,
 				404D3D481486DDB800998730 /* MenuViewController.h */,
 				404D3D491486DDB800998730 /* MenuViewController.m */,
 			);
-			name = "View Controllers";
+			name = Menu;
 			sourceTree = "<group>";
 		};
-		404D3D431486D7D000998730 /* Delegates */ = {
+		404D3D431486D7D000998730 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				9A1A6F2D1472EEA80045588E /* AppDelegate.m */,
 				9A1A6F2C1472EEA80045588E /* AppDelegate.h */,
 			);
-			name = Delegates;
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 		9A1A6F0E1472EEA70045588E = {
@@ -180,10 +189,9 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
-				404D3D431486D7D000998730 /* Delegates */,
-				404D3D401486D6B600998730 /* View Controllers */,
-				9A1A6F321472EEA80045588E /* GameViewController_iPhone.xib */,
-				404D3D461486DCB300998730 /* MenuView.xib */,
+				404D3D431486D7D000998730 /* Delegate */,
+				4002EC7E148756C000B0CF31 /* GameView */,
+				404D3D401486D6B600998730 /* Menu */,
 				9A1A6F241472EEA70045588E /* Supporting Files */,
 			);
 			path = MemoryGame;
@@ -307,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1A6F281472EEA70045588E /* InfoPlist.strings in Resources */,
-				9A1A6F341472EEA80045588E /* GameViewController_iPhone.xib in Resources */,
+				9A1A6F341472EEA80045588E /* GameViewController.xib in Resources */,
 				9A1A6F701472F2D60045588E /* Application_Icon.png in Resources */,
 				9A1A6F721472F2DC0045588E /* Application_Icon_HR.png in Resources */,
 				9A1A6F861472F3950045588E /* App_Store_Icon.png in Resources */,
@@ -389,12 +397,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9A1A6F321472EEA80045588E /* GameViewController_iPhone.xib */ = {
+		9A1A6F321472EEA80045588E /* GameViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9A1A6F331472EEA80045588E /* en */,
 			);
-			name = GameViewController_iPhone.xib;
+			name = GameViewController.xib;
 			sourceTree = "<group>";
 		};
 		9A1A6F471472EEA80045588E /* InfoPlist.strings */ = {
@@ -428,7 +436,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,7 +455,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
