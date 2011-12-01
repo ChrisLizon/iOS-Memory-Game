@@ -14,11 +14,7 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-<<<<<<< HEAD
-@synthesize gameViewController = _viewController;
-@synthesize menuViewController = _menuViewController;
 
-=======
 @synthesize gameViewController;
 @synthesize menuViewController;
 
