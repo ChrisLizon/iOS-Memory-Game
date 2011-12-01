@@ -27,27 +27,30 @@
 //}
 
 -(void)flipToGame{
-    GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-	[self setGameViewController:gameView];
+//    GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+//	[self setGameViewController:gameView];
 //	[gameView release];
 	
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:2.0];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:window cache:YES];
+	//[UIView beginAnimations:nil context:NULL];
+	//[UIView setAnimationDuration:2.0];
+	//[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:window cache:YES];
 	[menuViewController.view removeFromSuperview];
-	[self.window addSubview:[gameViewController view]];
+	//[self.window addSubview:[gameViewController view]];
+    self.window.rootViewController = self.gameViewController;
 	[UIView commitAnimations];
 }
 
 -(void)flipToMenu{
-    [UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:1.0];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:window cache:NO];
-	[gameViewController.view removeFromSuperview];
-	[self.window addSubview:[menuViewController view]];
-	[UIView commitAnimations];
-//	[gameViewController release];
-    gameViewController = nil;
+//    [UIView beginAnimations:nil context:NULL];
+//	[UIView setAnimationDuration:1.0];
+//	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:window cache:NO];
+//	[gameViewController.view removeFromSuperview];
+//	[self.window addSubview:[menuViewController view]];
+//	[UIView commitAnimations];
+////	[gameViewController release];
+//    gameViewController = nil;
+    
+    self.window.rootViewController = self.menuViewController;
     
 }
 
@@ -67,7 +70,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameView" bundle:nil];
     self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
     //self.window.rootViewController = self.gameViewController;
     self.window.rootViewController = self.menuViewController;

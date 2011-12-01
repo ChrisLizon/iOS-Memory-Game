@@ -24,11 +24,12 @@
 }
 
 -(IBAction) buttonClick:(id)sender{
-    //GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-    //self.gameScreen = [GameViewController alloc];
-//    self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-//    
-//    [self.navigationController pushViewController:gameScreen animated:YES];
+//    GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+    self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+    
+    [self.navigationController pushViewController:gameScreen animated:YES];
+    
+    printf("Testing 123\n");
 }
 
 - (IBAction)switchToSoloPlay:(id)sender{
