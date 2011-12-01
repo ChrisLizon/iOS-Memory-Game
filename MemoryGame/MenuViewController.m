@@ -25,9 +25,20 @@
 -(IBAction) buttonClick:(id)sender{
     //GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
     //self.gameScreen = [GameViewController alloc];
+<<<<<<< HEAD
     self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
     
     [self.navigationController pushViewController:gameScreen animated:YES];
+=======
+//    self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+//    
+//    [self.navigationController pushViewController:gameScreen animated:YES];
+}
+
+- (IBAction)switchToSoloPlay:(id)sender{
+    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	[mainDelegate flipToGame];
+>>>>>>> parent of 30419f7... Revert 0896836f1ef150edeb62f0fe1e2ca9756a325429^..HEAD
 }
 
 - (void)didReceiveMemoryWarning
