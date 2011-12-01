@@ -11,20 +11,66 @@
 #import "GameViewController.h"
 #import "MenuViewController.h"
 
+
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize gameViewController = _viewController;
-@synthesize menuViewController = _menuViewController;
+@synthesize gameViewController;
+@synthesize menuViewController;
 
+//- (void)dealloc
+//{
+//    [window release];
+//    [gameViewController release];
+//    [menuViewController release];
+//    [super dealloc];
+//}
+
+-(void)flipToGame{
+    GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+	[self setGameViewController:gameView];
+//	[gameView release];
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:2.0];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:window cache:YES];
+	[menuViewController.view removeFromSuperview];
+	[self.window addSubview:[gameViewController view]];
+	[UIView commitAnimations];
+}
+
+-(void)flipToMenu{
+    [UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:1.0];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:window cache:NO];
+	[gameViewController.view removeFromSuperview];
+	[self.window addSubview:[menuViewController view]];
+	[UIView commitAnimations];
+//	[gameViewController release];
+    gameViewController = nil;
+    
+}
+
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    [window addSubview:menuViewController.view];
+//    [window makeKeyAndVisible];
+//    return YES;
+//}
+//@implementation AppDelegate
+//
+//@synthesize window = _window;
+//@synthesize gameViewController = _viewController;
+//@synthesize menuViewController = _menuViewController;
+//
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-    //self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
-    self.window.rootViewController = self.gameViewController;
-    //self.window.rootViewController = self.menuViewController;
+    self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+    //self.window.rootViewController = self.gameViewController;
+    self.window.rootViewController = self.menuViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

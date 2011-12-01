@@ -10,7 +10,16 @@
 
 @class GameViewController,MenuViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    IBOutlet UIWindow *window;
+    IBOutlet GameViewController *gameViewController;
+    IBOutlet MenuViewController *menuViewController;
+}
+
+-(void)flipToGame;
+-(void)flipToMenu;
+
+//@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

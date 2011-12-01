@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "GameViewController.h"
+#import "AppDelegate.h"
 
 @implementation MenuViewController
 
@@ -25,9 +26,14 @@
 -(IBAction) buttonClick:(id)sender{
     //GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
     //self.gameScreen = [GameViewController alloc];
-    self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
-    
-    [self.navigationController pushViewController:gameScreen animated:YES];
+//    self.gameScreen = [[GameViewController alloc] initWithNibName:@"GameViewController_iPhone" bundle:nil];
+//    
+//    [self.navigationController pushViewController:gameScreen animated:YES];
+}
+
+- (IBAction)switchToSoloPlay:(id)sender{
+    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	[mainDelegate flipToGame];
 }
 
 - (void)didReceiveMemoryWarning
