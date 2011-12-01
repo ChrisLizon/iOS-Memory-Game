@@ -29,14 +29,22 @@
     return YES;
 }
 
-//- (void)menuToGameView 
+
 -(void) goToGame{
     [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             self.window.rootViewController = self.gameViewController;
 
     } completion:nil];
-//    self.window.rootViewController = self.gameViewController;
 
+
+}
+-(void) goToMenu{
+    [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+        self.window.rootViewController = self.menuViewController;
+        
+    } completion:nil];
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

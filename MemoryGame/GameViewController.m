@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "AppDelegate.h"
 #import <stdlib.h>
 
 
@@ -141,6 +142,12 @@
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
     
+}
+
+- (IBAction)quitGame:(id)sender{
+
+    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	[mainDelegate goToMenu];
 }
 
 - (void)viewDidUnload

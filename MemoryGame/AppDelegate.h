@@ -19,5 +19,6 @@
 @property(strong, nonatomic) MenuViewController *menuViewController;
 
 -(void) goToGame;
+-(void) goToMenu;
 
 @end
