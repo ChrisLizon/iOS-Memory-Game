@@ -7,7 +7,6 @@
 //
 
 #import "GameViewController.h"
-#import "AppDelegate.h"
 #import <stdlib.h>
 
 
@@ -31,7 +30,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-   
     
    cards = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Card0.png"],
                                                     [UIImage imageNamed:@"Card1.png"],
@@ -143,11 +141,6 @@
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
     
-}
-
--(IBAction)goHome:(id)sender{
-    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-	[mainDelegate flipToMenu];
 }
 
 - (void)viewDidUnload

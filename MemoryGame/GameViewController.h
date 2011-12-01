@@ -22,7 +22,6 @@
 @property (assign) NSInteger pairsFound;
 
 -(IBAction)cardClicked:(id)sender;
--(IBAction)goHome:(id)sender;
 -(void)flipCardsBack;
 
 
