@@ -2,23 +2,4 @@
 <Bucket
    type = "1"
    version = "1.0">
-<<<<<<< HEAD
-=======
-   <FileBreakpoints>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "MemoryGame/MenuViewController.m"
-         timestampString = "344407962.901616"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
-         landmarkName = "-switchToSoloPlay:"
-         landmarkType = "5">
-      </FileBreakpoint>
-   </FileBreakpoints>
->>>>>>> parent of 30419f7... Revert 0896836f1ef150edeb62f0fe1e2ca9756a325429^..HEAD
 </Bucket>
