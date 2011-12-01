@@ -28,16 +28,30 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+//
 
+//-(void) goToGame{
+//
+//    [UIView beginAnimations:@"flipviews" context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    [UIView setAnimationTransition:UIViewAnimationOptionTransitionFlipFromLeft forView:window cache:YES];
+//
+//    //[self.menuViewController removeFromParentViewController];
+//    [window addSubview:self.gameViewController.view];
+//    [UIView commitAnimations];
+//    
+//
+//}
 
 -(void) goToGame{
     [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-            self.window.rootViewController = self.gameViewController;
-
+        self.window.rootViewController = self.gameViewController;
+        
     } completion:nil];
-
-
+    
+    
 }
+
 -(void) goToMenu{
     [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
         self.window.rootViewController = self.menuViewController;
