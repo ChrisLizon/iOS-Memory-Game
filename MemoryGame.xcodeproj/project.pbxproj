@@ -34,6 +34,7 @@
 		9A1A6F701472F2D60045588E /* Application_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F6F1472F2D60045588E /* Application_Icon.png */; };
 		9A1A6F721472F2DC0045588E /* Application_Icon_HR.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */; };
 		9A1A6F861472F3950045588E /* App_Store_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F851472F3950045588E /* App_Store_Icon.png */; };
+		9AD1D57F14894DDB00D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D57E14894DDB00D864EE /* SwitchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		9A1A6F6F1472F2D60045588E /* Application_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Application_Icon.png; sourceTree = "<group>"; };
 		9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Application_Icon_HR.png; sourceTree = "<group>"; };
 		9A1A6F851472F3950045588E /* App_Store_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Store_Icon.png; sourceTree = "<group>"; };
+		9AD1D57D14894DDB00D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
+		9AD1D57E14894DDB00D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,7 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				9AD1D57B14894DB100D864EE /* SwitchView */,
 				404D3D431486D7D000998730 /* Delegate */,
 				4002EC7E148756C000B0CF31 /* GameView */,
 				404D3D401486D6B600998730 /* Menu */,
@@ -242,6 +246,15 @@
 				404D3D291486D25800998730 /* Icons */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		9AD1D57B14894DB100D864EE /* SwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				9AD1D57D14894DDB00D864EE /* SwitchViewController.h */,
+				9AD1D57E14894DDB00D864EE /* SwitchViewController.m */,
+			);
+			name = SwitchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +380,7 @@
 				9A1A6F2E1472EEA80045588E /* AppDelegate.m in Sources */,
 				9A1A6F311472EEA80045588E /* GameViewController.m in Sources */,
 				404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */,
+				9AD1D57F14894DDB00D864EE /* SwitchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
