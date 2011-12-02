@@ -17,6 +17,7 @@
 @synthesize window; //= _window;
 @synthesize gameViewController; //= _viewController;
 @synthesize menuViewController; //= _menuViewController;
+@synthesize switchViewController;
 
 //- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //{
@@ -33,9 +34,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    SwitchViewController *viewController = [[SwitchViewController alloc] initWithNibName:@"SwitchViewController" bundle:nil];
+    switchViewController = [[SwitchViewController alloc] initWithNibName:@"SwitchViewController" bundle:nil];
     // Override point for customization after application launch.
-	self.window.rootViewController = viewController;
+	self.window.rootViewController = switchViewController;
     [self.window makeKeyAndVisible];
     
     return YES;

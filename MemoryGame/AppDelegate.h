@@ -20,6 +20,7 @@
 @property (strong, nonatomic) GameViewController *gameViewController;
 
 @property(strong, nonatomic) MenuViewController *menuViewController;
+@property(strong, nonatomic) SwitchViewController *switchViewController;
 
 
 
