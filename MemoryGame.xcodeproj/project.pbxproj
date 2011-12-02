@@ -18,6 +18,10 @@
 		404D3D3B1486D25900998730 /* CardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D321486D25800998730 /* CardBack.png */; };
 		404D3D471486DCB300998730 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D461486DCB300998730 /* MenuView.xib */; };
 		404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404D3D491486DDB800998730 /* MenuViewController.m */; };
+		41CD8E6C148974B800E39D65 /* menubackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6B148974B800E39D65 /* menubackground.png */; };
+		41CD8E6F1489753200E39D65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6E1489753200E39D65 /* Default.png */; };
+		41CD8E711489759600E39D65 /* menubackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E701489759600E39D65 /* menubackground@2x.png */; };
+		41CD8E73148975B600E39D65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E72148975B600E39D65 /* Default@2x.png */; };
 		9A1A6F1E1472EEA70045588E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1D1472EEA70045588E /* UIKit.framework */; };
 		9A1A6F201472EEA70045588E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1F1472EEA70045588E /* Foundation.framework */; };
 		9A1A6F221472EEA70045588E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F211472EEA70045588E /* CoreGraphics.framework */; };
@@ -61,6 +65,10 @@
 		404D3D461486DCB300998730 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		404D3D481486DDB800998730 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		404D3D491486DDB800998730 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		41CD8E6B148974B800E39D65 /* menubackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubackground.png; sourceTree = "<group>"; };
+		41CD8E6E1489753200E39D65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		41CD8E701489759600E39D65 /* menubackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubackground@2x.png"; sourceTree = "<group>"; };
+		41CD8E72148975B600E39D65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A1A6F191472EEA70045588E /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1A6F1D1472EEA70045588E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A1A6F1F1472EEA70045588E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +168,8 @@
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
+				41CD8E72148975B600E39D65 /* Default@2x.png */,
+				41CD8E6E1489753200E39D65 /* Default.png */,
 				9A1A6F851472F3950045588E /* App_Store_Icon.png */,
 				9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */,
 				9A1A6F6F1472F2D60045588E /* Application_Icon.png */,
@@ -245,6 +255,8 @@
 		9A1A6F561472EF160045588E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				41CD8E701489759600E39D65 /* menubackground@2x.png */,
+				41CD8E6B148974B800E39D65 /* menubackground.png */,
 				404D3D291486D25800998730 /* Icons */,
 			);
 			name = Images;
@@ -346,6 +358,10 @@
 				404D3D3B1486D25900998730 /* CardBack.png in Resources */,
 				404D3D471486DCB300998730 /* MenuView.xib in Resources */,
 				9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */,
+				41CD8E6C148974B800E39D65 /* menubackground.png in Resources */,
+				41CD8E6F1489753200E39D65 /* Default.png in Resources */,
+				41CD8E711489759600E39D65 /* menubackground@2x.png in Resources */,
+				41CD8E73148975B600E39D65 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
