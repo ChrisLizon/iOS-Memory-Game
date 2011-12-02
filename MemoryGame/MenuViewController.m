@@ -13,7 +13,7 @@
 
 @implementation MenuViewController
 
-@synthesize gameScreen,playButton;
+@synthesize playButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

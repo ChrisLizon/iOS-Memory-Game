@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 //#import "GameViewController.h"
-@class GameViewController;
 
 @interface MenuViewController : UIViewController;
 
 
 @property (retain,nonatomic)IBOutlet UIButton *playButton;
-@property (retain) GameViewController *gameScreen;
+//@property (retain) GameViewController *gameScreen;
 -(IBAction) singlePlayerGame:(id)sender;
 
 @end

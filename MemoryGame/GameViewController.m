@@ -18,6 +18,7 @@
 
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
+@synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
 
 - (void)didReceiveMemoryWarning
 {
@@ -127,18 +128,22 @@
 }
 
 - (void) flipCardsBack{
+    turnsTaken++;
     if([[assignments objectAtIndex:currentCardIndex] integerValue] ==
        [[assignments objectAtIndex:lastCardIndex]integerValue]){
         [[imageviews objectAtIndex:currentCardIndex] setHidden: true];
         [[imageviews objectAtIndex:lastCardIndex] setHidden: true];
+        
         pairsFound++;
+        pairsFoundLabel.text = [NSString stringWithFormat:@"%i",pairsFound];
     }else{
         
         [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
 
     }
-    
+    turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
+
     //re-enable all the cards
     for(int i = 0; i < 16; i++){
         [[imageviews objectAtIndex:i]setEnabled:YES];
