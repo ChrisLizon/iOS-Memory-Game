@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GameViewController;
+@class MenuViewController;
 
-@interface SwitchViewController : UIViewController
+@interface SwitchViewController : UIViewController {
+    
+    GameViewController *gameViewController;
+    MenuViewController *menuViewController;
+}
+@property (retain, nonatomic) GameViewController *gameViewController;
+@property (retain, nonatomic) MenuViewController *menuViewController;
 
+
++ (void)switchToGame;
++ (void)switchToMenu;
 @end

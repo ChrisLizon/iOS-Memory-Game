@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 
-#import "GameViewController.h"
+#import "SwitchViewController.h"
 #import "MenuViewController.h"
+#import "GameViewController.h"
 
 @implementation AppDelegate
 
@@ -17,17 +18,29 @@
 @synthesize gameViewController; //= _viewController;
 @synthesize menuViewController; //= _menuViewController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+//    self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+//    //self.window.rootViewController = self.gameViewController;
+//    self.window.rootViewController = self.menuViewController;
+//    [self.window makeKeyAndVisible];
+//    return YES;
+//}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    SwitchViewController *viewController = [[SwitchViewController alloc] initWithNibName:@"SwitchViewController" bundle:nil];
     // Override point for customization after application launch.
-    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
-    self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
-    //self.window.rootViewController = self.gameViewController;
-    self.window.rootViewController = self.menuViewController;
+	self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
+
 //
 
 //-(void) goToGame{

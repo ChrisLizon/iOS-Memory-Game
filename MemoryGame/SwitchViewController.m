@@ -7,7 +7,130 @@
 //
 
 #import "SwitchViewController.h"
+#import "MenuViewController.h"
+#import "GameViewController.h"
 
 @implementation SwitchViewController
+
+@synthesize gameViewController;
+@synthesize menuViewController;
+
+static SwitchViewController *instance = NULL;
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad
+{
+    
+    instance = self;
+    self.menuViewController  = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+    [self.view insertSubview:menuViewController.view atIndex:0];
+
+    [super viewDidLoad];
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+
++(void) switchToGame{
+    
+    if(instance != NULL){
+        
+        if (instance.gameViewController.view.superview == nil)
+        {
+            if (instance.gameViewController == nil)
+            {
+                instance.gameViewController =
+                [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+                
+            }
+            
+            [UIView beginAnimations:@"View Flip" context:nil];
+            [UIView setAnimationDuration:1.0];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+            
+            [UIView setAnimationTransition:
+             UIViewAnimationOptionTransitionFlipFromLeft forView:instance.view cache:YES];
+            
+            [instance.gameViewController viewWillAppear:YES];
+            [instance.menuViewController viewWillDisappear:YES];
+            
+            [instance.menuViewController.view removeFromSuperview];
+            [instance.view insertSubview:instance.gameViewController.view atIndex:0];
+            
+            [instance.menuViewController viewDidDisappear:YES];
+            [instance.gameViewController viewDidAppear:YES];
+            [UIView commitAnimations];
+        }
+        
+    }
+    
+}
+
++(void) switchToMenu{
+    
+    if(instance != NULL){
+        
+        if (instance.menuViewController.view.superview == nil)
+        {
+            if (instance.menuViewController == nil)
+            {
+                instance.menuViewController =
+                [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+                
+            }
+            
+            [UIView beginAnimations:@"View Flip" context:nil];
+            [UIView setAnimationDuration:1.0];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+            
+            [UIView setAnimationTransition:
+             UIViewAnimationOptionTransitionFlipFromLeft forView:instance.view cache:YES];
+            
+            [instance.menuViewController viewWillAppear:YES];
+            [instance.gameViewController viewWillDisappear:YES];
+            
+            [instance.gameViewController.view removeFromSuperview];
+            [instance.view insertSubview:instance.menuViewController.view atIndex:0];
+            
+            [instance.gameViewController viewDidDisappear:YES];
+            [instance.menuViewController viewDidAppear:YES];
+            [UIView commitAnimations];
+        }
+        
+    }
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+
+
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
 @end

@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@class GameViewController,MenuViewController;
+@class GameViewController, MenuViewController, SwitchViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    UIWindow *window;
+    SwitchViewController *switchViewController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) GameViewController *gameViewController;
 
 @property(strong, nonatomic) MenuViewController *menuViewController;
+
+
 
 -(void) goToGame;
 -(void) goToMenu;

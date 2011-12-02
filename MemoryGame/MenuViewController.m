@@ -8,7 +8,8 @@
 
 #import "MenuViewController.h"
 #import "GameViewController.h"
-#import "AppDelegate.h"
+#import "SwitchViewController.h"
+//#import "AppDelegate.h"
 
 @implementation MenuViewController
 
@@ -25,8 +26,10 @@
 
 -(IBAction) singlePlayerGame:(id)sender{
     
-    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-	[mainDelegate goToGame];
+//    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//	[mainDelegate goToGame];
+    
+    [SwitchViewController switchToGame];
 }
 
 - (void)didReceiveMemoryWarning

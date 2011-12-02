@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "AppDelegate.h"
+#import "SwitchViewController.h"
 #import <stdlib.h>
 
 
@@ -146,8 +147,10 @@
 
 - (IBAction)quitGame:(id)sender{
 
-    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-	[mainDelegate goToMenu];
+//    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//	[mainDelegate goToMenu];
+    
+    [SwitchViewController switchToMenu];
 }
 
 - (void)viewDidUnload
