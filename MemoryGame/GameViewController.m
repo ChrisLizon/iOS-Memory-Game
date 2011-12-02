@@ -65,9 +65,9 @@
         
         for(int j = 0; j <2; j++){
             
-            int randomSlot = random() % 16;
+            int randomSlot = arc4random() % 16;
             while([[assignments objectAtIndex:randomSlot] intValue] != -1){
-                randomSlot = random() % 16;
+                randomSlot = arc4random() % 16;
             }
             printf("Assigning %d to slot %d\n", i, randomSlot);
             [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
