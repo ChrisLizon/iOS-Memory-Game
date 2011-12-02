@@ -30,22 +30,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     
-   cards = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Card0.png"],
-                                                    [UIImage imageNamed:@"Card1.png"],
-                                                    [UIImage imageNamed:@"Card2.png"],
-                                                    [UIImage imageNamed:@"Card3.png"],
-                                                    [UIImage imageNamed:@"Card4.png"],
-                                                    [UIImage imageNamed:@"Card5.png"],
-                                                    [UIImage imageNamed:@"Card6.png"],
-                                                    [UIImage imageNamed:@"Card7.png"],
-                                                    [UIImage imageNamed:@"CardBack.png"],
-                      
-                                                        nil];
+    cards = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Card0.png"],
+             [UIImage imageNamed:@"Card1.png"],
+             [UIImage imageNamed:@"Card2.png"],
+             [UIImage imageNamed:@"Card3.png"],
+             [UIImage imageNamed:@"Card4.png"],
+             [UIImage imageNamed:@"Card5.png"],
+             [UIImage imageNamed:@"Card6.png"],
+             [UIImage imageNamed:@"Card7.png"],
+             [UIImage imageNamed:@"CardBack.png"],
+             
+             nil];
     
-
+    
     
     //assignments = (NSInteger*) calloc(8, sizeof(NSInteger));
     
@@ -63,7 +63,7 @@
     for(int i = 0; i < 8; i++){
         
         for(int j = 0; j <2; j++){
-        
+            
             int randomSlot = random() % 16;
             while([[assignments objectAtIndex:randomSlot] intValue] != -1){
                 randomSlot = random() % 16;
@@ -77,15 +77,16 @@
     
     flippedCards = 0;
     
-//    for(int i = 0; i < 8; i++){
-//    
-//        [[imageviews objectAtIndex: i] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
-//        [[imageviews objectAtIndex: i+8] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
-//        
-//    }
+    //    for(int i = 0; i < 8; i++){
+    //    
+    //        [[imageviews objectAtIndex: i] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
+    //        [[imageviews objectAtIndex: i+8] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
+    //        
+    //    }
     
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+
 }
 
 
@@ -163,6 +164,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

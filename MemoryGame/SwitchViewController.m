@@ -24,6 +24,7 @@ static SwitchViewController *instance = NULL;
     
     instance = self;
     self.menuViewController  = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
     [self.view insertSubview:menuViewController.view atIndex:0];
 
     [super viewDidLoad];
@@ -39,15 +40,15 @@ static SwitchViewController *instance = NULL;
 }
 
 
-+(void) switchToGame{
+- (void) switchToGame{
     
-    if(instance != NULL){
+
         
-        if (instance.gameViewController.view.superview == nil)
+        if (self.gameViewController.view.superview == nil)
         {
-            if (instance.gameViewController == nil)
+            if (self.gameViewController == nil)
             {
-                instance.gameViewController =
+                gameViewController =
                 [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
                 
             }
@@ -55,22 +56,23 @@ static SwitchViewController *instance = NULL;
             [UIView beginAnimations:@"View Flip" context:nil];
             [UIView setAnimationDuration:1.0];
             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+            [UIView setAnimationDelegate:self];
             
             [UIView setAnimationTransition:
-             UIViewAnimationOptionTransitionFlipFromLeft forView:instance.view cache:YES];
+             UIViewAnimationOptionTransitionFlipFromRight forView:self.view cache:YES];
             
-            [instance.gameViewController viewWillAppear:YES];
-            [instance.menuViewController viewWillDisappear:YES];
+            [gameViewController viewWillAppear:YES];
+            [menuViewController viewWillDisappear:YES];
             
-            [instance.menuViewController.view removeFromSuperview];
-            [instance.view insertSubview:instance.gameViewController.view atIndex:0];
+            [menuViewController.view removeFromSuperview];
+            [self.view insertSubview:gameViewController.view atIndex:0];
             
-            [instance.menuViewController viewDidDisappear:YES];
-            [instance.gameViewController viewDidAppear:YES];
+            [menuViewController viewDidDisappear:YES];
+            [gameViewController viewDidAppear:YES];
             [UIView commitAnimations];
         }
         
-    }
+    
     
 }
 
