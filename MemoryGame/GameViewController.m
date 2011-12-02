@@ -7,7 +7,7 @@
 //
 
 #import "GameViewController.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 #import "SwitchViewController.h"
 #import <stdlib.h>
 

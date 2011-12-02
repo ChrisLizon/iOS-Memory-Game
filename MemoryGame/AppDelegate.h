@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class GameViewController, MenuViewController, SwitchViewController;
+@class SwitchViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     UIWindow *window;

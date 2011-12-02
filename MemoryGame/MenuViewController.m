@@ -9,7 +9,7 @@
 #import "MenuViewController.h"
 //#import "GameViewController.h"
 #import "SwitchViewController.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 
 @implementation MenuViewController
 
