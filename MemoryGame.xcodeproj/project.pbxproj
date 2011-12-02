@@ -115,9 +115,9 @@
 		4002EC7E148756C000B0CF31 /* GameView */ = {
 			isa = PBXGroup;
 			children = (
-				9A1A6F321472EEA80045588E /* GameViewController.xib */,
 				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
 				9A1A6F301472EEA80045588E /* GameViewController.m */,
+				9A1A6F321472EEA80045588E /* GameViewController.xib */,
 			);
 			name = GameView;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 		404D3D401486D6B600998730 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				404D3D461486DCB300998730 /* MenuView.xib */,
 				404D3D481486DDB800998730 /* MenuViewController.h */,
 				404D3D491486DDB800998730 /* MenuViewController.m */,
+				404D3D461486DCB300998730 /* MenuView.xib */,
 			);
 			name = Menu;
 			sourceTree = "<group>";

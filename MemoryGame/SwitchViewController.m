@@ -53,14 +53,10 @@ static SwitchViewController *instance = NULL;
                 
             }
             
-            [UIView beginAnimations:@"View Flip" context:nil];
-            [UIView setAnimationDuration:1.0];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            [UIView setAnimationDelegate:self];
             
-            [UIView setAnimationTransition:
-             UIViewAnimationOptionTransitionFlipFromRight forView:self.view cache:YES];
-            
+            [UIView transitionWithView:self.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+                
+           
             [gameViewController viewWillAppear:YES];
             [menuViewController viewWillDisappear:YES];
             
@@ -69,7 +65,9 @@ static SwitchViewController *instance = NULL;
             
             [menuViewController viewDidDisappear:YES];
             [gameViewController viewDidAppear:YES];
-            [UIView commitAnimations];
+                
+            } completion:nil];
+
         }
         
     
@@ -88,14 +86,10 @@ static SwitchViewController *instance = NULL;
                 [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
                 
             }
-            
-            [UIView beginAnimations:@"View Flip" context:nil];
-            [UIView setAnimationDuration:1.0];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            
-            [UIView setAnimationTransition:
-             UIViewAnimationOptionTransitionFlipFromLeft forView:instance.view cache:YES];
-            
+
+
+            [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+
             [instance.menuViewController viewWillAppear:YES];
             [instance.gameViewController viewWillDisappear:YES];
             
@@ -104,7 +98,10 @@ static SwitchViewController *instance = NULL;
             
             [instance.gameViewController viewDidDisappear:YES];
             [instance.menuViewController viewDidAppear:YES];
-            [UIView commitAnimations];
+            
+            } completion:nil];
+            
+
         }
         
     }
