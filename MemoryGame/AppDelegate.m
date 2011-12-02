@@ -9,13 +9,27 @@
 #import "AppDelegate.h"
 
 #import "SwitchViewController.h"
-
+#import "MenuViewController.h"
+#import "GameViewController.h"
 
 @implementation AppDelegate
 
-@synthesize window;
+@synthesize window; //= _window;
+@synthesize gameViewController; //= _viewController;
+@synthesize menuViewController; //= _menuViewController;
 @synthesize switchViewController;
 
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+//    self.menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
+//    //self.window.rootViewController = self.gameViewController;
+//    self.window.rootViewController = self.menuViewController;
+//    [self.window makeKeyAndVisible];
+//    return YES;
+//}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -28,6 +42,38 @@
     return YES;
 }
 
+//
+
+//-(void) goToGame{
+//
+//    [UIView beginAnimations:@"flipviews" context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    [UIView setAnimationTransition:UIViewAnimationOptionTransitionFlipFromLeft forView:window cache:YES];
+//
+//    //[self.menuViewController removeFromParentViewController];
+//    [window addSubview:self.gameViewController.view];
+//    [UIView commitAnimations];
+//    
+//
+//}
+
+-(void) goToGame{
+    [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        self.window.rootViewController = self.gameViewController;
+        
+    } completion:nil];
+    
+    
+}
+
+-(void) goToMenu{
+    [UIView transitionWithView:self.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+        self.window.rootViewController = self.menuViewController;
+        
+    } completion:nil];
+    
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

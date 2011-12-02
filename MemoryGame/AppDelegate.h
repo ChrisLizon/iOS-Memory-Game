@@ -17,7 +17,14 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) GameViewController *gameViewController;
+
+@property(strong, nonatomic) MenuViewController *menuViewController;
 @property(strong, nonatomic) SwitchViewController *switchViewController;
 
+
+
+-(void) goToGame;
+-(void) goToMenu;
 
 @end
