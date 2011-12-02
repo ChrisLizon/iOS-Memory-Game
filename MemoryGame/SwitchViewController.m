@@ -40,31 +40,31 @@ static SwitchViewController *instance = NULL;
 }
 
 
-- (void) switchToGame{
++ (void) switchToGame{
     
 
         
-        if (self.gameViewController.view.superview == nil)
+        if (instance.gameViewController.view.superview == nil)
         {
-            if (self.gameViewController == nil)
+            if (instance.gameViewController == nil)
             {
-                gameViewController =
+                instance.gameViewController =
                 [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
                 
             }
             
             
-            [UIView transitionWithView:self.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+            [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
                 
            
-            [gameViewController viewWillAppear:YES];
-            [menuViewController viewWillDisappear:YES];
+            [instance.gameViewController viewWillAppear:YES];
+            [instance.menuViewController viewWillDisappear:YES];
             
-            [menuViewController.view removeFromSuperview];
-            [self.view insertSubview:gameViewController.view atIndex:0];
+            [instance.menuViewController.view removeFromSuperview];
+            [instance.view insertSubview:instance.gameViewController.view atIndex:0];
             
-            [menuViewController viewDidDisappear:YES];
-            [gameViewController viewDidAppear:YES];
+            [instance.menuViewController viewDidDisappear:YES];
+            [instance.gameViewController viewDidAppear:YES];
                 
             } completion:nil];
 

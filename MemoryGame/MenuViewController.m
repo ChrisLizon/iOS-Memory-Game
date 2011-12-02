@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-#import "GameViewController.h"
+//#import "GameViewController.h"
 #import "SwitchViewController.h"
 #import "AppDelegate.h"
 
@@ -29,10 +29,10 @@
 //    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //	[mainDelegate goToGame];
     
-   // [SwitchViewController switchToGame];
+    [SwitchViewController switchToGame];
     
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate.switchViewController switchToGame];
+    //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    //[appDelegate.switchViewController switchToGame];
 }
 
 - (void)didReceiveMemoryWarning

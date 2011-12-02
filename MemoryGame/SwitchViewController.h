@@ -19,6 +19,6 @@
 @property (retain, nonatomic) MenuViewController *menuViewController;
 
 
-- (void)switchToGame;
++ (void)switchToGame;
 + (void)switchToMenu;
 @end
