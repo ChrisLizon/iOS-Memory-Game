@@ -53,7 +53,7 @@
 								<reference key="IBUINavigationBar" ref="861422845"/>
 								<string key="IBUITitle">Memory Game</string>
 								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="861383921">
-									<string key="IBUITitle">Quit</string>
+									<string key="IBUITitle">Quit Game</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="255004995"/>
@@ -497,7 +497,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Pairs found:</string>
+						<string key="IBUIText">Pairs found</string>
 						<object class="NSColor" key="IBUITextColor" id="120177279">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -549,7 +549,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Turns taken:</string>
+						<string key="IBUIText">Turns taken</string>
 						<reference key="IBUITextColor" ref="120177279"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
