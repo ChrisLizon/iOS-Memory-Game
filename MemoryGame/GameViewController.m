@@ -78,13 +78,6 @@
     
     flippedCards = 0;
     
-    //    for(int i = 0; i < 8; i++){
-    //    
-    //        [[imageviews objectAtIndex: i] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
-    //        [[imageviews objectAtIndex: i+8] setImage: [cards objectAtIndex:i] forState:UIControlStateNormal];
-    //        
-    //    }
-    
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
 
@@ -99,6 +92,8 @@
     
  
     [sender setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateNormal];
+    [sender setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateDisabled];
+    
     [sender setEnabled:NO];
     flippedCards ++;
     
@@ -107,7 +102,12 @@
         
         //disable all the cards for the next second
         for(int i = 0; i < 16; i++){
-            [[imageviews objectAtIndex:i]setEnabled:NO];
+            if(i != lastCardIndex && i != currentCardIndex){
+            [[imageviews objectAtIndex:i] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
+            }
+            
+            [[imageviews objectAtIndex:i] setEnabled:NO];
+            
         }
         
         //set up a timer to turn the cards back over after 1 second
@@ -139,7 +139,9 @@
     }else{
         
         [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+        [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+        [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
 
     }
     turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
