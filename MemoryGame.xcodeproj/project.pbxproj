@@ -261,11 +261,19 @@
 		9A1A6F561472EF160045588E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9AAA673E14912C0C00CA2FBF /* Team615-Info */,
 				41CD8E701489759600E39D65 /* menubackground@2x.png */,
 				41CD8E6B148974B800E39D65 /* menubackground.png */,
 				404D3D291486D25800998730 /* Icons */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		9AAA673E14912C0C00CA2FBF /* Team615-Info */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Team615-Info";
 			sourceTree = "<group>";
 		};
 		9AD06A5A149129B2004FFC54 /* InfoView */ = {

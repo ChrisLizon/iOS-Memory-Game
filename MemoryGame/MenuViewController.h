@@ -13,7 +13,8 @@
 
 
 @property (retain,nonatomic)IBOutlet UIButton *playButton;
-//@property (retain) GameViewController *gameScreen;
 -(IBAction) singlePlayerGame:(id)sender;
+
+-(IBAction)infoScreen:(id)sender;
 
 @end

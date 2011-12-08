@@ -35,6 +35,10 @@
     //[appDelegate.switchViewController switchToGame];
 }
 
+-(IBAction) infoScreen:(id)sender{
+    [SwitchViewController switchToInfo];
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.

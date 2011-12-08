@@ -9,11 +9,13 @@
 #import "SwitchViewController.h"
 #import "MenuViewController.h"
 #import "GameViewController.h"
+#import "InfoViewController.h"
 
 @implementation SwitchViewController
 
 @synthesize gameViewController;
 @synthesize menuViewController;
+@synthesize infoViewController;
 
 static SwitchViewController *instance = NULL;
 
@@ -25,6 +27,7 @@ static SwitchViewController *instance = NULL;
     instance = self;
     self.menuViewController  = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
     self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    self.infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
     [self.view insertSubview:menuViewController.view atIndex:0];
 
     [super viewDidLoad];
@@ -59,11 +62,14 @@ static SwitchViewController *instance = NULL;
            
             [instance.gameViewController viewWillAppear:YES];
             [instance.menuViewController viewWillDisappear:YES];
+            [instance.infoViewController viewWillDisappear:YES];
             
             [instance.menuViewController.view removeFromSuperview];
+            [instance.infoViewController.view removeFromSuperview];
             [instance.view insertSubview:instance.gameViewController.view atIndex:0];
             
             [instance.menuViewController viewDidDisappear:YES];
+            [instance.infoViewController viewDidDisappear:YES];
             [instance.gameViewController viewDidAppear:YES];
                 
             } completion:nil];
@@ -92,11 +98,14 @@ static SwitchViewController *instance = NULL;
 
             [instance.menuViewController viewWillAppear:YES];
             [instance.gameViewController viewWillDisappear:YES];
+            [instance.infoViewController viewWillDisappear:YES];
             
             [instance.gameViewController.view removeFromSuperview];
+            [instance.infoViewController.view removeFromSuperview];
             [instance.view insertSubview:instance.menuViewController.view atIndex:0];
             
             [instance.gameViewController viewDidDisappear:YES];
+            [instance.infoViewController viewDidDisappear:YES];
             [instance.menuViewController viewDidAppear:YES];
             
             } completion:nil];
@@ -106,6 +115,34 @@ static SwitchViewController *instance = NULL;
         
     }
     
+}
+
++(void)switchToInfo{
+    if (instance.infoViewController.view.superview == nil)
+    {
+        
+        if (instance.infoViewController == nil)
+        {
+            instance.infoViewController =
+            [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+            
+        }
+        
+        [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+            
+            [instance.gameViewController viewWillDisappear:YES];
+            [instance.menuViewController viewWillDisappear:YES];
+            
+            [instance.menuViewController.view removeFromSuperview];
+            [instance.gameViewController.view removeFromSuperview];
+            [instance.view insertSubview:instance.infoViewController.view atIndex:0];
+            
+            [instance.menuViewController viewDidDisappear:YES];
+            [instance.gameViewController viewDidDisappear:YES];
+            [instance.infoViewController viewDidAppear:YES];
+            
+        } completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning

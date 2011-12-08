@@ -7,8 +7,13 @@
 //
 
 #import "InfoViewController.h"
+#import "SwitchViewController.h"
 
 @implementation InfoViewController
+
+-(IBAction)backToMenu:(id)sender{
+    [SwitchViewController switchToMenu];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
