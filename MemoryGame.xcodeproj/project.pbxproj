@@ -107,10 +107,9 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
-		ACAA2ACC149934E900CE9217 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
-		ACAA2ACD149934E900CE9217 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
-		ACAA2ACE149934E900CE9217 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
-		ACAA2AD214993B5900CE9217 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
+		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
+		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,7 +265,7 @@
 		9A1A6F551472EF090045588E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ACAA2ACA149934D000CE9217 /* Audio */,
+				ACA744B114992F1C00F3D5F8 /* Sounds */,
 				9A1A6F561472EF160045588E /* Images */,
 			);
 			name = Resources;
@@ -313,14 +312,14 @@
 			name = SwitchView;
 			sourceTree = "<group>";
 		};
-		ACAA2ACA149934D000CE9217 /* Audio */ = {
+		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				ACAA2ACC149934E900CE9217 /* flip.wav */,
-				ACAA2ACD149934E900CE9217 /* flop.wav */,
-				ACAA2ACE149934E900CE9217 /* test2.wav */,
+				ACA744B314992F3B00F3D5F8 /* flip.wav */,
+				ACA744B414992F3B00F3D5F8 /* flop.wav */,
+				ACA744B514992F3B00F3D5F8 /* test2.wav */,
 			);
-			name = Audio;
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,9 +415,9 @@
 				9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */,
 				9AAA67481491422900CA2FBF /* ben.png in Resources */,
 				9AAA67491491422900CA2FBF /* chris.jpeg in Resources */,
-				ACAA2ACF149934E900CE9217 /* flip.wav in Resources */,
-				ACAA2AD0149934E900CE9217 /* flop.wav in Resources */,
-				ACAA2AD1149934E900CE9217 /* test2.wav in Resources */,
+				ACA744B614992F3B00F3D5F8 /* flip.wav in Resources */,
+				ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */,
+				ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
