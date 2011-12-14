@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface GameViewController : UIViewController
 
@@ -24,9 +25,10 @@
 @property (assign) NSInteger pairsFound;
 @property (assign) NSInteger turnsTaken;
 
+@property (retain,nonatomic)AVAudioPlayer *musicPlayer;
+
 -(IBAction)cardClicked:(id)sender;
 -(void)flipCardsBack;
 -(IBAction)quitGame:(id)sender;
-
 
 @end

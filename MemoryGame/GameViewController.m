@@ -19,6 +19,7 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
+@synthesize musicPlayer;
 
 - (void)didReceiveMemoryWarning
 {
@@ -80,6 +81,19 @@
     
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+    
+    
+    
+    //Load up the audio
+    NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/test2.wav",[[NSBundle mainBundle]resourcePath]]];
+    NSError *error;
+    musicPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    
+    musicPlayer.numberOfLoops=-1;
+    
+    [musicPlayer prepareToPlay];
+    if(musicPlayer !=nil)
+        [musicPlayer play];
 
 }
 
