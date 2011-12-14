@@ -44,7 +44,16 @@
 		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
 		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
-		AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC93094214993EA000C31263 /* AVFoundation.framework */; };
+<<<<<<< HEAD
+		ACAA2ACF149934E900CE9217 /* flip.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2ACC149934E900CE9217 /* flip.wav */; };
+		ACAA2AD0149934E900CE9217 /* flop.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2ACD149934E900CE9217 /* flop.wav */; };
+		ACAA2AD1149934E900CE9217 /* test2.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2ACE149934E900CE9217 /* test2.wav */; };
+		ACAA2AD314993B5900CE9217 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAA2AD214993B5900CE9217 /* AVFoundation.framework */; };
+=======
+		ACA744B614992F3B00F3D5F8 /* flip.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B314992F3B00F3D5F8 /* flip.wav */; };
+		ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B414992F3B00F3D5F8 /* flop.wav */; };
+		ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B514992F3B00F3D5F8 /* test2.wav */; };
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,10 +113,16 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
-		AC93094214993EA000C31263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+<<<<<<< HEAD
+		ACAA2ACC149934E900CE9217 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
+		ACAA2ACD149934E900CE9217 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
+		ACAA2ACE149934E900CE9217 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
+		ACAA2AD214993B5900CE9217 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+=======
 		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
 		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
 		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */,
+				ACAA2AD314993B5900CE9217 /* AVFoundation.framework in Frameworks */,
 				9A1A6F1E1472EEA70045588E /* UIKit.framework in Frameworks */,
 				9A1A6F201472EEA70045588E /* Foundation.framework in Frameworks */,
 				9A1A6F221472EEA70045588E /* CoreGraphics.framework in Frameworks */,
@@ -183,7 +198,7 @@
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
-				AC93094214993EA000C31263 /* AVFoundation.framework */,
+				ACAA2AD214993B5900CE9217 /* AVFoundation.framework */,
 				41CD8E72148975B600E39D65 /* Default@2x.png */,
 				41CD8E6E1489753200E39D65 /* Default.png */,
 				9A1A6F851472F3950045588E /* App_Store_Icon.png */,
@@ -263,7 +278,11 @@
 		9A1A6F551472EF090045588E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				ACAA2ACA149934D000CE9217 /* Audio */,
+=======
 				ACA744B114992F1C00F3D5F8 /* Sounds */,
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 				9A1A6F561472EF160045588E /* Images */,
 			);
 			name = Resources;
@@ -310,6 +329,16 @@
 			name = SwitchView;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		ACAA2ACA149934D000CE9217 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				ACAA2ACC149934E900CE9217 /* flip.wav */,
+				ACAA2ACD149934E900CE9217 /* flop.wav */,
+				ACAA2ACE149934E900CE9217 /* test2.wav */,
+			);
+			name = Audio;
+=======
 		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +347,7 @@
 				ACA744B514992F3B00F3D5F8 /* test2.wav */,
 			);
 			name = Sounds;
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +443,15 @@
 				9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */,
 				9AAA67481491422900CA2FBF /* ben.png in Resources */,
 				9AAA67491491422900CA2FBF /* chris.jpeg in Resources */,
+<<<<<<< HEAD
+				ACAA2ACF149934E900CE9217 /* flip.wav in Resources */,
+				ACAA2AD0149934E900CE9217 /* flop.wav in Resources */,
+				ACAA2AD1149934E900CE9217 /* test2.wav in Resources */,
+=======
+				ACA744B614992F3B00F3D5F8 /* flip.wav in Resources */,
+				ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */,
+				ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */,
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
