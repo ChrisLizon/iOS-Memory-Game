@@ -15,7 +15,7 @@
 
 @synthesize window;
 @synthesize switchViewController;
-
+@synthesize musicPlayer;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -24,6 +24,17 @@
     // Override point for customization after application launch.
 	self.window.rootViewController = switchViewController;
     [self.window makeKeyAndVisible];
+    
+    //Load up the audio
+    NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/test2.wav",[[NSBundle mainBundle]resourcePath]]];
+    NSError *error;
+    musicPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    
+    musicPlayer.numberOfLoops=-1;
+    
+    [musicPlayer prepareToPlay];
+    /*if(musicPlayer !=nil)
+        [musicPlayer play];*/
     
     return YES;
 }

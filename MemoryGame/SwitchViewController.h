@@ -25,4 +25,6 @@
 + (void)switchToGame;
 + (void)switchToMenu;
 + (void)switchToInfo;
+
+
 @end

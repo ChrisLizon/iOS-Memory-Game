@@ -19,7 +19,7 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
-@synthesize musicPlayer;
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -84,16 +84,8 @@
     
     
     
-    //Load up the audio
-    NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/test2.wav",[[NSBundle mainBundle]resourcePath]]];
-    NSError *error;
-    musicPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+
     
-    musicPlayer.numberOfLoops=-1;
-    
-    [musicPlayer prepareToPlay];
-    if(musicPlayer !=nil)
-        [musicPlayer play];
 
 }
 
@@ -165,13 +157,13 @@
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
     
+        
 }
 
 - (IBAction)quitGame:(id)sender{
 
 //    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //	[mainDelegate goToMenu];
-    
     [SwitchViewController switchToMenu];
 }
 
