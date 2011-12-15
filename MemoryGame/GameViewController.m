@@ -57,6 +57,7 @@ static AVAudioPlayer *soundPlayer;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
     soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    soundPlayer.numberOfLoops=0;
     [soundPlayer prepareToPlay];
     
 
@@ -64,6 +65,10 @@ static AVAudioPlayer *soundPlayer;
 
 
 - (IBAction)cardClicked:(id)sender{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+    soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    soundPlayer.numberOfLoops=0;
     [soundPlayer play];
     //get the car index from the UIButton's tag value.
     
@@ -120,7 +125,13 @@ static AVAudioPlayer *soundPlayer;
         [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
-
+        
+        //Flop sound
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flop" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=0;
+        [soundPlayer play];
     }
     turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
 
