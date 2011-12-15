@@ -49,37 +49,7 @@ static AVAudioPlayer *soundPlayer;
              
              nil];
     
-    
-    
-    //assignments = (NSInteger*) calloc(8, sizeof(NSInteger));
-    
-    
-//    assignments = [[NSMutableArray alloc]initWithCapacity:16];
-//    
-//    
-//    
-//    for(int i = 0; i < 16; i++){
-//        
-//        [assignments addObject:[[NSNumber alloc] initWithInt:-1 ]];
-//    }
-//    
-//    
-//    for(int i = 0; i < 8; i++){
-//        
-//        for(int j = 0; j <2; j++){
-//            
-//            int randomSlot = arc4random() % 16;
-//            while([[assignments objectAtIndex:randomSlot] intValue] != -1){
-//                randomSlot = arc4random() % 16;
-//            }
-//            printf("Assigning %d to slot %d\n", i, randomSlot);
-//            [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
-//            printf("Slot %d now contains %d\n", randomSlot, [[assignments objectAtIndex:randomSlot] intValue]);
-//        }
-//        
-//    }
-//    
-//    flippedCards = 0;
+
     
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
@@ -187,8 +157,11 @@ static AVAudioPlayer *soundPlayer;
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex == [alertView cancelButtonIndex])
+    if(buttonIndex == [alertView cancelButtonIndex]){
+        [soundPlayer stop];
+        [[AppDelegate getPlayer] play];
         [SwitchViewController switchToMenu];
+    }
 }
 
 
