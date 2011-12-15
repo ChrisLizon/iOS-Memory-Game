@@ -44,7 +44,9 @@
 		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
 		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
+		AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC576BE9149A5A130076D38A /* Theme.mp3 */; };
 		AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC93094214993EA000C31263 /* AVFoundation.framework */; };
+		ACB9869C149A88AF0045930B /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9869B149A88AF0045930B /* flip.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,10 +106,11 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
+		AC576BE9149A5A130076D38A /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
 		AC93094214993EA000C31263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
 		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
-		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
+		ACA744B514992F3B00F3D5F8 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		ACB9869B149A88AF0045930B /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,9 +316,10 @@
 		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				ACA744B314992F3B00F3D5F8 /* flip.wav */,
+				ACB9869B149A88AF0045930B /* flip.caf */,
+				AC576BE9149A5A130076D38A /* Theme.mp3 */,
 				ACA744B414992F3B00F3D5F8 /* flop.wav */,
-				ACA744B514992F3B00F3D5F8 /* test2.wav */,
+				ACA744B514992F3B00F3D5F8 /* win.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -413,6 +417,8 @@
 				9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */,
 				9AAA67481491422900CA2FBF /* ben.png in Resources */,
 				9AAA67491491422900CA2FBF /* chris.jpeg in Resources */,
+				AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */,
+				ACB9869C149A88AF0045930B /* flip.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

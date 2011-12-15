@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 @class GameViewController;
 @class MenuViewController;
 @class InfoViewController;

@@ -15,30 +15,41 @@
 
 @synthesize window;
 @synthesize switchViewController;
-@synthesize musicPlayer;
 
+static AVAudioPlayer *musicPlayer;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    //Load up the audio
+    /*NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Theme.mp3",[[NSBundle mainBundle]resourcePath]]];
+    NSError *error;
+    musicPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    musicPlayer.numberOfLoops=-1;
+    [musicPlayer prepareToPlay];
+    if(musicPlayer !=nil)
+     [musicPlayer play];*/
+     
+    
     switchViewController = [[SwitchViewController alloc] initWithNibName:@"SwitchViewController" bundle:nil];
     // Override point for customization after application launch.
 	self.window.rootViewController = switchViewController;
     [self.window makeKeyAndVisible];
     
-    //Load up the audio
-    NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/test2.wav",[[NSBundle mainBundle]resourcePath]]];
-    NSError *error;
-    musicPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     
-    musicPlayer.numberOfLoops=-1;
-    
-    [musicPlayer prepareToPlay];
-    /*if(musicPlayer !=nil)
-        [musicPlayer play];*/
-    
+
     return YES;
 }
 
++(AVAudioPlayer *)getPlayer
+{
+    return musicPlayer;
+}
+
++(void)setPlayer:(AVAudioPlayer *)player{
+    musicPlayer=player;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

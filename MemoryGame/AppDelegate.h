@@ -20,6 +20,7 @@
 
 @property(strong, nonatomic) SwitchViewController *switchViewController;
 
-@property (retain,nonatomic)AVAudioPlayer *musicPlayer;
++(AVAudioPlayer *)getPlayer;
++(void)setPlayer:(AVAudioPlayer *)player;
 
 @end

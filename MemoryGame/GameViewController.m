@@ -21,6 +21,8 @@
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
 
 
+static AVAudioPlayer *soundPlayer;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -82,9 +84,10 @@
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
     
-    
-    
-
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+    soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    [soundPlayer prepareToPlay];
     
 
 }
@@ -126,7 +129,7 @@
     
         flippedCards = 0;
     }else{
-        
+        [soundPlayer play];
         lastCardIndex = index;
     }
     
@@ -156,7 +159,13 @@
     for(int i = 0; i < 16; i++){
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
-    
+    if(pairsFound==8){
+        NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/win.wav",[[NSBundle mainBundle]resourcePath]]];
+        NSError *error;
+        [[AppDelegate getPlayer] stop];
+        [AppDelegate setPlayer:[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error]];
+        [[AppDelegate getPlayer] play];
+    }
         
 }
 
