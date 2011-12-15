@@ -157,9 +157,22 @@
 
 //    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //	[mainDelegate goToMenu];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Quit game" 
+                                              message:@"Are you sure?" 
+                                              delegate:self
+                                              cancelButtonTitle:@"Yes" 
+                                              otherButtonTitles:@"No",nil];
+    [alert show];
     
-    [SwitchViewController switchToMenu];
+    //[alert dismissWithClickedButtonIndex:0 animated:NO];
+        //[SwitchViewController switchToMenu];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == [alertView cancelButtonIndex])
+        [SwitchViewController switchToMenu];
+}
+
 
 - (void)viewDidUnload
 {
