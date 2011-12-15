@@ -11,6 +11,8 @@
 
 @implementation MPViewController
 
+@synthesize sControl,ipField,portField,joinGameButton,startGameButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,6 +24,26 @@
 
 -(IBAction)backToMenu:(id)sender{
     [SwitchViewController switchToMenu];
+}
+
+- (IBAction)backgroundTap:(id)sender {  
+    [ipField resignFirstResponder];
+    [portField resignFirstResponder];
+}
+
+-(IBAction)toggleHost:(id)sender{
+    if([sender selectedSegmentIndex]==1){
+        ipField.hidden = FALSE;
+        portField.hidden = FALSE;
+        joinGameButton.hidden = FALSE;
+        startGameButton.hidden = TRUE;
+    } else {
+        ipField.hidden = YES;
+        portField.hidden = YES;
+        joinGameButton.hidden = TRUE;
+        startGameButton.hidden = FALSE;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,13 +63,13 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
-*/
+
 
 - (void)viewDidUnload
 {
