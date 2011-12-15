@@ -54,32 +54,32 @@ static AVAudioPlayer *soundPlayer;
     //assignments = (NSInteger*) calloc(8, sizeof(NSInteger));
     
     
-    assignments = [[NSMutableArray alloc]initWithCapacity:16];
-    
-    
-    
-    for(int i = 0; i < 16; i++){
-        
-        [assignments addObject:[[NSNumber alloc] initWithInt:-1 ]];
-    }
-    
-    
-    for(int i = 0; i < 8; i++){
-        
-        for(int j = 0; j <2; j++){
-            
-            int randomSlot = arc4random() % 16;
-            while([[assignments objectAtIndex:randomSlot] intValue] != -1){
-                randomSlot = arc4random() % 16;
-            }
-            printf("Assigning %d to slot %d\n", i, randomSlot);
-            [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
-            printf("Slot %d now contains %d\n", randomSlot, [[assignments objectAtIndex:randomSlot] intValue]);
-        }
-        
-    }
-    
-    flippedCards = 0;
+//    assignments = [[NSMutableArray alloc]initWithCapacity:16];
+//    
+//    
+//    
+//    for(int i = 0; i < 16; i++){
+//        
+//        [assignments addObject:[[NSNumber alloc] initWithInt:-1 ]];
+//    }
+//    
+//    
+//    for(int i = 0; i < 8; i++){
+//        
+//        for(int j = 0; j <2; j++){
+//            
+//            int randomSlot = arc4random() % 16;
+//            while([[assignments objectAtIndex:randomSlot] intValue] != -1){
+//                randomSlot = arc4random() % 16;
+//            }
+//            printf("Assigning %d to slot %d\n", i, randomSlot);
+//            [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
+//            printf("Slot %d now contains %d\n", randomSlot, [[assignments objectAtIndex:randomSlot] intValue]);
+//        }
+//        
+//    }
+//    
+//    flippedCards = 0;
     
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
@@ -175,8 +175,22 @@ static AVAudioPlayer *soundPlayer;
 
 //    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //	[mainDelegate goToMenu];
-    [SwitchViewController switchToMenu];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Quit game" 
+                                              message:@"Are you sure?" 
+                                              delegate:self
+                                              cancelButtonTitle:@"Yes" 
+                                              otherButtonTitles:@"No",nil];
+    [alert show];
+    
+    //[alert dismissWithClickedButtonIndex:0 animated:NO];
+        //[SwitchViewController switchToMenu];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == [alertView cancelButtonIndex])
+        [SwitchViewController switchToMenu];
+}
+
 
 - (void)viewDidUnload
 {
@@ -187,8 +201,41 @@ static AVAudioPlayer *soundPlayer;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    assignments = [[NSMutableArray alloc]initWithCapacity:16];
+    for(int i = 0; i < 16; i++){
+        
+        [assignments addObject:[[NSNumber alloc] initWithInt:-1 ]];
+    }
+    
+    
+    for(int i = 0; i < 8; i++){
+        
+        for(int j = 0; j <2; j++){
+            
+            int randomSlot = arc4random() % 16;
+            while([[assignments objectAtIndex:randomSlot] intValue] != -1){
+                randomSlot = arc4random() % 16;
+            }
+            printf("Assigning %d to slot %d\n", i, randomSlot);
+            [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
+            printf("Slot %d now contains %d\n", randomSlot, [[assignments objectAtIndex:randomSlot] intValue]);
+            
+            [[imageviews objectAtIndex:randomSlot] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
+            [[imageviews objectAtIndex:randomSlot] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
+            [[imageviews objectAtIndex:randomSlot] setHidden:NO];
+        }
+        
+    }
+    
+    flippedCards = 0;
+    
+    //Initialize the turns taken and the pairs found labels to 0 every time the user opens the game
+    pairsFound = 0;
+    pairsFoundLabel.text = [NSString stringWithFormat:@"%i",pairsFound];
+    turnsTaken=0;
+    turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
+    
     [super viewWillAppear:animated];
-
 
 }
 
@@ -199,6 +246,8 @@ static AVAudioPlayer *soundPlayer;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+   
+    
 	[super viewWillDisappear:animated];
 }
 

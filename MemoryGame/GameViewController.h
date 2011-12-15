@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
 
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController<UIAlertViewDelegate>
 
 @property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *imageviews;
 @property (retain) IBOutlet UINavigationBar *topToolbar;
