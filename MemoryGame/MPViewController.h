@@ -25,7 +25,11 @@
 
 
 -(IBAction)backToMenu:(id)sender;
+
 -(IBAction)backgroundTap:(id)sender;
+-(IBAction)ipFieldDoneEditing:(id)sender;
+-(IBAction)portFieldDoneEditing:(id)sender;
+
 -(IBAction)toggleHost:(id)sender;
 
 @end

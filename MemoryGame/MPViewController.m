@@ -26,6 +26,14 @@
     [SwitchViewController switchToMenu];
 }
 
+-(IBAction)ipFieldDoneEditing:(id)sender{
+    [sender resignFirstResponder];
+}
+
+-(IBAction)portFieldDoneEditing:(id)sender{
+    [sender resignFirstResponder];
+}
+
 - (IBAction)backgroundTap:(id)sender {  
     [ipField resignFirstResponder];
     [portField resignFirstResponder];
