@@ -23,13 +23,13 @@ static AVAudioPlayer *musicPlayer;
     
     
     //Load up the audio
-    /*NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Theme.mp3",[[NSBundle mainBundle]resourcePath]]];
+    NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Theme.mp3",[[NSBundle mainBundle]resourcePath]]];
     NSError *error;
     musicPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     musicPlayer.numberOfLoops=-1;
     [musicPlayer prepareToPlay];
     if(musicPlayer !=nil)
-     [musicPlayer play];*/
+     [musicPlayer play];
      
     
     switchViewController = [[SwitchViewController alloc] initWithNibName:@"SwitchViewController" bundle:nil];

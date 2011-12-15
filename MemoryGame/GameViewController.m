@@ -94,7 +94,7 @@ static AVAudioPlayer *soundPlayer;
 
 
 - (IBAction)cardClicked:(id)sender{
-    
+    [soundPlayer play];
     //get the car index from the UIButton's tag value.
     
     NSInteger index = [sender tag];
@@ -129,7 +129,6 @@ static AVAudioPlayer *soundPlayer;
     
         flippedCards = 0;
     }else{
-        [soundPlayer play];
         lastCardIndex = index;
     }
     
@@ -160,11 +159,14 @@ static AVAudioPlayer *soundPlayer;
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
     if(pairsFound==8){
-        NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/win.wav",[[NSBundle mainBundle]resourcePath]]];
-        NSError *error;
         [[AppDelegate getPlayer] stop];
-        [AppDelegate setPlayer:[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error]];
-        [[AppDelegate getPlayer] play];
+        
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=-1;
+        [soundPlayer play];
     }
         
 }
