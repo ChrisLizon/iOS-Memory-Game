@@ -10,19 +10,23 @@
 @class GameViewController;
 @class MenuViewController;
 @class InfoViewController;
+@class MPViewController;
 
 @interface SwitchViewController : UIViewController {
     
     GameViewController *gameViewController;
     MenuViewController *menuViewController;
     InfoViewController *infoViewController;
+    MPViewController *mpViewController;
 }
 @property (retain, nonatomic) GameViewController *gameViewController;
 @property (retain, nonatomic) MenuViewController *menuViewController;
 @property (retain, nonatomic) InfoViewController *infoViewController;
+@property (retain, nonatomic) MPViewController *mpViewController;
 
 
 + (void)switchToGame;
 + (void)switchToMenu;
 + (void)switchToInfo;
++ (void)switchToMultiplayer;
 @end

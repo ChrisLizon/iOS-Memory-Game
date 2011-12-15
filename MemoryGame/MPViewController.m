@@ -1,19 +1,15 @@
 //
-//  MenuViewController.m
+//  MPViewController.m
 //  MemoryGame
 //
-//  Created by HerpDerp on 11/30/11.
+//  Created by HerpDerp on 12/15/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MenuViewController.h"
-//#import "GameViewController.h"
+#import "MPViewController.h"
 #import "SwitchViewController.h"
-//#import "AppDelegate.h"
 
-@implementation MenuViewController
-
-@synthesize playButton;
+@implementation MPViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,23 +20,8 @@
     return self;
 }
 
--(IBAction) singlePlayerGame:(id)sender{
-    
-//    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//	[mainDelegate goToGame];
-    
-    [SwitchViewController switchToGame];
-    
-    //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    //[appDelegate.switchViewController switchToGame];
-}
-
--(IBAction) infoScreen:(id)sender{
-    [SwitchViewController switchToInfo];
-}
-
--(IBAction)mpScreen:(id)sender{
-    [SwitchViewController switchToMultiplayer];
+-(IBAction)backToMenu:(id)sender{
+    [SwitchViewController switchToMenu];
 }
 
 - (void)didReceiveMemoryWarning
