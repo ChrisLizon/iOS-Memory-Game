@@ -10,6 +10,7 @@
 #import "SwitchViewController.h"
 
 @implementation InfoViewController
+@synthesize mobiLabel;
 
 -(IBAction)backToMenu:(id)sender{
     [SwitchViewController switchToMenu];
@@ -52,5 +53,13 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	//See if touch was inside the label
+	if (CGRectContainsPoint(mobiLabel.frame, [[[event allTouches] anyObject] locationInView:self.view]))
+	{
+		//Open webpage
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.team615.mobi"]];
+	}
+}
 @end

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface InfoViewController : UIViewController
+@property(retain,nonatomic)IBOutlet UILabel *mobiLabel;
 -(IBAction)backToMenu:(id)sender;
+
 @end
