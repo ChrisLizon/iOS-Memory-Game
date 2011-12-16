@@ -73,6 +73,12 @@ static AVAudioPlayer *soundPlayer;
         [[imageviews objectAtIndex:i] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
     }
     
+    assignments = [[NSMutableArray alloc]initWithCapacity:16];
+    for(int i = 0; i < 16; i++){
+        
+        [assignments addObject:[[NSNumber alloc] initWithInt:0 ]];
+    }
+    
     if([AppDelegate getSound]){
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
         NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
@@ -230,7 +236,8 @@ static AVAudioPlayer *soundPlayer;
                                     
                                         NSNumber * card = [f numberFromString:[vals objectAtIndex:i+1]];
                                         
-                                        
+                                        [assignments replaceObjectAtIndex:i withObject:card];
+
                                         
                                     }
 
