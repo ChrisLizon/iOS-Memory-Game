@@ -19,7 +19,8 @@
 
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
-@synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
+@synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
+@synthesize turnsTaken;
 
 
 static AVAudioPlayer *soundPlayer;
@@ -152,7 +153,7 @@ static bool sound;
         [[imageviews objectAtIndex:lastCardIndex] setHidden: true];
         
         pairsFound++;
-        pairsFoundLabel.text = [NSString stringWithFormat:@"%i",pairsFound];
+        pairsFoundCounter.text = [NSString stringWithFormat:@"%i",pairsFound];
     }else{
         
         [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
@@ -170,7 +171,7 @@ static bool sound;
                 [soundPlayer play];
             }
     }
-    turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
+    turnsTakenCounter.text = [NSString stringWithFormat:@"%i",turnsTaken];
 
     //re-enable all the cards
     for(int i = 0; i < 16; i++){
@@ -257,9 +258,9 @@ static bool sound;
     
     //Initialize the turns taken and the pairs found labels to 0 every time the user opens the game
     pairsFound = 0;
-    pairsFoundLabel.text = [NSString stringWithFormat:@"%i",pairsFound];
+    pairsFoundCounter.text = [NSString stringWithFormat:@"%i",pairsFound];
     turnsTaken=0;
-    turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
+    turnsTakenCounter.text = [NSString stringWithFormat:@"%i",turnsTaken];
     
     [super viewWillAppear:animated];
 

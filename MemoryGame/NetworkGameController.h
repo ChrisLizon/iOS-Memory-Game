@@ -19,8 +19,10 @@
 @property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *imageviews;
 @property (retain) IBOutlet UINavigationBar *topToolbar;
 @property (retain) IBOutlet UINavigationBar *bottomToolbar;
-@property (retain) IBOutlet UILabel *pairsFoundLabel;
-@property (retain) IBOutlet UILabel *turnsTakenLabel;
+@property (retain) IBOutlet UILabel *pairsFoundCounter;
+@property (retain) IBOutlet UILabel *turnsTakenCounter;
+@property (retain) IBOutlet UILabel *pairsFoundText;
+@property (retain) IBOutlet UILabel *turnsTakenText;
 @property (retain) NSArray *cards;
 @property (retain) NSMutableArray *assignments;
 @property (retain) NSInputStream *inputStream;
@@ -30,7 +32,7 @@
 @property (assign) NSInteger lastCardIndex;
 @property (assign) NSInteger currentCardIndex;
 @property (assign) NSInteger pairsFound;
-@property (assign) NSInteger turnsTaken;
+
 
 
 -(IBAction)cardClicked:(id)sender;
@@ -40,6 +42,9 @@
 -(void)flipCardAtIndex:(int)index;
 -(void)disableCards;
 -(void)enableCards;
+-(void)win;
+-(void)lose;
+-(void)setScoreWithPlayerScore:(NSString*)player andOpponentScore:(NSString*)opponent;
 -(void)removeCardsAtIndex:(int)index1 andIndex:(int)index2;
 -(void)flipCardsBackAtIndex:(int)index1 andIndex:(int)index2;
 -(void)initNetworkCommunication;
