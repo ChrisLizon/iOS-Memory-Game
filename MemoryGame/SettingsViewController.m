@@ -20,6 +20,8 @@
 
 -(IBAction)toggleMusic:(id)sender{
     [AppDelegate toggleMusic];
+    [AppDelegate toggleHardMusic];
+    [AppDelegate setHardSound:self.soundSwitch.on];
     if(![AppDelegate getMusic]){
         self.musicSwitch.on=false;
     }else{
@@ -29,6 +31,8 @@
 
 -(IBAction)toggleSound:(id)sender{
     [AppDelegate toggleSound];
+    [AppDelegate toggleHardSound];
+    [AppDelegate setHardMusic:self.musicSwitch.on];
     if(![AppDelegate getSound])
         self.soundSwitch.on=false;
     else

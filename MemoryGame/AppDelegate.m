@@ -17,11 +17,12 @@
 @synthesize switchViewController;
 
 static AVAudioPlayer *musicPlayer;
-static bool music,sound;
+static bool music,sound;//The current values of music and sound
+static bool hardSetMusic, hardSetSound;//The user defined choice for music and sound
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    music=sound=true;
+    music=sound=hardSetSound=hardSetMusic=true;
     
     //Load up the audio
     NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Theme.mp3",[[NSBundle mainBundle]resourcePath]]];
@@ -53,17 +54,37 @@ static bool music,sound;
     else
         [musicPlayer play];
 }
-
-+(BOOL)getMusic{return music;}
-
-+(BOOL)getSound{return sound;}
-
 +(void)toggleSound{
     if(sound)
         sound=false;
     else
         sound=true;
 }
++(void)toggleHardMusic{
+    if(hardSetMusic)
+        hardSetMusic=false;
+    else
+        hardSetMusic=true;
+}
++(void)toggleHardSound{
+    if(hardSetSound)
+        hardSetSound=false;
+    else
+        hardSetSound=true;
+}
+
++(BOOL)getMusic{return music;}
+
++(BOOL)getSound{return sound;}
+
++(BOOL)getHardMusic{return hardSetMusic;}
+
++(BOOL)getHardSound{return hardSetSound;}
+
++(void)setHardMusic:(BOOL)on{hardSetMusic=on;} 
++(void)setHardSound:(BOOL)on{hardSetSound=on;} 
+
+
 
 +(AVAudioPlayer *)getPlayer
 {

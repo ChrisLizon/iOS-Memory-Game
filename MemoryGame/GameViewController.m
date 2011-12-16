@@ -39,9 +39,9 @@ static bool sound;
             [[AppDelegate getPlayer] stop];
     }else{
         sound=true;
-        if([AppDelegate getMusic]==false)
+        if([AppDelegate getHardMusic]==true)
             [AppDelegate toggleMusic];
-        if([AppDelegate getSound]==false)
+        if([AppDelegate getHardSound]==true)
             [AppDelegate toggleSound];
         if([AppDelegate getMusic]&&[[AppDelegate getPlayer] isPlaying]==false){
             [[AppDelegate getPlayer] play];
@@ -284,6 +284,7 @@ static bool sound;
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
