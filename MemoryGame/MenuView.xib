@@ -214,15 +214,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">mpScreen:</string>
-						<reference key="source" ref="458902342"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">11</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">infoScreen:</string>
 						<reference key="source" ref="406741861"/>
 						<reference key="destination" ref="372490531"/>
@@ -322,11 +313,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-<<<<<<< HEAD
-			<int key="maxID">11</int>
-=======
 			<int key="maxID">12</int>
->>>>>>> ecf441a6bec340e2059655ae018d63c95fb2663b
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -335,11 +322,7 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="infoScreen:">id</string>
-<<<<<<< HEAD
-						<string key="mpScreen:">id</string>
-=======
 						<string key="settingsScreen:">id</string>
->>>>>>> ecf441a6bec340e2059655ae018d63c95fb2663b
 						<string key="singlePlayerGame:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -347,13 +330,8 @@
 							<string key="name">infoScreen:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-<<<<<<< HEAD
-						<object class="IBActionInfo" key="mpScreen:">
-							<string key="name">mpScreen:</string>
-=======
 						<object class="IBActionInfo" key="settingsScreen:">
 							<string key="name">settingsScreen:</string>
->>>>>>> ecf441a6bec340e2059655ae018d63c95fb2663b
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="singlePlayerGame:">
