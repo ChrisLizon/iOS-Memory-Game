@@ -7,8 +7,13 @@
 //
 
 #import "SettingsViewController.h"
+#import "SwitchViewController.h"
 
 @implementation SettingsViewController
+
+-(IBAction)backToMenu:(id)sender{
+    [SwitchViewController switchToMenu];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

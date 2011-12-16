@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
-
+-(IBAction)backToMenu:(id)sender;
 @end
