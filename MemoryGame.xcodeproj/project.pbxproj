@@ -52,6 +52,7 @@
 		AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC286D93149BA76F0041FC93 /* SettingsViewController.m */; };
 		AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC286D94149BA76F0041FC93 /* SettingsViewController.xib */; };
 		AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC576BE9149A5A130076D38A /* Theme.mp3 */; };
+		AC76D410149BF7020067E240 /* sound-off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC76D40F149BF7020067E240 /* sound-off.png */; };
 		AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC93094214993EA000C31263 /* AVFoundation.framework */; };
 		ACB9869C149A88AF0045930B /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9869B149A88AF0045930B /* flip.caf */; };
 		ACEF96E9149BC8D3000ED8EF /* NetworkGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF96E7149BC8D3000ED8EF /* NetworkGameController.m */; };
@@ -125,10 +126,8 @@
 		AC286D93149BA76F0041FC93 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		AC286D94149BA76F0041FC93 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		AC576BE9149A5A130076D38A /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
+		AC76D40F149BF7020067E240 /* sound-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sound-off.png"; sourceTree = "<group>"; };
 		AC93094214993EA000C31263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
-		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
-		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
 		ACB9869B149A88AF0045930B /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
 		ACEF96E6149BC8D3000ED8EF /* NetworkGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkGameController.h; sourceTree = "<group>"; };
 		ACEF96E7149BC8D3000ED8EF /* NetworkGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkGameController.m; sourceTree = "<group>"; };
@@ -311,6 +310,7 @@
 		9A1A6F561472EF160045588E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AC76D40F149BF7020067E240 /* sound-off.png */,
 				AC0D141A149BC2BF0030AB71 /* sound.png */,
 				9AAA673E14912C0C00CA2FBF /* Team615-Info */,
 				41CD8E701489759600E39D65 /* menubackground@2x.png */,
@@ -376,9 +376,6 @@
 				AC11B10F149A8F3A000D3FCB /* flop.caf */,
 				AC11B111149A8F41000D3FCB /* win.caf */,
 				AC576BE9149A5A130076D38A /* Theme.mp3 */,
-				ACA744B314992F3B00F3D5F8 /* flip.wav */,
-				ACA744B414992F3B00F3D5F8 /* flop.wav */,
-				ACA744B514992F3B00F3D5F8 /* test2.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -484,6 +481,7 @@
 				4005F474149A7CD400039B35 /* MPViewController.xib in Resources */,
 				ACEF96EA149BC8D3000ED8EF /* NetworkGameController.xib in Resources */,
 				AC0D141B149BC2BF0030AB71 /* sound.png in Resources */,
+				AC76D410149BF7020067E240 /* sound-off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
