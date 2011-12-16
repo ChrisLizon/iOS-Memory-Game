@@ -27,6 +27,7 @@
 
 -(IBAction)cardClicked:(id)sender;
 -(IBAction)quitGame:(id)sender;
+-(IBAction)volumeToggle:(id)sender;
 
 -(void)flipCardAtIndex:(int)index;
 -(void)disableCards;
