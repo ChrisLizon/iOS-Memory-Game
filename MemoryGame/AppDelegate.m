@@ -17,10 +17,11 @@
 @synthesize switchViewController;
 
 static AVAudioPlayer *musicPlayer;
+static bool music,sound;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+    music=sound=true;
     
     //Load up the audio
     NSURL *url=[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Theme.mp3",[[NSBundle mainBundle]resourcePath]]];
@@ -40,6 +41,28 @@ static AVAudioPlayer *musicPlayer;
     
 
     return YES;
+}
+
++(void)toggleMusic{
+    if(music)
+        music=false;
+    else
+        music=true;
+    if([musicPlayer isPlaying])
+        [musicPlayer stop];
+    else
+        [musicPlayer play];
+}
+
++(BOOL)getMusic{return music;}
+
++(BOOL)getSound{return sound;}
+
++(void)toggleSound{
+    if(sound)
+        sound=false;
+    else
+        sound=true;
 }
 
 +(AVAudioPlayer *)getPlayer

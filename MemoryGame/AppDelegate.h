@@ -23,4 +23,9 @@
 +(AVAudioPlayer *)getPlayer;
 +(void)setPlayer:(AVAudioPlayer *)player;
 
++(void)toggleMusic;
++(BOOL)getMusic;
++(void)toggleSound;
++(BOOL)getSound;
+
 @end

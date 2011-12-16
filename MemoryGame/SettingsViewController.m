@@ -8,11 +8,20 @@
 
 #import "SettingsViewController.h"
 #import "SwitchViewController.h"
+#import "AppDelegate.h"
 
 @implementation SettingsViewController
 
 -(IBAction)backToMenu:(id)sender{
     [SwitchViewController switchToMenu];
+}
+
+-(IBAction)toggleMusic:(id)sender{
+    [AppDelegate toggleMusic];
+}
+
+-(IBAction)toggleSound:(id)sender{
+    [AppDelegate toggleSound];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

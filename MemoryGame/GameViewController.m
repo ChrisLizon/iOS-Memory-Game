@@ -54,22 +54,25 @@ static AVAudioPlayer *soundPlayer;
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
-    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-    soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-    soundPlayer.numberOfLoops=0;
-    [soundPlayer prepareToPlay];
-    
+    if([AppDelegate getSound]){
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=0;
+        [soundPlayer prepareToPlay];
+    }
 
 }
 
 
 - (IBAction)cardClicked:(id)sender{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
-    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-    soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-    soundPlayer.numberOfLoops=0;
-    [soundPlayer play];
+    if([AppDelegate getSound]){
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=0;
+        [soundPlayer play];
+    }
     //get the car index from the UIButton's tag value.
     
     NSInteger index = [sender tag];
@@ -127,11 +130,13 @@ static AVAudioPlayer *soundPlayer;
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
         
         //Flop sound
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flop" ofType:@"caf"];
-        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-        soundPlayer.numberOfLoops=0;
-        [soundPlayer play];
+        if([AppDelegate getSound]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flop" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=0;
+            [soundPlayer play];
+        }
     }
     turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
 
@@ -142,12 +147,13 @@ static AVAudioPlayer *soundPlayer;
     if(pairsFound==8){
         [[AppDelegate getPlayer] stop];
         
-        
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
-        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-        soundPlayer.numberOfLoops=-1;
-        [soundPlayer play];
+        if([AppDelegate getMusic]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=-1;
+            [soundPlayer play];
+        }
     }
         
 }
@@ -169,8 +175,10 @@ static AVAudioPlayer *soundPlayer;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex == [alertView cancelButtonIndex]){
-        [soundPlayer stop];
-        [[AppDelegate getPlayer] play];
+        if([AppDelegate getMusic]){
+            [soundPlayer stop];
+            [[AppDelegate getPlayer] play];
+        }
         [SwitchViewController switchToMenu];
     }
 }

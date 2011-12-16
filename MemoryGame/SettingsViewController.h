@@ -10,4 +10,6 @@
 
 @interface SettingsViewController : UIViewController
 -(IBAction)backToMenu:(id)sender;
+-(IBAction)toggleMusic:(id)sender;
+-(IBAction)toggleSound:(id)sender;
 @end
