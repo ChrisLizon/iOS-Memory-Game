@@ -17,6 +17,8 @@
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
 
+@synthesize inputStream, outputStream;
+
 static bool sound;
 static AVAudioPlayer *soundPlayer;
 
@@ -66,6 +68,11 @@ static AVAudioPlayer *soundPlayer;
              
              nil];
     
+    
+    for(int i = 0; i < 16; i++){
+        [[imageviews objectAtIndex:i] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
+    }
+    
     if([AppDelegate getSound]){
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
         NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
@@ -81,11 +88,13 @@ static AVAudioPlayer *soundPlayer;
     //get the car index from the UIButton's tag value.
     
     NSInteger index = [sender tag];
-    [self flipCardAtIndex:index];
+    //[self flipCardAtIndex:index];
 
     [sender setEnabled:NO];
     
-    //TODO SEND SELECT OVER SOCKET
+    NSString *response  = [NSString stringWithFormat:@"select %d\n", index];
+	NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
+	[outputStream write:[data bytes] maxLength:[data length]];
     
     flippedCards ++;
     
@@ -112,6 +121,8 @@ static AVAudioPlayer *soundPlayer;
             soundPlayer.numberOfLoops=0;
             [soundPlayer play];
         }
+    
+    NSLog(@"Index: %d", index);
     [[imageviews objectAtIndex:index] setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateNormal];
     [[imageviews objectAtIndex:index] setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateDisabled];
     
@@ -135,6 +146,8 @@ static AVAudioPlayer *soundPlayer;
 }
 
 - (void) removeCardsAtIndex:(int)index1 andIndex:(int)index2{
+    
+    NSLog(@"Removing %d and %d", index1, index2);
     [[imageviews objectAtIndex:index1] setHidden: true];
     [[imageviews objectAtIndex:index2] setHidden: true];
 }
@@ -176,6 +189,101 @@ static AVAudioPlayer *soundPlayer;
     
 }
 
+- (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent {
+    
+	switch (streamEvent) {
+            
+		case NSStreamEventOpenCompleted:
+			NSLog(@"Stream opened");
+			break;
+            
+		case NSStreamEventHasBytesAvailable:
+			if (theStream == inputStream) {
+                
+                uint8_t buffer[1024];
+                int len;
+                
+                while ([inputStream hasBytesAvailable]) {
+                    len = [inputStream read:buffer maxLength:sizeof(buffer)];
+                    if (len > 0) {
+                        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+                        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+                        
+                        NSString *output = [[NSString alloc] initWithBytes:buffer length:len encoding:NSASCIIStringEncoding];
+                        
+                        NSArray *chunks = [output componentsSeparatedByString:@"\n"];
+                        
+                        for(int i = 0; i < [chunks count]; i++){
+                            
+                            NSString *rawcommand = [chunks objectAtIndex:i];
+                            NSString *tempcommand = [rawcommand stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+                            NSString *command = [tempcommand stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+
+                           
+                            if (command != nil && ![command isEqualToString:@""]) {
+                                
+                                if([command isEqualToString:@"loaded"]){
+                                    //remove progress dialogs?
+                                }else if([command hasPrefix:@"cardorder"]){
+                                    NSArray * vals = [command componentsSeparatedByString:@" "];
+                                    for(int i = 0; i< 16; i++){
+                                    
+                                        NSNumber * card = [f numberFromString:[vals objectAtIndex:i+1]];
+                                        
+                                        
+                                        
+                                    }
+
+                                }else if([command hasPrefix:@"flip"]){
+                                    NSArray * vals = [command componentsSeparatedByString:@" "];
+                                    NSNumber * test = [f numberFromString:[vals objectAtIndex:1]];
+                                    NSLog(@"flipping \"%@\"", [vals objectAtIndex:1] );
+                                    [self flipCardAtIndex: [test integerValue]];
+                                        
+                                }else if([command hasPrefix:@"remove"]){
+                                    
+                                    NSArray * vals = [command componentsSeparatedByString:@" "];
+                                    [self removeCardsAtIndex:[[f numberFromString:[vals objectAtIndex:1]] integerValue]
+                                                      andIndex:[[f numberFromString:[vals objectAtIndex:2]] integerValue]];
+                                        
+                                }else if([command hasPrefix:@"flop"]){
+                                    
+                                    NSArray * vals = [command componentsSeparatedByString:@" "];
+                                    [self flipCardsBackAtIndex:[[f numberFromString:[vals objectAtIndex:1]] integerValue]
+                                                      andIndex:[[f numberFromString:[vals objectAtIndex:2]] integerValue]];
+                                    
+                                }else if([command hasPrefix:@"enableall"]){
+                                    [self enableCards];
+                                    
+                                }else if([command hasPrefix:@"disableall"]){
+                                    [self disableCards];
+                                }
+                                
+                                
+                                NSLog(@"server said: %@", command);
+                            }
+                        }
+//                        
+//                        if (nil != output) {
+//                            NSLog(@"server said: %@", output);
+//                        }
+                    }
+                }
+            }
+            break;			
+            
+		case NSStreamEventErrorOccurred:
+			NSLog(@"Can not connect to the host!");
+			break;
+            
+		case NSStreamEventEndEncountered:
+			break;
+            
+		//default:
+			//NSLog(@"Unknown event");
+	}
+    
+}
 
 
 - (IBAction)quitGame:(id)sender{
@@ -198,9 +306,14 @@ static AVAudioPlayer *soundPlayer;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex == [alertView cancelButtonIndex]){
-        //TODO SEND QUIT OVER SOCKET
-        //TEAR DOWN SOCKET
+   
         
+        NSString *response  = @"quit\n";
+        NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
+        [outputStream write:[data bytes] maxLength:[data length]];
+        
+        //TEAR DOWN SOCKET
+
         [SwitchViewController switchToMenu];
         
     }
