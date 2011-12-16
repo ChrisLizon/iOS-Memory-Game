@@ -32,4 +32,7 @@
 
 -(IBAction)toggleHost:(id)sender;
 
+-(IBAction)startGame:(id)sender;
+-(IBAction)joinGame:(id)sender;
+
 @end

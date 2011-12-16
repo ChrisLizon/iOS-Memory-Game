@@ -54,6 +54,15 @@
     
 }
 
+-(IBAction)startGame:(id)sender{
+    [SwitchViewController switchToNetworkGame];
+}
+-(IBAction)joinGame:(id)sender{
+    printf("Hello World\n");
+    [SwitchViewController switchToNetworkGame];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.

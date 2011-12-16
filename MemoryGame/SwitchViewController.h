@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @class GameViewController;
 @class MenuViewController;
+@class NetworkGameController;
 @class InfoViewController;
 @class MPViewController;
 
@@ -23,10 +24,12 @@
 @property (retain, nonatomic) MenuViewController *menuViewController;
 @property (retain, nonatomic) InfoViewController *infoViewController;
 @property (retain, nonatomic) MPViewController *mpViewController;
+@property (retain, nonatomic) NetworkGameController *netGameController;
 
 
 + (void)switchToGame;
 + (void)switchToMenu;
 + (void)switchToInfo;
 + (void)switchToMultiplayer;
++ (void)switchToNetworkGame;
 @end

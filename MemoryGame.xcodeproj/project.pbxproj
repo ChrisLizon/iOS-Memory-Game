@@ -46,6 +46,8 @@
 		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
 		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
+		AC4FD9B9149BB13C00788450 /* NetworkGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4FD9B7149BB13C00788450 /* NetworkGameController.m */; };
+		AC4FD9BA149BB13C00788450 /* NetworkGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4FD9B8149BB13C00788450 /* NetworkGameController.xib */; };
 		ACA744B614992F3B00F3D5F8 /* flip.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B314992F3B00F3D5F8 /* flip.wav */; };
 		ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B414992F3B00F3D5F8 /* flop.wav */; };
 		ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B514992F3B00F3D5F8 /* test2.wav */; };
@@ -111,6 +113,9 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
+		AC4FD9B6149BB13C00788450 /* NetworkGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkGameController.h; sourceTree = "<group>"; };
+		AC4FD9B7149BB13C00788450 /* NetworkGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkGameController.m; sourceTree = "<group>"; };
+		AC4FD9B8149BB13C00788450 /* NetworkGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkGameController.xib; sourceTree = "<group>"; };
 		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
 		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
 		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				AC4FD9B4149BB10400788450 /* NetworkGame */,
 				4005F46F149A7C0700039B35 /* MultiplayerView */,
 				9AD06A5A149129B2004FFC54 /* InfoView */,
 				404D3D431486D7D000998730 /* Delegate */,
@@ -323,6 +329,16 @@
 				9AD1D5861489553600D864EE /* SwitchViewController.xib */,
 			);
 			name = SwitchView;
+			sourceTree = "<group>";
+		};
+		AC4FD9B4149BB10400788450 /* NetworkGame */ = {
+			isa = PBXGroup;
+			children = (
+				AC4FD9B6149BB13C00788450 /* NetworkGameController.h */,
+				AC4FD9B7149BB13C00788450 /* NetworkGameController.m */,
+				AC4FD9B8149BB13C00788450 /* NetworkGameController.xib */,
+			);
+			name = NetworkGame;
 			sourceTree = "<group>";
 		};
 		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
@@ -432,6 +448,7 @@
 				ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */,
 				ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */,
 				4005F474149A7CD400039B35 /* MPViewController.xib in Resources */,
+				AC4FD9BA149BB13C00788450 /* NetworkGameController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +490,7 @@
 				9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */,
 				9AD06A5E149129D3004FFC54 /* InfoViewController.m in Sources */,
 				4005F472149A7C8100039B35 /* MPViewController.m in Sources */,
+				AC4FD9B9149BB13C00788450 /* NetworkGameController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "MenuViewController.h"
 #import "GameViewController.h"
 #import "InfoViewController.h"
+#import "NetworkGameController.h"
 #import "MPViewController.h"
 
 @implementation SwitchViewController
@@ -18,6 +19,7 @@
 @synthesize menuViewController;
 @synthesize infoViewController;
 @synthesize mpViewController;
+@synthesize netGameController;
 
 static SwitchViewController *instance = NULL;
 
@@ -101,15 +103,18 @@ static SwitchViewController *instance = NULL;
             [instance.gameViewController viewWillDisappear:YES];
             [instance.infoViewController viewWillDisappear:YES];
             [instance.mpViewController viewWillDisappear:YES];
+            [instance.netGameController viewWillDisappear:YES];
             
             [instance.gameViewController.view removeFromSuperview];
             [instance.infoViewController.view removeFromSuperview];
             [instance.mpViewController.view removeFromSuperview];
+            [instance.netGameController.view removeFromSuperview];
             [instance.view insertSubview:instance.menuViewController.view atIndex:0];
             
             [instance.mpViewController viewDidDisappear:YES];
             [instance.gameViewController viewDidDisappear:YES];
             [instance.infoViewController viewDidDisappear:YES];
+            [instance.netGameController viewDidDisappear:YES];
             [instance.menuViewController viewDidAppear:YES];
             
             } completion:nil];
@@ -174,6 +179,33 @@ static SwitchViewController *instance = NULL;
             [instance.gameViewController viewDidDisappear:YES];
             [instance.infoViewController viewDidDisappear:YES];
             [instance.mpViewController viewDidAppear:YES];
+            
+        } completion:nil];
+    }
+}
+
++(void)switchToNetworkGame{
+    if (instance.netGameController.view.superview == nil)
+    {
+        
+        if (instance.netGameController == nil)
+        {
+            instance.netGameController =
+            [[NetworkGameController alloc] initWithNibName:@"GameViewController" bundle:nil];
+            
+        }
+        
+        [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+            
+            [instance.mpViewController viewWillDisappear:YES];
+            [instance.netGameController viewWillAppear:YES];
+            
+            [instance.mpViewController.view removeFromSuperview];
+            [instance.view insertSubview:instance.netGameController.view atIndex:0];
+            
+            [instance.mpViewController viewDidDisappear:YES];
+            [instance.netGameController viewDidAppear:YES];
+
             
         } completion:nil];
     }
