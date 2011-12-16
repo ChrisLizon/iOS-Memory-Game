@@ -9,6 +9,7 @@ build/
 *.perspectivev3
 MemoryGame.xcodeproj/xcuserdata/*
 MemoryGame.xcodeproj/project.xcworkspace/xcuserdata/*
+MemoryGame/en.lproj/.DS_Store
 
 MemoryGame.xcodeproj/project.xcworkspace/xcuserdata/herpderp.xcuserdatad/UserInterfaceState.xcuserstate
 

@@ -8,6 +8,7 @@
 
 #import "NetworkGameController.h"
 #import "SwitchViewController.h"
+#import "AppDelegate.h"
 #import <stdlib.h>
 
 @implementation NetworkGameController
@@ -16,7 +17,21 @@
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
 
-@synthesize inputStream, outputStream;
+static bool sound;
+static AVAudioPlayer *soundPlayer;
+
+-(IBAction)volumeToggle:(id)sender{
+    if(sound){
+        sound=false;
+        if([[AppDelegate getPlayer] isPlaying])
+            [[AppDelegate getPlayer] stop];
+    }else{
+        sound=true;
+        if([AppDelegate getMusic]&&[[AppDelegate getPlayer] isPlaying]==false){
+            [[AppDelegate getPlayer] play];
+        }
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +47,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    sound=true;
+    if([AppDelegate getMusic]==false&&[AppDelegate getSound]==false){
+        sound=false;
+    }
     // Do any additional setup after loading the view from its nib.
     
     cards = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Card0.png"],
@@ -46,9 +66,17 @@
              
              nil];
     
+    if([AppDelegate getSound]){
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=0;
+        [soundPlayer prepareToPlay];
+    }
 }
 
 - (IBAction)cardClicked:(id)sender{
+    
     
     //get the car index from the UIButton's tag value.
     
@@ -76,7 +104,14 @@
 }
 
 - (void) flipCardAtIndex:(int)index{
-    
+    if(sound)
+        if([AppDelegate getSound]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=0;
+            [soundPlayer play];
+        }
     [[imageviews objectAtIndex:index] setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateNormal];
     [[imageviews objectAtIndex:index] setImage:[cards objectAtIndex:[[assignments objectAtIndex:index] intValue]] forState:UIControlStateDisabled];
     
@@ -105,6 +140,15 @@
 }
 
 - (void) flipCardsBackAtIndex:(int)index1 andIndex:(int)index2{
+    //Flop sound
+    if(sound)
+        if([AppDelegate getSound]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flop" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=0;
+            [soundPlayer play];
+        }
     [[imageviews objectAtIndex:index1] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
     [[imageviews objectAtIndex:index1] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
     
