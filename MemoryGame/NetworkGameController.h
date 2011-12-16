@@ -42,6 +42,8 @@
 -(void)flipCardAtIndex:(int)index;
 -(void)disableCards;
 -(void)enableCards;
+-(void)win;
+-(void)lose;
 -(void)setScoreWithPlayerScore:(NSString*)player andOpponentScore:(NSString*)opponent;
 -(void)removeCardsAtIndex:(int)index1 andIndex:(int)index2;
 -(void)flipCardsBackAtIndex:(int)index1 andIndex:(int)index2;

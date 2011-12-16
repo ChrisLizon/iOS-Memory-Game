@@ -194,6 +194,16 @@ static AVAudioPlayer *soundPlayer;
       
 }
 
+-(void)win{
+
+
+}
+
+-(void)lose{
+
+
+}
+
 
 - (void)initNetworkCommunication {
     CFReadStreamRef readStream;
@@ -282,6 +292,11 @@ static AVAudioPlayer *soundPlayer;
                                     
                                 }else if([command hasPrefix:@"disableall"]){
                                     [self disableCards];
+                                }else if([command hasPrefix:@"win"]){
+                                    [self win];
+                                    
+                                }else if([command hasPrefix:@"lose"]){
+                                    [self lose];
                                 }else if([command hasPrefix:@"score"]){
                                     NSArray * vals = [command componentsSeparatedByString:@" "];
                                     [self setScoreWithPlayerScore:[vals objectAtIndex:1]
