@@ -74,15 +74,11 @@
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="255004995"/>
 								</object>
-								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="974536091">
+								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="819236587">
 									<object class="NSCustomResource" key="IBUIImage">
 										<string key="NSClassName">NSImage</string>
 										<string key="NSResourceName">sound.png</string>
 									</object>
-									<double key="IBUIImageInsets.top">0.0</double>
-									<double key="IBUIImageInsets.bottom">0.0</double>
-									<double key="IBUIImageInsets.left">2</double>
-									<double key="IBUIImageInsets.right">0.0</double>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="255004995"/>
@@ -97,7 +93,6 @@
 						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:260</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<array key="IBUIItems">
@@ -971,7 +966,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">volumeToggle:</string>
-						<reference key="source" ref="974536091"/>
+						<reference key="source" ref="819236587"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">105</int>
@@ -1138,7 +1133,7 @@
 						<reference key="object" ref="255004995"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="861383921"/>
-							<reference ref="974536091"/>
+							<reference ref="819236587"/>
 						</array>
 						<reference key="parent" ref="861422845"/>
 					</object>
@@ -1168,15 +1163,14 @@
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
-<<<<<<< HEAD
-						<int key="objectID">104</int>
-						<reference key="object" ref="974536091"/>
-						<reference key="parent" ref="255004995"/>
-=======
 						<int key="objectID">103</int>
 						<reference key="object" ref="475579458"/>
 						<reference key="parent" ref="774585933"/>
->>>>>>> ed2ce9c31764657adf43504ab2ebbf498f63f867
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">104</int>
+						<reference key="object" ref="819236587"/>
+						<reference key="parent" ref="255004995"/>
 					</object>
 				</array>
 			</object>
@@ -1188,11 +1182,8 @@
 				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="100.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="101.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-<<<<<<< HEAD
-				<string key="104.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-=======
 				<string key="103.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
->>>>>>> ed2ce9c31764657adf43504ab2ebbf498f63f867
+				<string key="104.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1238,11 +1229,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-<<<<<<< HEAD
 			<int key="maxID">105</int>
-=======
-			<int key="maxID">103</int>
->>>>>>> ed2ce9c31764657adf43504ab2ebbf498f63f867
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1313,11 +1300,8 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="CardBack.png">{60, 60}</string>
-<<<<<<< HEAD
-			<string key="sound.png">{43, 43}</string>
-=======
 			<string key="menubackground.png">{320, 480}</string>
->>>>>>> ed2ce9c31764657adf43504ab2ebbf498f63f867
+			<string key="sound.png">{43, 43}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
