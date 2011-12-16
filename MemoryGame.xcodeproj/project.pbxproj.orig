@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4005F472149A7C8100039B35 /* MPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005F471149A7C8100039B35 /* MPViewController.m */; };
+		4005F474149A7CD400039B35 /* MPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4005F473149A7CD400039B35 /* MPViewController.xib */; };
+		404D3D331486D25800998730 /* Card0.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2A1486D25800998730 /* Card0.png */; };
+		404D3D341486D25800998730 /* Card1.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2B1486D25800998730 /* Card1.png */; };
+		404D3D351486D25800998730 /* Card2.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2C1486D25800998730 /* Card2.png */; };
+		404D3D361486D25800998730 /* Card3.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2D1486D25800998730 /* Card3.png */; };
+		404D3D371486D25800998730 /* Card4.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2E1486D25800998730 /* Card4.png */; };
+		404D3D381486D25800998730 /* Card5.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2F1486D25800998730 /* Card5.png */; };
+		404D3D391486D25900998730 /* Card6.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D301486D25800998730 /* Card6.png */; };
+		404D3D3A1486D25900998730 /* Card7.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D311486D25800998730 /* Card7.png */; };
+		404D3D3B1486D25900998730 /* CardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D321486D25800998730 /* CardBack.png */; };
+		404D3D471486DCB300998730 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D461486DCB300998730 /* MenuView.xib */; };
+		404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404D3D491486DDB800998730 /* MenuViewController.m */; };
+		41CD8E6C148974B800E39D65 /* menubackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6B148974B800E39D65 /* menubackground.png */; };
+		41CD8E6F1489753200E39D65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6E1489753200E39D65 /* Default.png */; };
+		41CD8E711489759600E39D65 /* menubackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E701489759600E39D65 /* menubackground@2x.png */; };
+		41CD8E73148975B600E39D65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E72148975B600E39D65 /* Default@2x.png */; };
+		9A1A6F1E1472EEA70045588E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1D1472EEA70045588E /* UIKit.framework */; };
+		9A1A6F201472EEA70045588E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1F1472EEA70045588E /* Foundation.framework */; };
+		9A1A6F221472EEA70045588E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F211472EEA70045588E /* CoreGraphics.framework */; };
+		9A1A6F281472EEA70045588E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F261472EEA70045588E /* InfoPlist.strings */; };
+		9A1A6F2A1472EEA70045588E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F291472EEA70045588E /* main.m */; };
+		9A1A6F2E1472EEA80045588E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F2D1472EEA80045588E /* AppDelegate.m */; };
+		9A1A6F311472EEA80045588E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F301472EEA80045588E /* GameViewController.m */; };
+		9A1A6F341472EEA80045588E /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F321472EEA80045588E /* GameViewController.xib */; };
+		9A1A6F3F1472EEA80045588E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */; };
+		9A1A6F401472EEA80045588E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1D1472EEA70045588E /* UIKit.framework */; };
+		9A1A6F411472EEA80045588E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A6F1F1472EEA70045588E /* Foundation.framework */; };
+		9A1A6F491472EEA80045588E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F471472EEA80045588E /* InfoPlist.strings */; };
+		9A1A6F4C1472EEA80045588E /* MemoryGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1A6F4B1472EEA80045588E /* MemoryGameTests.m */; };
+		9A1A6F701472F2D60045588E /* Application_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F6F1472F2D60045588E /* Application_Icon.png */; };
+		9A1A6F721472F2DC0045588E /* Application_Icon_HR.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */; };
+		9A1A6F861472F3950045588E /* App_Store_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1A6F851472F3950045588E /* App_Store_Icon.png */; };
+		9AAA67481491422900CA2FBF /* ben.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA67461491422800CA2FBF /* ben.png */; };
+		9AAA67491491422900CA2FBF /* chris.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA67471491422800CA2FBF /* chris.jpeg */; };
+		9AD06A5E149129D3004FFC54 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD06A5D149129D3004FFC54 /* InfoViewController.m */; };
+		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
+		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
+		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
+		AC0D141B149BC2BF0030AB71 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0D141A149BC2BF0030AB71 /* sound.png */; };
+		AC11B110149A8F3A000D3FCB /* flop.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B10F149A8F3A000D3FCB /* flop.caf */; };
+		AC11B112149A8F41000D3FCB /* win.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B111149A8F41000D3FCB /* win.caf */; };
+		AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC286D93149BA76F0041FC93 /* SettingsViewController.m */; };
+		AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC286D94149BA76F0041FC93 /* SettingsViewController.xib */; };
+		AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC576BE9149A5A130076D38A /* Theme.mp3 */; };
+		AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC93094214993EA000C31263 /* AVFoundation.framework */; };
+		ACB9869C149A88AF0045930B /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9869B149A88AF0045930B /* flip.caf */; };
+		ACEF96E9149BC8D3000ED8EF /* NetworkGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF96E7149BC8D3000ED8EF /* NetworkGameController.m */; };
+		ACEF96EA149BC8D3000ED8EF /* NetworkGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEF96E8149BC8D3000ED8EF /* NetworkGameController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A1A6F421472EEA80045588E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1A6F101472EEA70045588E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A1A6F181472EEA70045588E;
+			remoteInfo = MemoryGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4005F470149A7C8100039B35 /* MPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPViewController.h; sourceTree = "<group>"; };
+		4005F471149A7C8100039B35 /* MPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPViewController.m; sourceTree = "<group>"; };
+		4005F473149A7CD400039B35 /* MPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPViewController.xib; sourceTree = "<group>"; };
+		404D3D2A1486D25800998730 /* Card0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card0.png; sourceTree = "<group>"; };
+		404D3D2B1486D25800998730 /* Card1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card1.png; sourceTree = "<group>"; };
+		404D3D2C1486D25800998730 /* Card2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card2.png; sourceTree = "<group>"; };
+		404D3D2D1486D25800998730 /* Card3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card3.png; sourceTree = "<group>"; };
+		404D3D2E1486D25800998730 /* Card4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card4.png; sourceTree = "<group>"; };
+		404D3D2F1486D25800998730 /* Card5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card5.png; sourceTree = "<group>"; };
+		404D3D301486D25800998730 /* Card6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card6.png; sourceTree = "<group>"; };
+		404D3D311486D25800998730 /* Card7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card7.png; sourceTree = "<group>"; };
+		404D3D321486D25800998730 /* CardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBack.png; sourceTree = "<group>"; };
+		404D3D461486DCB300998730 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		404D3D481486DDB800998730 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		404D3D491486DDB800998730 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		41CD8E6B148974B800E39D65 /* menubackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubackground.png; sourceTree = "<group>"; };
+		41CD8E6E1489753200E39D65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		41CD8E701489759600E39D65 /* menubackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubackground@2x.png"; sourceTree = "<group>"; };
+		41CD8E72148975B600E39D65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9A1A6F191472EEA70045588E /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1A6F1D1472EEA70045588E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9A1A6F1F1472EEA70045588E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9A1A6F211472EEA70045588E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9A1A6F251472EEA70045588E /* MemoryGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryGame-Info.plist"; sourceTree = "<group>"; };
+		9A1A6F271472EEA70045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A1A6F291472EEA70045588E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A1A6F2B1472EEA70045588E /* MemoryGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryGame-Prefix.pch"; sourceTree = "<group>"; };
+		9A1A6F2C1472EEA80045588E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9A1A6F2D1472EEA80045588E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9A1A6F2F1472EEA80045588E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		9A1A6F301472EEA80045588E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		9A1A6F331472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameViewController.xib; sourceTree = "<group>"; };
+		9A1A6F3D1472EEA80045588E /* MemoryGameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9A1A6F461472EEA80045588E /* MemoryGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryGameTests-Info.plist"; sourceTree = "<group>"; };
+		9A1A6F481472EEA80045588E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A1A6F4A1472EEA80045588E /* MemoryGameTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryGameTests.h; sourceTree = "<group>"; };
+		9A1A6F4B1472EEA80045588E /* MemoryGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryGameTests.m; sourceTree = "<group>"; };
+		9A1A6F6F1472F2D60045588E /* Application_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Application_Icon.png; sourceTree = "<group>"; };
+		9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Application_Icon_HR.png; sourceTree = "<group>"; };
+		9A1A6F851472F3950045588E /* App_Store_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Store_Icon.png; sourceTree = "<group>"; };
+		9AAA67461491422800CA2FBF /* ben.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ben.png; sourceTree = "<group>"; };
+		9AAA67471491422800CA2FBF /* chris.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chris.jpeg; sourceTree = "<group>"; };
+		9AD06A5C149129D3004FFC54 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		9AD06A5D149129D3004FFC54 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		9AD06A5F149129E0004FFC54 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
+		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
+		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
+		AC0D141A149BC2BF0030AB71 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
+		AC11B10F149A8F3A000D3FCB /* flop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flop.caf; sourceTree = "<group>"; };
+		AC11B111149A8F41000D3FCB /* win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.caf; sourceTree = "<group>"; };
+		AC286D92149BA76F0041FC93 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AC286D93149BA76F0041FC93 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		AC286D94149BA76F0041FC93 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		AC576BE9149A5A130076D38A /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
+		AC93094214993EA000C31263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
+		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
+		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
+		ACB9869B149A88AF0045930B /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
+		ACEF96E6149BC8D3000ED8EF /* NetworkGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkGameController.h; sourceTree = "<group>"; };
+		ACEF96E7149BC8D3000ED8EF /* NetworkGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkGameController.m; sourceTree = "<group>"; };
+		ACEF96E8149BC8D3000ED8EF /* NetworkGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkGameController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A1A6F161472EEA70045588E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */,
+				9A1A6F1E1472EEA70045588E /* UIKit.framework in Frameworks */,
+				9A1A6F201472EEA70045588E /* Foundation.framework in Frameworks */,
+				9A1A6F221472EEA70045588E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1A6F391472EEA80045588E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1A6F3F1472EEA80045588E /* SenTestingKit.framework in Frameworks */,
+				9A1A6F401472EEA80045588E /* UIKit.framework in Frameworks */,
+				9A1A6F411472EEA80045588E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4002EC7E148756C000B0CF31 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
+				9A1A6F301472EEA80045588E /* GameViewController.m */,
+				9A1A6F321472EEA80045588E /* GameViewController.xib */,
+			);
+			name = GameView;
+			sourceTree = "<group>";
+		};
+		4005F46F149A7C0700039B35 /* MultiplayerView */ = {
+			isa = PBXGroup;
+			children = (
+				4005F470149A7C8100039B35 /* MPViewController.h */,
+				4005F471149A7C8100039B35 /* MPViewController.m */,
+				4005F473149A7CD400039B35 /* MPViewController.xib */,
+			);
+			name = MultiplayerView;
+			sourceTree = "<group>";
+		};
+		404D3D291486D25800998730 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				404D3D2A1486D25800998730 /* Card0.png */,
+				404D3D2B1486D25800998730 /* Card1.png */,
+				404D3D2C1486D25800998730 /* Card2.png */,
+				404D3D2D1486D25800998730 /* Card3.png */,
+				404D3D2E1486D25800998730 /* Card4.png */,
+				404D3D2F1486D25800998730 /* Card5.png */,
+				404D3D301486D25800998730 /* Card6.png */,
+				404D3D311486D25800998730 /* Card7.png */,
+				404D3D321486D25800998730 /* CardBack.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		404D3D401486D6B600998730 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				404D3D481486DDB800998730 /* MenuViewController.h */,
+				404D3D491486DDB800998730 /* MenuViewController.m */,
+				404D3D461486DCB300998730 /* MenuView.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		404D3D431486D7D000998730 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F2D1472EEA80045588E /* AppDelegate.m */,
+				9A1A6F2C1472EEA80045588E /* AppDelegate.h */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		9A1A6F0E1472EEA70045588E = {
+			isa = PBXGroup;
+			children = (
+				AC93094214993EA000C31263 /* AVFoundation.framework */,
+				41CD8E72148975B600E39D65 /* Default@2x.png */,
+				41CD8E6E1489753200E39D65 /* Default.png */,
+				9A1A6F851472F3950045588E /* App_Store_Icon.png */,
+				9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */,
+				9A1A6F6F1472F2D60045588E /* Application_Icon.png */,
+				9A1A6F231472EEA70045588E /* MemoryGame */,
+				9A1A6F441472EEA80045588E /* MemoryGameTests */,
+				9A1A6F1C1472EEA70045588E /* Frameworks */,
+				9A1A6F1A1472EEA70045588E /* Products */,
+				9A1A6F551472EF090045588E /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		9A1A6F1A1472EEA70045588E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F191472EEA70045588E /* MemoryGame.app */,
+				9A1A6F3D1472EEA80045588E /* MemoryGameTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A1A6F1C1472EEA70045588E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F1D1472EEA70045588E /* UIKit.framework */,
+				9A1A6F1F1472EEA70045588E /* Foundation.framework */,
+				9A1A6F211472EEA70045588E /* CoreGraphics.framework */,
+				9A1A6F3E1472EEA80045588E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A1A6F231472EEA70045588E /* MemoryGame */ = {
+			isa = PBXGroup;
+			children = (
+				AC4FD9B4149BB10400788450 /* NetworkGame */,
+				4005F46F149A7C0700039B35 /* MultiplayerView */,
+				AC286D90149BA7280041FC93 /* SettingsView */,
+				9AD06A5A149129B2004FFC54 /* InfoView */,
+				404D3D431486D7D000998730 /* Delegate */,
+				9AD1D57B14894DB100D864EE /* SwitchView */,
+				4002EC7E148756C000B0CF31 /* GameView */,
+				404D3D401486D6B600998730 /* Menu */,
+				9A1A6F241472EEA70045588E /* Supporting Files */,
+			);
+			path = MemoryGame;
+			sourceTree = "<group>";
+		};
+		9A1A6F241472EEA70045588E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F251472EEA70045588E /* MemoryGame-Info.plist */,
+				9A1A6F261472EEA70045588E /* InfoPlist.strings */,
+				9A1A6F291472EEA70045588E /* main.m */,
+				9A1A6F2B1472EEA70045588E /* MemoryGame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A1A6F441472EEA80045588E /* MemoryGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F4A1472EEA80045588E /* MemoryGameTests.h */,
+				9A1A6F4B1472EEA80045588E /* MemoryGameTests.m */,
+				9A1A6F451472EEA80045588E /* Supporting Files */,
+			);
+			path = MemoryGameTests;
+			sourceTree = "<group>";
+		};
+		9A1A6F451472EEA80045588E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A1A6F461472EEA80045588E /* MemoryGameTests-Info.plist */,
+				9A1A6F471472EEA80045588E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A1A6F551472EF090045588E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACA744B114992F1C00F3D5F8 /* Sounds */,
+				9A1A6F561472EF160045588E /* Images */,
+			);
+			name = Resources;
+			path = MemoryGame;
+			sourceTree = "<group>";
+		};
+		9A1A6F561472EF160045588E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D141A149BC2BF0030AB71 /* sound.png */,
+				9AAA673E14912C0C00CA2FBF /* Team615-Info */,
+				41CD8E701489759600E39D65 /* menubackground@2x.png */,
+				41CD8E6B148974B800E39D65 /* menubackground.png */,
+				404D3D291486D25800998730 /* Icons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		9AAA673E14912C0C00CA2FBF /* Team615-Info */ = {
+			isa = PBXGroup;
+			children = (
+				9AAA67461491422800CA2FBF /* ben.png */,
+				9AAA67471491422800CA2FBF /* chris.jpeg */,
+			);
+			name = "Team615-Info";
+			sourceTree = "<group>";
+		};
+		9AD06A5A149129B2004FFC54 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				9AD06A5C149129D3004FFC54 /* InfoViewController.h */,
+				9AD06A5D149129D3004FFC54 /* InfoViewController.m */,
+				9AD06A5F149129E0004FFC54 /* InfoViewController.xib */,
+			);
+			name = InfoView;
+			sourceTree = "<group>";
+		};
+		9AD1D57B14894DB100D864EE /* SwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				9AD1D5841489553600D864EE /* SwitchViewController.h */,
+				9AD1D5851489553600D864EE /* SwitchViewController.m */,
+				9AD1D5861489553600D864EE /* SwitchViewController.xib */,
+			);
+			name = SwitchView;
+			sourceTree = "<group>";
+		};
+		AC286D90149BA7280041FC93 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				AC286D92149BA76F0041FC93 /* SettingsViewController.h */,
+				AC286D93149BA76F0041FC93 /* SettingsViewController.m */,
+				AC286D94149BA76F0041FC93 /* SettingsViewController.xib */,
+			);
+			name = SettingsView;
+			sourceTree = "<group>";
+		};
+		AC4FD9B4149BB10400788450 /* NetworkGame */ = {
+			isa = PBXGroup;
+			children = (
+				ACEF96E6149BC8D3000ED8EF /* NetworkGameController.h */,
+				ACEF96E7149BC8D3000ED8EF /* NetworkGameController.m */,
+				ACEF96E8149BC8D3000ED8EF /* NetworkGameController.xib */,
+			);
+			name = NetworkGame;
+			sourceTree = "<group>";
+		};
+		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9869B149A88AF0045930B /* flip.caf */,
+				AC11B10F149A8F3A000D3FCB /* flop.caf */,
+				AC11B111149A8F41000D3FCB /* win.caf */,
+				AC576BE9149A5A130076D38A /* Theme.mp3 */,
+				ACA744B314992F3B00F3D5F8 /* flip.wav */,
+				ACA744B414992F3B00F3D5F8 /* flop.wav */,
+				ACA744B514992F3B00F3D5F8 /* test2.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A1A6F181472EEA70045588E /* MemoryGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1A6F4F1472EEA80045588E /* Build configuration list for PBXNativeTarget "MemoryGame" */;
+			buildPhases = (
+				9A1A6F151472EEA70045588E /* Sources */,
+				9A1A6F161472EEA70045588E /* Frameworks */,
+				9A1A6F171472EEA70045588E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemoryGame;
+			productName = MemoryGame;
+			productReference = 9A1A6F191472EEA70045588E /* MemoryGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A1A6F3C1472EEA80045588E /* MemoryGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1A6F521472EEA80045588E /* Build configuration list for PBXNativeTarget "MemoryGameTests" */;
+			buildPhases = (
+				9A1A6F381472EEA80045588E /* Sources */,
+				9A1A6F391472EEA80045588E /* Frameworks */,
+				9A1A6F3A1472EEA80045588E /* Resources */,
+				9A1A6F3B1472EEA80045588E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A1A6F431472EEA80045588E /* PBXTargetDependency */,
+			);
+			name = MemoryGameTests;
+			productName = MemoryGameTests;
+			productReference = 9A1A6F3D1472EEA80045588E /* MemoryGameTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A1A6F101472EEA70045588E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 9A1A6F131472EEA70045588E /* Build configuration list for PBXProject "MemoryGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9A1A6F0E1472EEA70045588E;
+			productRefGroup = 9A1A6F1A1472EEA70045588E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A1A6F181472EEA70045588E /* MemoryGame */,
+				9A1A6F3C1472EEA80045588E /* MemoryGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A1A6F171472EEA70045588E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1A6F281472EEA70045588E /* InfoPlist.strings in Resources */,
+				9A1A6F341472EEA80045588E /* GameViewController.xib in Resources */,
+				9A1A6F701472F2D60045588E /* Application_Icon.png in Resources */,
+				9A1A6F721472F2DC0045588E /* Application_Icon_HR.png in Resources */,
+				9A1A6F861472F3950045588E /* App_Store_Icon.png in Resources */,
+				404D3D331486D25800998730 /* Card0.png in Resources */,
+				404D3D341486D25800998730 /* Card1.png in Resources */,
+				404D3D351486D25800998730 /* Card2.png in Resources */,
+				404D3D361486D25800998730 /* Card3.png in Resources */,
+				404D3D371486D25800998730 /* Card4.png in Resources */,
+				404D3D381486D25800998730 /* Card5.png in Resources */,
+				404D3D391486D25900998730 /* Card6.png in Resources */,
+				404D3D3A1486D25900998730 /* Card7.png in Resources */,
+				404D3D3B1486D25900998730 /* CardBack.png in Resources */,
+				404D3D471486DCB300998730 /* MenuView.xib in Resources */,
+				9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */,
+				41CD8E6C148974B800E39D65 /* menubackground.png in Resources */,
+				41CD8E6F1489753200E39D65 /* Default.png in Resources */,
+				41CD8E711489759600E39D65 /* menubackground@2x.png in Resources */,
+				41CD8E73148975B600E39D65 /* Default@2x.png in Resources */,
+				9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */,
+				9AAA67481491422900CA2FBF /* ben.png in Resources */,
+				9AAA67491491422900CA2FBF /* chris.jpeg in Resources */,
+				AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */,
+				ACB9869C149A88AF0045930B /* flip.caf in Resources */,
+				AC11B110149A8F3A000D3FCB /* flop.caf in Resources */,
+				AC11B112149A8F41000D3FCB /* win.caf in Resources */,
+				AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */,
+<<<<<<< HEAD
+				AC0D141B149BC2BF0030AB71 /* sound.png in Resources */,
+=======
+				4005F474149A7CD400039B35 /* MPViewController.xib in Resources */,
+				ACEF96EA149BC8D3000ED8EF /* NetworkGameController.xib in Resources */,
+>>>>>>> ed2ce9c31764657adf43504ab2ebbf498f63f867
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1A6F3A1472EEA80045588E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1A6F491472EEA80045588E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A1A6F3B1472EEA80045588E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A1A6F151472EEA70045588E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1A6F2A1472EEA70045588E /* main.m in Sources */,
+				9A1A6F2E1472EEA80045588E /* AppDelegate.m in Sources */,
+				9A1A6F311472EEA80045588E /* GameViewController.m in Sources */,
+				404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */,
+				9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */,
+				9AD06A5E149129D3004FFC54 /* InfoViewController.m in Sources */,
+				4005F472149A7C8100039B35 /* MPViewController.m in Sources */,
+				AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */,
+				ACEF96E9149BC8D3000ED8EF /* NetworkGameController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1A6F381472EEA80045588E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1A6F4C1472EEA80045588E /* MemoryGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A1A6F431472EEA80045588E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A1A6F181472EEA70045588E /* MemoryGame */;
+			targetProxy = 9A1A6F421472EEA80045588E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A1A6F261472EEA70045588E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A1A6F271472EEA70045588E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A1A6F321472EEA80045588E /* GameViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A1A6F331472EEA80045588E /* en */,
+			);
+			name = GameViewController.xib;
+			sourceTree = "<group>";
+		};
+		9A1A6F471472EEA80045588E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A1A6F481472EEA80045588E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A1A6F4D1472EEA80045588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Lizon (87RQTC3JC3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Lizon (87RQTC3JC3)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "7A53137F-10B1-4042-88B4-9F3BDE3C39C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7A53137F-10B1-4042-88B4-9F3BDE3C39C4";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9A1A6F4E1472EEA80045588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Lizon (87RQTC3JC3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Lizon (87RQTC3JC3)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "7A53137F-10B1-4042-88B4-9F3BDE3C39C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7A53137F-10B1-4042-88B4-9F3BDE3C39C4";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A1A6F501472EEA80045588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryGame/MemoryGame-Prefix.pch";
+				INFOPLIST_FILE = "MemoryGame/MemoryGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9A1A6F511472EEA80045588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryGame/MemoryGame-Prefix.pch";
+				INFOPLIST_FILE = "MemoryGame/MemoryGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9A1A6F531472EEA80045588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MemoryGame.app/MemoryGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryGame/MemoryGame-Prefix.pch";
+				INFOPLIST_FILE = "MemoryGameTests/MemoryGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9A1A6F541472EEA80045588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MemoryGame.app/MemoryGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoryGame/MemoryGame-Prefix.pch";
+				INFOPLIST_FILE = "MemoryGameTests/MemoryGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A1A6F131472EEA70045588E /* Build configuration list for PBXProject "MemoryGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1A6F4D1472EEA80045588E /* Debug */,
+				9A1A6F4E1472EEA80045588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1A6F4F1472EEA80045588E /* Build configuration list for PBXNativeTarget "MemoryGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1A6F501472EEA80045588E /* Debug */,
+				9A1A6F511472EEA80045588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1A6F521472EEA80045588E /* Build configuration list for PBXNativeTarget "MemoryGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1A6F531472EEA80045588E /* Debug */,
+				9A1A6F541472EEA80045588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A1A6F101472EEA70045588E /* Project object */;
+}
