@@ -17,4 +17,6 @@
 
 -(IBAction)infoScreen:(id)sender;
 
+-(IBAction)settingsScreen:(id)sender;
+
 @end

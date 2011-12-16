@@ -46,6 +46,8 @@
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
 		AC11B110149A8F3A000D3FCB /* flop.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B10F149A8F3A000D3FCB /* flop.caf */; };
 		AC11B112149A8F41000D3FCB /* win.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B111149A8F41000D3FCB /* win.caf */; };
+		AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC286D93149BA76F0041FC93 /* SettingsViewController.m */; };
+		AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC286D94149BA76F0041FC93 /* SettingsViewController.xib */; };
 		AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC576BE9149A5A130076D38A /* Theme.mp3 */; };
 		AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC93094214993EA000C31263 /* AVFoundation.framework */; };
 		ACB9869C149A88AF0045930B /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9869B149A88AF0045930B /* flip.caf */; };
@@ -110,6 +112,9 @@
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
 		AC11B10F149A8F3A000D3FCB /* flop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flop.caf; sourceTree = "<group>"; };
 		AC11B111149A8F41000D3FCB /* win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.caf; sourceTree = "<group>"; };
+		AC286D92149BA76F0041FC93 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AC286D93149BA76F0041FC93 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		AC286D94149BA76F0041FC93 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		AC576BE9149A5A130076D38A /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
 		AC93094214993EA000C31263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		ACB9869B149A88AF0045930B /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
@@ -225,6 +230,7 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				AC286D90149BA7280041FC93 /* SettingsView */,
 				9AD06A5A149129B2004FFC54 /* InfoView */,
 				404D3D431486D7D000998730 /* Delegate */,
 				9AD1D57B14894DB100D864EE /* SwitchView */,
@@ -313,6 +319,16 @@
 				9AD1D5861489553600D864EE /* SwitchViewController.xib */,
 			);
 			name = SwitchView;
+			sourceTree = "<group>";
+		};
+		AC286D90149BA7280041FC93 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				AC286D92149BA76F0041FC93 /* SettingsViewController.h */,
+				AC286D93149BA76F0041FC93 /* SettingsViewController.m */,
+				AC286D94149BA76F0041FC93 /* SettingsViewController.xib */,
+			);
+			name = SettingsView;
 			sourceTree = "<group>";
 		};
 		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
@@ -423,6 +439,7 @@
 				ACB9869C149A88AF0045930B /* flip.caf in Resources */,
 				AC11B110149A8F3A000D3FCB /* flop.caf in Resources */,
 				AC11B112149A8F41000D3FCB /* win.caf in Resources */,
+				AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +480,7 @@
 				404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */,
 				9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */,
 				9AD06A5E149129D3004FFC54 /* InfoViewController.m in Sources */,
+				AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
