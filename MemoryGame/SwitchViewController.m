@@ -13,6 +13,7 @@
 #import "NetworkGameController.h"
 #import "MPViewController.h"
 #import "SettingsViewController.h"
+#import "HSViewController.h"
 
 @implementation SwitchViewController
 
@@ -22,6 +23,7 @@
 @synthesize mpViewController;
 @synthesize netGameController;
 @synthesize settingsViewController;
+@synthesize hsViewController;
 
 static SwitchViewController *instance = NULL;
 
@@ -32,10 +34,10 @@ static SwitchViewController *instance = NULL;
     
     instance = self;
     self.menuViewController  = [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
-    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
-    self.infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
-    self.mpViewController = [[MPViewController alloc] initWithNibName:@"MPViewController" bundle:nil];
-    self.settingsViewController=[[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+//    self.gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+//    self.infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+//    self.mpViewController = [[MPViewController alloc] initWithNibName:@"MPViewController" bundle:nil];
+//    self.settingsViewController=[[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
     [self.view insertSubview:menuViewController.view atIndex:0];
 
     [super viewDidLoad];
@@ -101,30 +103,31 @@ static SwitchViewController *instance = NULL;
                 [[MenuViewController alloc] initWithNibName:@"MenuView" bundle:nil];
                 
             }
-
-
-            [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-
             [instance.menuViewController viewWillAppear:YES];
             [instance.gameViewController viewWillDisappear:YES];
             [instance.infoViewController viewWillDisappear:YES];
             [instance.mpViewController viewWillDisappear:YES];
             [instance.netGameController viewWillDisappear:YES];
             [instance.settingsViewController viewWillDisappear:YES];
-            
-            [instance.gameViewController.view removeFromSuperview];
-            [instance.infoViewController.view removeFromSuperview];
-            [instance.mpViewController.view removeFromSuperview];
-            [instance.netGameController.view removeFromSuperview];
-            [instance.settingsViewController.view removeFromSuperview];
-            [instance.view insertSubview:instance.menuViewController.view atIndex:0];
-            
-            [instance.mpViewController viewDidDisappear:YES];
-            [instance.gameViewController viewDidDisappear:YES];
-            [instance.infoViewController viewDidDisappear:YES];
-            [instance.netGameController viewDidDisappear:YES];
-            [instance.settingsViewController viewDidDisappear:YES];
-            [instance.menuViewController viewDidAppear:YES];
+            [instance.hsViewController viewWillDisappear:YES];
+
+            [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+
+                [instance.gameViewController.view removeFromSuperview];
+                [instance.infoViewController.view removeFromSuperview];
+                [instance.mpViewController.view removeFromSuperview];
+                [instance.netGameController.view removeFromSuperview];
+                [instance.settingsViewController.view removeFromSuperview];
+                [instance.hsViewController.view removeFromSuperview];
+                [instance.view insertSubview:instance.menuViewController.view atIndex:0];
+                
+                [instance.mpViewController viewDidDisappear:YES];
+                [instance.gameViewController viewDidDisappear:YES];
+                [instance.infoViewController viewDidDisappear:YES];
+                [instance.netGameController viewDidDisappear:YES];
+                [instance.settingsViewController viewDidDisappear:YES];
+                [instance.menuViewController viewDidAppear:YES];
+                [instance.hsViewController viewDidDisappear:YES];
             
             } completion:nil];
             
@@ -251,6 +254,34 @@ static SwitchViewController *instance = NULL;
             [instance.gameViewController viewDidDisappear:YES];
             [instance.infoViewController viewDidDisappear:YES];
             [instance.settingsViewController viewDidAppear:YES];
+            
+        } completion:nil];
+    }
+}
+
++(void)switchToHighScore{
+    if (instance.hsViewController.view.superview == nil)
+    {
+        
+        if (instance.hsViewController == nil)
+        {
+            instance.hsViewController =
+            [[HSViewController alloc] initWithNibName:@"HSViewController" bundle:nil];
+            
+        }
+        
+        [instance.menuViewController viewWillDisappear:YES];
+        [instance.hsViewController viewWillAppear:YES];
+        
+        [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
+            
+
+            [instance.menuViewController.view removeFromSuperview];
+          
+            [instance.view insertSubview:instance.hsViewController.view atIndex:0];
+            
+            [instance.menuViewController viewDidDisappear:YES];
+            [instance.hsViewController viewDidAppear:YES];
             
         } completion:nil];
     }

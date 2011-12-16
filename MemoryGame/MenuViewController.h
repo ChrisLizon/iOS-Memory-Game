@@ -22,4 +22,6 @@
 
 -(IBAction)settingsScreen:(id)sender;
 
+-(IBAction)hsScreen:(id)sender;
+
 @end

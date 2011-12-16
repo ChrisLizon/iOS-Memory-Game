@@ -176,7 +176,6 @@ static bool sound;
                 [soundPlayer play];
             }
     }
-        
 }
 
 - (IBAction)quitGame:(id)sender{

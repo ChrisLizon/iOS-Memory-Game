@@ -1,19 +1,15 @@
 //
-//  MenuViewController.m
+//  HSViewController.m
 //  MemoryGame
 //
-//  Created by HerpDerp on 11/30/11.
+//  Created by HerpDerp on 12/16/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MenuViewController.h"
-//#import "GameViewController.h"
+#import "HSViewController.h"
 #import "SwitchViewController.h"
-//#import "AppDelegate.h"
 
-@implementation MenuViewController
-
-@synthesize playButton;
+@implementation HSViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,32 +20,10 @@
     return self;
 }
 
--(IBAction) singlePlayerGame:(id)sender{
-    
-//    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//	[mainDelegate goToGame];
-    
-    [SwitchViewController switchToGame];
-    
-    //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    //[appDelegate.switchViewController switchToGame];
+-(IBAction)backToMenu:(id)sender{
+    [SwitchViewController switchToMenu];
 }
 
--(IBAction) infoScreen:(id)sender{
-    [SwitchViewController switchToInfo];
-}
-
--(IBAction) settingsScreen:(id)sender{
-    [SwitchViewController switchToSettings];
-}
-
--(IBAction)mpScreen:(id)sender{
-    [SwitchViewController switchToMultiplayer];
-}
-
--(IBAction)hsScreen:(id)sender{
-    [SwitchViewController switchToHighScore];
-}
 
 - (void)didReceiveMemoryWarning
 {

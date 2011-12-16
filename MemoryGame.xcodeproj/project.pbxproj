@@ -20,6 +20,8 @@
 		404D3D3B1486D25900998730 /* CardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D321486D25800998730 /* CardBack.png */; };
 		404D3D471486DCB300998730 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D461486DCB300998730 /* MenuView.xib */; };
 		404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404D3D491486DDB800998730 /* MenuViewController.m */; };
+		40D964E2149BDC0800EB6D56 /* HSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D964E1149BDC0800EB6D56 /* HSViewController.m */; };
+		40D964E6149BDC2700EB6D56 /* HSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D964E5149BDC2700EB6D56 /* HSViewController.xib */; };
 		41CD8E6C148974B800E39D65 /* menubackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6B148974B800E39D65 /* menubackground.png */; };
 		41CD8E6F1489753200E39D65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6E1489753200E39D65 /* Default.png */; };
 		41CD8E711489759600E39D65 /* menubackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E701489759600E39D65 /* menubackground@2x.png */; };
@@ -84,6 +86,9 @@
 		404D3D461486DCB300998730 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		404D3D481486DDB800998730 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		404D3D491486DDB800998730 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		40D964E0149BDC0800EB6D56 /* HSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSViewController.h; sourceTree = "<group>"; };
+		40D964E1149BDC0800EB6D56 /* HSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSViewController.m; sourceTree = "<group>"; };
+		40D964E5149BDC2700EB6D56 /* HSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSViewController.xib; sourceTree = "<group>"; };
 		41CD8E6B148974B800E39D65 /* menubackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubackground.png; sourceTree = "<group>"; };
 		41CD8E6E1489753200E39D65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		41CD8E701489759600E39D65 /* menubackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubackground@2x.png"; sourceTree = "<group>"; };
@@ -215,6 +220,16 @@
 			name = Delegate;
 			sourceTree = "<group>";
 		};
+		40D964DF149BDB9800EB6D56 /* HighScoreView */ = {
+			isa = PBXGroup;
+			children = (
+				40D964E0149BDC0800EB6D56 /* HSViewController.h */,
+				40D964E1149BDC0800EB6D56 /* HSViewController.m */,
+				40D964E5149BDC2700EB6D56 /* HSViewController.xib */,
+			);
+			name = HighScoreView;
+			sourceTree = "<group>";
+		};
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +270,7 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				40D964DF149BDB9800EB6D56 /* HighScoreView */,
 				AC4FD9B4149BB10400788450 /* NetworkGame */,
 				4005F46F149A7C0700039B35 /* MultiplayerView */,
 				AC286D90149BA7280041FC93 /* SettingsView */,
@@ -484,6 +500,7 @@
 				4005F474149A7CD400039B35 /* MPViewController.xib in Resources */,
 				ACEF96EA149BC8D3000ED8EF /* NetworkGameController.xib in Resources */,
 				AC0D141B149BC2BF0030AB71 /* sound.png in Resources */,
+				40D964E6149BDC2700EB6D56 /* HSViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +544,7 @@
 				4005F472149A7C8100039B35 /* MPViewController.m in Sources */,
 				AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */,
 				ACEF96E9149BC8D3000ED8EF /* NetworkGameController.m in Sources */,
+				40D964E2149BDC0800EB6D56 /* HSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

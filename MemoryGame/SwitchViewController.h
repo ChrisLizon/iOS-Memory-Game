@@ -14,6 +14,7 @@
 @class InfoViewController;
 @class MPViewController;
 @class SettingsViewController;
+@class HSViewController;
 
 @interface SwitchViewController : UIViewController {
     
@@ -22,6 +23,7 @@
     InfoViewController *infoViewController;
     MPViewController *mpViewController;
     SettingsViewController *settingsViewController;
+    HSViewController *hsViewController;
 }
 @property (retain, nonatomic) GameViewController *gameViewController;
 @property (retain, nonatomic) MenuViewController *menuViewController;
@@ -29,6 +31,7 @@
 @property (retain, nonatomic) MPViewController *mpViewController;
 @property (retain, nonatomic) NetworkGameController *netGameController;
 @property (retain,nonatomic) SettingsViewController *settingsViewController;
+@property (retain, nonatomic) HSViewController *hsViewController;
 
 
 + (void)switchToGame;
@@ -37,6 +40,7 @@
 + (void)switchToMultiplayer;
 + (void)switchToNetworkGame;
 + (void)switchToSettings;
++ (void)switchToHighScore;
 
 
 @end
