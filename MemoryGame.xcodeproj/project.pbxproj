@@ -22,6 +22,7 @@
 		404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404D3D491486DDB800998730 /* MenuViewController.m */; };
 		40D964E2149BDC0800EB6D56 /* HSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D964E1149BDC0800EB6D56 /* HSViewController.m */; };
 		40D964E6149BDC2700EB6D56 /* HSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D964E5149BDC2700EB6D56 /* HSViewController.xib */; };
+		40D964EC149BEF9C00EB6D56 /* HighScores.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40D964EB149BEF9C00EB6D56 /* HighScores.plist */; };
 		41CD8E6C148974B800E39D65 /* menubackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6B148974B800E39D65 /* menubackground.png */; };
 		41CD8E6F1489753200E39D65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E6E1489753200E39D65 /* Default.png */; };
 		41CD8E711489759600E39D65 /* menubackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41CD8E701489759600E39D65 /* menubackground@2x.png */; };
@@ -89,6 +90,7 @@
 		40D964E0149BDC0800EB6D56 /* HSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSViewController.h; sourceTree = "<group>"; };
 		40D964E1149BDC0800EB6D56 /* HSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSViewController.m; sourceTree = "<group>"; };
 		40D964E5149BDC2700EB6D56 /* HSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSViewController.xib; sourceTree = "<group>"; };
+		40D964EB149BEF9C00EB6D56 /* HighScores.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HighScores.plist; sourceTree = "<group>"; };
 		41CD8E6B148974B800E39D65 /* menubackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubackground.png; sourceTree = "<group>"; };
 		41CD8E6E1489753200E39D65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		41CD8E701489759600E39D65 /* menubackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubackground@2x.png"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		9A1A6F241472EEA70045588E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				40D964EB149BEF9C00EB6D56 /* HighScores.plist */,
 				9A1A6F251472EEA70045588E /* MemoryGame-Info.plist */,
 				9A1A6F261472EEA70045588E /* InfoPlist.strings */,
 				9A1A6F291472EEA70045588E /* main.m */,
@@ -501,6 +504,7 @@
 				ACEF96EA149BC8D3000ED8EF /* NetworkGameController.xib in Resources */,
 				AC0D141B149BC2BF0030AB71 /* sound.png in Resources */,
 				40D964E6149BDC2700EB6D56 /* HSViewController.xib in Resources */,
+				40D964EC149BEF9C00EB6D56 /* HighScores.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

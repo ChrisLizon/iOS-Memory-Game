@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HSViewController : UIViewController
+@interface HSViewController : UIViewController<UITableViewDelegate>
 
 -(IBAction)backToMenu:(id)sender;
 
