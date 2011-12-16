@@ -16,6 +16,7 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
+@synthesize inputStream,outputStream;
 
 static bool sound;
 static AVAudioPlayer *soundPlayer;
