@@ -15,7 +15,7 @@
 
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
-@synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
+@synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
 
 @synthesize inputStream, outputStream;
 
@@ -55,6 +55,9 @@ static AVAudioPlayer *soundPlayer;
         sound=false;
     }
     // Do any additional setup after loading the view from its nib.
+    
+    turnsTakenText.text = @"Opponent's Score";
+    pairsFoundText.text = @"Your Score";
     
     cards = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"Card0.png"],
              [UIImage imageNamed:@"Card1.png"],
@@ -175,6 +178,12 @@ static AVAudioPlayer *soundPlayer;
     [[imageviews objectAtIndex:index2] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
 
 }
+ 
+-(void)setScoreWithPlayerScore:(NSString*)player andOpponentScore:(NSString*)opponent{
+    pairsFoundCounter.text = player;
+    turnsTakenCounter.text = opponent;
+      
+}
 
 
 - (void)initNetworkCommunication {
@@ -264,6 +273,10 @@ static AVAudioPlayer *soundPlayer;
                                     
                                 }else if([command hasPrefix:@"disableall"]){
                                     [self disableCards];
+                                }else if([command hasPrefix:@"score"]){
+                                    NSArray * vals = [command componentsSeparatedByString:@" "];
+                                    [self setScoreWithPlayerScore:[vals objectAtIndex:1]
+                                                      andOpponentScore:[vals objectAtIndex:2]];
                                 }
                                 
                                 
