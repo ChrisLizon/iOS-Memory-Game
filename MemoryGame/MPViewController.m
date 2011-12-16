@@ -1,19 +1,17 @@
 //
-//  MenuViewController.m
+//  MPViewController.m
 //  MemoryGame
 //
-//  Created by HerpDerp on 11/30/11.
+//  Created by HerpDerp on 12/15/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MenuViewController.h"
-//#import "GameViewController.h"
+#import "MPViewController.h"
 #import "SwitchViewController.h"
-//#import "AppDelegate.h"
 
-@implementation MenuViewController
+@implementation MPViewController
 
-@synthesize playButton;
+@synthesize sControl,ipField,portField,joinGameButton,startGameButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,28 +22,46 @@
     return self;
 }
 
--(IBAction) singlePlayerGame:(id)sender{
-    
-//    AppDelegate *mainDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//	[mainDelegate goToGame];
-    
-    [SwitchViewController switchToGame];
-    
-    //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    //[appDelegate.switchViewController switchToGame];
+-(IBAction)backToMenu:(id)sender{
+    [SwitchViewController switchToMenu];
 }
 
--(IBAction) infoScreen:(id)sender{
-    [SwitchViewController switchToInfo];
+-(IBAction)ipFieldDoneEditing:(id)sender{
+    [sender resignFirstResponder];
 }
 
--(IBAction) settingsScreen:(id)sender{
-    [SwitchViewController switchToSettings];
+-(IBAction)portFieldDoneEditing:(id)sender{
+    [sender resignFirstResponder];
 }
 
--(IBAction)mpScreen:(id)sender{
-    [SwitchViewController switchToMultiplayer];
+- (IBAction)backgroundTap:(id)sender {  
+    [ipField resignFirstResponder];
+    [portField resignFirstResponder];
 }
+
+-(IBAction)toggleHost:(id)sender{
+    if([sender selectedSegmentIndex]==1){
+        ipField.hidden = FALSE;
+        portField.hidden = FALSE;
+        joinGameButton.hidden = FALSE;
+        startGameButton.hidden = TRUE;
+    } else {
+        ipField.hidden = YES;
+        portField.hidden = YES;
+        joinGameButton.hidden = TRUE;
+        startGameButton.hidden = FALSE;
+    }
+    
+}
+
+-(IBAction)startGame:(id)sender{
+    [SwitchViewController switchToNetworkGame];
+}
+-(IBAction)joinGame:(id)sender{
+    printf("Hello World\n");
+    [SwitchViewController switchToNetworkGame];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -64,13 +80,13 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
-*/
+
 
 - (void)viewDidUnload
 {
