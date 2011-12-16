@@ -39,6 +39,10 @@
     [SwitchViewController switchToInfo];
 }
 
+-(IBAction) settingsScreen:(id)sender{
+    [SwitchViewController switchToSettings];
+}
+
 -(IBAction)mpScreen:(id)sender{
     [SwitchViewController switchToMultiplayer];
 }

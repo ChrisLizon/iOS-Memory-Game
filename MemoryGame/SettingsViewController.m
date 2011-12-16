@@ -1,19 +1,27 @@
 //
-//  InfoViewController.m
+//  SettingsViewController.m
 //  MemoryGame
 //
-//  Created by Guest User on 11-12-08.
+//  Created by Guest User on 11-12-16.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "InfoViewController.h"
+#import "SettingsViewController.h"
 #import "SwitchViewController.h"
+#import "AppDelegate.h"
 
-@implementation InfoViewController
-@synthesize mobiLabel;
+@implementation SettingsViewController
 
 -(IBAction)backToMenu:(id)sender{
     [SwitchViewController switchToMenu];
+}
+
+-(IBAction)toggleMusic:(id)sender{
+    [AppDelegate toggleMusic];
+}
+
+-(IBAction)toggleSound:(id)sender{
+    [AppDelegate toggleSound];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -53,13 +61,5 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	//See if touch was inside the label
-	if (CGRectContainsPoint(mobiLabel.frame, [[[event allTouches] anyObject] locationInView:self.view]))
-	{
-		//Open webpage
-		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.team615.mobi"]];
-	}
-}
+
 @end

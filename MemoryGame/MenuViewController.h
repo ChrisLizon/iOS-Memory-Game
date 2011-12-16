@@ -20,4 +20,6 @@
 
 -(IBAction)mpScreen:(id)sender;
 
+-(IBAction)settingsScreen:(id)sender;
+
 @end

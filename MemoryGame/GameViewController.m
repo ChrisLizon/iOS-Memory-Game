@@ -20,6 +20,9 @@
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
 
+
+static AVAudioPlayer *soundPlayer;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -46,46 +49,30 @@
              
              nil];
     
-    
-    
-    //assignments = (NSInteger*) calloc(8, sizeof(NSInteger));
-    
-    
-//    assignments = [[NSMutableArray alloc]initWithCapacity:16];
-//    
-//    
-//    
-//    for(int i = 0; i < 16; i++){
-//        
-//        [assignments addObject:[[NSNumber alloc] initWithInt:-1 ]];
-//    }
-//    
-//    
-//    for(int i = 0; i < 8; i++){
-//        
-//        for(int j = 0; j <2; j++){
-//            
-//            int randomSlot = arc4random() % 16;
-//            while([[assignments objectAtIndex:randomSlot] intValue] != -1){
-//                randomSlot = arc4random() % 16;
-//            }
-//            printf("Assigning %d to slot %d\n", i, randomSlot);
-//            [assignments replaceObjectAtIndex:randomSlot withObject:[[NSNumber alloc] initWithInteger: i]];
-//            printf("Slot %d now contains %d\n", randomSlot, [[assignments objectAtIndex:randomSlot] intValue]);
-//        }
-//        
-//    }
-//    
-//    flippedCards = 0;
+
     
     
     [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+    
+    if([AppDelegate getSound]){
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=0;
+        [soundPlayer prepareToPlay];
+    }
 
 }
 
 
 - (IBAction)cardClicked:(id)sender{
-    
+    if([AppDelegate getSound]){
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+        soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+        soundPlayer.numberOfLoops=0;
+        [soundPlayer play];
+    }
     //get the car index from the UIButton's tag value.
     
     NSInteger index = [sender tag];
@@ -120,7 +107,6 @@
     
         flippedCards = 0;
     }else{
-        
         lastCardIndex = index;
     }
     
@@ -142,7 +128,15 @@
         [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
         [[imageviews objectAtIndex:lastCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateDisabled];
-
+        
+        //Flop sound
+        if([AppDelegate getSound]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flop" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=0;
+            [soundPlayer play];
+        }
     }
     turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
 
@@ -150,7 +144,18 @@
     for(int i = 0; i < 16; i++){
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
-    
+    if(pairsFound==8){
+        [[AppDelegate getPlayer] stop];
+        
+        if([AppDelegate getMusic]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=-1;
+            [soundPlayer play];
+        }
+    }
+        
 }
 
 - (IBAction)quitGame:(id)sender{
@@ -169,8 +174,13 @@
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex == [alertView cancelButtonIndex])
+    if(buttonIndex == [alertView cancelButtonIndex]){
+        if([AppDelegate getMusic]){
+            [soundPlayer stop];
+            [[AppDelegate getPlayer] play];
+        }
         [SwitchViewController switchToMenu];
+    }
 }
 
 

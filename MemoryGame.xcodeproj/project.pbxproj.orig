@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4005F472149A7C8100039B35 /* MPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005F471149A7C8100039B35 /* MPViewController.m */; };
-		4005F474149A7CD400039B35 /* MPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4005F473149A7CD400039B35 /* MPViewController.xib */; };
 		404D3D331486D25800998730 /* Card0.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2A1486D25800998730 /* Card0.png */; };
 		404D3D341486D25800998730 /* Card1.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2B1486D25800998730 /* Card1.png */; };
 		404D3D351486D25800998730 /* Card2.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2C1486D25800998730 /* Card2.png */; };
@@ -46,13 +44,16 @@
 		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
 		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
-		AC11B110149A8F3A000D3FCB /* flop.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B10F149A8F3A000D3FCB /* flop.caf */; };
-		AC11B112149A8F41000D3FCB /* win.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B111149A8F41000D3FCB /* win.caf */; };
-		AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC286D93149BA76F0041FC93 /* SettingsViewController.m */; };
-		AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC286D94149BA76F0041FC93 /* SettingsViewController.xib */; };
-		AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC576BE9149A5A130076D38A /* Theme.mp3 */; };
-		AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC93094214993EA000C31263 /* AVFoundation.framework */; };
-		ACB9869C149A88AF0045930B /* flip.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9869B149A88AF0045930B /* flip.caf */; };
+<<<<<<< HEAD
+		ACAA2ACF149934E900CE9217 /* flip.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2ACC149934E900CE9217 /* flip.wav */; };
+		ACAA2AD0149934E900CE9217 /* flop.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2ACD149934E900CE9217 /* flop.wav */; };
+		ACAA2AD1149934E900CE9217 /* test2.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2ACE149934E900CE9217 /* test2.wav */; };
+		ACAA2AD314993B5900CE9217 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACAA2AD214993B5900CE9217 /* AVFoundation.framework */; };
+=======
+		ACA744B614992F3B00F3D5F8 /* flip.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B314992F3B00F3D5F8 /* flip.wav */; };
+		ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B414992F3B00F3D5F8 /* flop.wav */; };
+		ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA744B514992F3B00F3D5F8 /* test2.wav */; };
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4005F470149A7C8100039B35 /* MPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPViewController.h; sourceTree = "<group>"; };
-		4005F471149A7C8100039B35 /* MPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPViewController.m; sourceTree = "<group>"; };
-		4005F473149A7CD400039B35 /* MPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPViewController.xib; sourceTree = "<group>"; };
 		404D3D2A1486D25800998730 /* Card0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card0.png; sourceTree = "<group>"; };
 		404D3D2B1486D25800998730 /* Card1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card1.png; sourceTree = "<group>"; };
 		404D3D2C1486D25800998730 /* Card2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card2.png; sourceTree = "<group>"; };
@@ -115,20 +113,16 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
-		AC11B10F149A8F3A000D3FCB /* flop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flop.caf; sourceTree = "<group>"; };
-		AC11B111149A8F41000D3FCB /* win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.caf; sourceTree = "<group>"; };
-		AC286D92149BA76F0041FC93 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		AC286D93149BA76F0041FC93 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		AC286D94149BA76F0041FC93 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		AC576BE9149A5A130076D38A /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
-		AC93094214993EA000C31263 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		ACB9869B149A88AF0045930B /* flip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flip.caf; sourceTree = "<group>"; };
-		AC4FD9B6149BB13C00788450 /* NetworkGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkGameController.h; sourceTree = "<group>"; };
-		AC4FD9B7149BB13C00788450 /* NetworkGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkGameController.m; sourceTree = "<group>"; };
-		AC4FD9B8149BB13C00788450 /* NetworkGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkGameController.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		ACAA2ACC149934E900CE9217 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
+		ACAA2ACD149934E900CE9217 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
+		ACAA2ACE149934E900CE9217 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
+		ACAA2AD214993B5900CE9217 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+=======
 		ACA744B314992F3B00F3D5F8 /* flip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip.wav; sourceTree = "<group>"; };
 		ACA744B414992F3B00F3D5F8 /* flop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flop.wav; sourceTree = "<group>"; };
 		ACA744B514992F3B00F3D5F8 /* test2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test2.wav; sourceTree = "<group>"; };
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC93094314993EA000C31263 /* AVFoundation.framework in Frameworks */,
+				ACAA2AD314993B5900CE9217 /* AVFoundation.framework in Frameworks */,
 				9A1A6F1E1472EEA70045588E /* UIKit.framework in Frameworks */,
 				9A1A6F201472EEA70045588E /* Foundation.framework in Frameworks */,
 				9A1A6F221472EEA70045588E /* CoreGraphics.framework in Frameworks */,
@@ -164,16 +158,6 @@
 				9A1A6F321472EEA80045588E /* GameViewController.xib */,
 			);
 			name = GameView;
-			sourceTree = "<group>";
-		};
-		4005F46F149A7C0700039B35 /* MultiplayerView */ = {
-			isa = PBXGroup;
-			children = (
-				4005F470149A7C8100039B35 /* MPViewController.h */,
-				4005F471149A7C8100039B35 /* MPViewController.m */,
-				4005F473149A7CD400039B35 /* MPViewController.xib */,
-			);
-			name = MultiplayerView;
 			sourceTree = "<group>";
 		};
 		404D3D291486D25800998730 /* Icons */ = {
@@ -214,7 +198,7 @@
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
-				AC93094214993EA000C31263 /* AVFoundation.framework */,
+				ACAA2AD214993B5900CE9217 /* AVFoundation.framework */,
 				41CD8E72148975B600E39D65 /* Default@2x.png */,
 				41CD8E6E1489753200E39D65 /* Default.png */,
 				9A1A6F851472F3950045588E /* App_Store_Icon.png */,
@@ -251,9 +235,6 @@
 		9A1A6F231472EEA70045588E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
-				AC4FD9B4149BB10400788450 /* NetworkGame */,
-				4005F46F149A7C0700039B35 /* MultiplayerView */,
-				AC286D90149BA7280041FC93 /* SettingsView */,
 				9AD06A5A149129B2004FFC54 /* InfoView */,
 				404D3D431486D7D000998730 /* Delegate */,
 				9AD1D57B14894DB100D864EE /* SwitchView */,
@@ -297,7 +278,11 @@
 		9A1A6F551472EF090045588E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				ACAA2ACA149934D000CE9217 /* Audio */,
+=======
 				ACA744B114992F1C00F3D5F8 /* Sounds */,
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 				9A1A6F561472EF160045588E /* Images */,
 			);
 			name = Resources;
@@ -344,38 +329,25 @@
 			name = SwitchView;
 			sourceTree = "<group>";
 		};
-		AC286D90149BA7280041FC93 /* SettingsView */ = {
+<<<<<<< HEAD
+		ACAA2ACA149934D000CE9217 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				AC286D92149BA76F0041FC93 /* SettingsViewController.h */,
-				AC286D93149BA76F0041FC93 /* SettingsViewController.m */,
-				AC286D94149BA76F0041FC93 /* SettingsViewController.xib */,
+				ACAA2ACC149934E900CE9217 /* flip.wav */,
+				ACAA2ACD149934E900CE9217 /* flop.wav */,
+				ACAA2ACE149934E900CE9217 /* test2.wav */,
 			);
-			name = SettingsView;
-			sourceTree = "<group>";
-		};
-		AC4FD9B4149BB10400788450 /* NetworkGame */ = {
-			isa = PBXGroup;
-			children = (
-				AC4FD9B6149BB13C00788450 /* NetworkGameController.h */,
-				AC4FD9B7149BB13C00788450 /* NetworkGameController.m */,
-				AC4FD9B8149BB13C00788450 /* NetworkGameController.xib */,
-			);
-			name = NetworkGame;
-			sourceTree = "<group>";
-		};
+			name = Audio;
+=======
 		ACA744B114992F1C00F3D5F8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				ACB9869B149A88AF0045930B /* flip.caf */,
-				AC11B10F149A8F3A000D3FCB /* flop.caf */,
-				AC11B111149A8F41000D3FCB /* win.caf */,
-				AC576BE9149A5A130076D38A /* Theme.mp3 */,
 				ACA744B314992F3B00F3D5F8 /* flip.wav */,
 				ACA744B414992F3B00F3D5F8 /* flop.wav */,
 				ACA744B514992F3B00F3D5F8 /* test2.wav */,
 			);
 			name = Sounds;
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,16 +443,15 @@
 				9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */,
 				9AAA67481491422900CA2FBF /* ben.png in Resources */,
 				9AAA67491491422900CA2FBF /* chris.jpeg in Resources */,
-				AC576BEA149A5A130076D38A /* Theme.mp3 in Resources */,
-				ACB9869C149A88AF0045930B /* flip.caf in Resources */,
-				AC11B110149A8F3A000D3FCB /* flop.caf in Resources */,
-				AC11B112149A8F41000D3FCB /* win.caf in Resources */,
-				AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */,
+<<<<<<< HEAD
+				ACAA2ACF149934E900CE9217 /* flip.wav in Resources */,
+				ACAA2AD0149934E900CE9217 /* flop.wav in Resources */,
+				ACAA2AD1149934E900CE9217 /* test2.wav in Resources */,
+=======
 				ACA744B614992F3B00F3D5F8 /* flip.wav in Resources */,
 				ACA744B714992F3B00F3D5F8 /* flop.wav in Resources */,
 				ACA744B814992F3B00F3D5F8 /* test2.wav in Resources */,
-				4005F474149A7CD400039B35 /* MPViewController.xib in Resources */,
-				AC4FD9BA149BB13C00788450 /* NetworkGameController.xib in Resources */,
+>>>>>>> 3fbe8c91498e181619fd8d8c3a6842f7fb9e2a8b
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,9 +492,6 @@
 				404D3D4A1486DDB800998730 /* MenuViewController.m in Sources */,
 				9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */,
 				9AD06A5E149129D3004FFC54 /* InfoViewController.m in Sources */,
-				4005F472149A7C8100039B35 /* MPViewController.m in Sources */,
-				AC4FD9B9149BB13C00788450 /* NetworkGameController.m in Sources */,
-				AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class SwitchViewController;
 
@@ -19,5 +20,12 @@
 
 @property(strong, nonatomic) SwitchViewController *switchViewController;
 
++(AVAudioPlayer *)getPlayer;
++(void)setPlayer:(AVAudioPlayer *)player;
+
++(void)toggleMusic;
++(BOOL)getMusic;
++(void)toggleSound;
++(BOOL)getSound;
 
 @end

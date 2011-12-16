@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "AppDelegate.h"
 
 @interface GameViewController : UIViewController<UIAlertViewDelegate>
 
@@ -24,9 +26,10 @@
 @property (assign) NSInteger pairsFound;
 @property (assign) NSInteger turnsTaken;
 
+
+
 -(IBAction)cardClicked:(id)sender;
 -(void)flipCardsBack;
 -(IBAction)quitGame:(id)sender;
-
 
 @end
