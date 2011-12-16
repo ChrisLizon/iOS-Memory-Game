@@ -31,5 +31,6 @@
 -(IBAction)cardClicked:(id)sender;
 -(void)flipCardsBack;
 -(IBAction)quitGame:(id)sender;
+-(IBAction)volumeToggle:(id)sender;
 
 @end

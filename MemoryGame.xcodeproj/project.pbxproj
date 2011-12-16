@@ -44,6 +44,7 @@
 		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
 		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
+		AC0D141B149BC2BF0030AB71 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0D141A149BC2BF0030AB71 /* sound.png */; };
 		AC11B110149A8F3A000D3FCB /* flop.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B10F149A8F3A000D3FCB /* flop.caf */; };
 		AC11B112149A8F41000D3FCB /* win.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B111149A8F41000D3FCB /* win.caf */; };
 		AC286D95149BA76F0041FC93 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC286D93149BA76F0041FC93 /* SettingsViewController.m */; };
@@ -110,6 +111,7 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
+		AC0D141A149BC2BF0030AB71 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
 		AC11B10F149A8F3A000D3FCB /* flop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flop.caf; sourceTree = "<group>"; };
 		AC11B111149A8F41000D3FCB /* win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.caf; sourceTree = "<group>"; };
 		AC286D92149BA76F0041FC93 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		9A1A6F561472EF160045588E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D141A149BC2BF0030AB71 /* sound.png */,
 				9AAA673E14912C0C00CA2FBF /* Team615-Info */,
 				41CD8E701489759600E39D65 /* menubackground@2x.png */,
 				41CD8E6B148974B800E39D65 /* menubackground.png */,
@@ -440,6 +443,7 @@
 				AC11B110149A8F3A000D3FCB /* flop.caf in Resources */,
 				AC11B112149A8F41000D3FCB /* win.caf in Resources */,
 				AC286D96149BA76F0041FC93 /* SettingsViewController.xib in Resources */,
+				AC0D141B149BC2BF0030AB71 /* sound.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
