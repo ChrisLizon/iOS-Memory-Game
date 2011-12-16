@@ -27,5 +27,11 @@
 +(BOOL)getMusic;
 +(void)toggleSound;
 +(BOOL)getSound;
++(void)toggleHardMusic;
++(BOOL)getHardMusic;
++(void)setHardMusic:(BOOL)on;
++(void)toggleHardSound;
++(BOOL)getHardSound;
++(void)setHardSound:(BOOL)off;
 
 @end

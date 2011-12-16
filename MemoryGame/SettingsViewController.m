@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 
 @implementation SettingsViewController
+@synthesize musicSwitch,soundSwitch;
+
 
 -(IBAction)backToMenu:(id)sender{
     [SwitchViewController switchToMenu];
@@ -18,10 +20,23 @@
 
 -(IBAction)toggleMusic:(id)sender{
     [AppDelegate toggleMusic];
+    [AppDelegate toggleHardMusic];
+    [AppDelegate setHardSound:self.soundSwitch.on];
+    if(![AppDelegate getMusic]){
+        self.musicSwitch.on=false;
+    }else{
+        self.musicSwitch.on=true;
+    }
 }
 
 -(IBAction)toggleSound:(id)sender{
     [AppDelegate toggleSound];
+    [AppDelegate toggleHardSound];
+    [AppDelegate setHardMusic:self.musicSwitch.on];
+    if(![AppDelegate getSound])
+        self.soundSwitch.on=false;
+    else
+        self.soundSwitch.on=true;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,8 +62,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if(![AppDelegate getMusic]){
+        self.musicSwitch.on=false;
+    }else{
+        self.musicSwitch.on=true;
+    }
+    if(![AppDelegate getSound])
+        self.soundSwitch.on=false;
+    else
+        self.soundSwitch.on=true;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:true];
+    if(![AppDelegate getMusic]){
+        self.musicSwitch.on=false;
+    }else{
+        self.musicSwitch.on=true;
+    }
+    if(![AppDelegate getSound])
+        self.soundSwitch.on=false;
+    else
+        self.soundSwitch.on=true;
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];

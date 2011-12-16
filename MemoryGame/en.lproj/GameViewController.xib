@@ -797,19 +797,35 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">pairsFoundLabel</string>
+						<string key="label">turnsTakenText</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="626658290"/>
+						<reference key="destination" ref="240527188"/>
 					</object>
-					<int key="connectionID">99</int>
+					<int key="connectionID">106</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">turnsTakenLabel</string>
+						<string key="label">turnsTakenCounter</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="963820451"/>
 					</object>
-					<int key="connectionID">102</int>
+					<int key="connectionID">107</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pairsFoundText</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="65903204"/>
+					</object>
+					<int key="connectionID">108</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pairsFoundCounter</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="626658290"/>
+					</object>
+					<int key="connectionID">109</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1229,7 +1245,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">105</int>
+			<int key="maxID">109</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1257,25 +1273,35 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="bottomToolbar">UINavigationBar</string>
-						<string key="pairsFoundLabel">UILabel</string>
+						<string key="pairsFoundCounter">UILabel</string>
+						<string key="pairsFoundText">UILabel</string>
 						<string key="topToolbar">UINavigationBar</string>
-						<string key="turnsTakenLabel">UILabel</string>
+						<string key="turnsTakenCounter">UILabel</string>
+						<string key="turnsTakenText">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="bottomToolbar">
 							<string key="name">bottomToolbar</string>
 							<string key="candidateClassName">UINavigationBar</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="pairsFoundLabel">
-							<string key="name">pairsFoundLabel</string>
+						<object class="IBToOneOutletInfo" key="pairsFoundCounter">
+							<string key="name">pairsFoundCounter</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pairsFoundText">
+							<string key="name">pairsFoundText</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="topToolbar">
 							<string key="name">topToolbar</string>
 							<string key="candidateClassName">UINavigationBar</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="turnsTakenLabel">
-							<string key="name">turnsTakenLabel</string>
+						<object class="IBToOneOutletInfo" key="turnsTakenCounter">
+							<string key="name">turnsTakenCounter</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="turnsTakenText">
+							<string key="name">turnsTakenText</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

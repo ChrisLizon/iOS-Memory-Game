@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "AppDelegate.h"
 #import "SwitchViewController.h"
+#import "SettingsViewController.h"
 #import <stdlib.h>
 
 
@@ -18,19 +19,31 @@
 
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
-@synthesize turnsTakenLabel,pairsFoundLabel,turnsTaken;
+@synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
+@synthesize turnsTaken;
 
 
 static AVAudioPlayer *soundPlayer;
 static bool sound;
 
 -(IBAction)volumeToggle:(id)sender{
+    
+    
     if(sound){
+        if([AppDelegate getMusic]==true)
+            [AppDelegate toggleMusic];
+        if([AppDelegate getSound]==true)
+            [AppDelegate toggleSound];
         sound=false;
+        
         if([[AppDelegate getPlayer] isPlaying])
             [[AppDelegate getPlayer] stop];
     }else{
         sound=true;
+        if([AppDelegate getHardMusic]==true)
+            [AppDelegate toggleMusic];
+        if([AppDelegate getHardSound]==true)
+            [AppDelegate toggleSound];
         if([AppDelegate getMusic]&&[[AppDelegate getPlayer] isPlaying]==false){
             [[AppDelegate getPlayer] play];
         }
@@ -140,7 +153,7 @@ static bool sound;
         [[imageviews objectAtIndex:lastCardIndex] setHidden: true];
         
         pairsFound++;
-        pairsFoundLabel.text = [NSString stringWithFormat:@"%i",pairsFound];
+        pairsFoundCounter.text = [NSString stringWithFormat:@"%i",pairsFound];
     }else{
         
         [[imageviews objectAtIndex:currentCardIndex] setImage:[cards objectAtIndex:8] forState:UIControlStateNormal];
@@ -158,7 +171,7 @@ static bool sound;
                 [soundPlayer play];
             }
     }
-    turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
+    turnsTakenCounter.text = [NSString stringWithFormat:@"%i",turnsTaken];
 
     //re-enable all the cards
     for(int i = 0; i < 16; i++){
@@ -244,9 +257,9 @@ static bool sound;
     
     //Initialize the turns taken and the pairs found labels to 0 every time the user opens the game
     pairsFound = 0;
-    pairsFoundLabel.text = [NSString stringWithFormat:@"%i",pairsFound];
+    pairsFoundCounter.text = [NSString stringWithFormat:@"%i",pairsFound];
     turnsTaken=0;
-    turnsTakenLabel.text = [NSString stringWithFormat:@"%i",turnsTaken];
+    turnsTakenCounter.text = [NSString stringWithFormat:@"%i",turnsTaken];
     
     [super viewWillAppear:animated];
 
@@ -255,6 +268,10 @@ static bool sound;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    sound=true;
+    if([AppDelegate getMusic]==false&&[AppDelegate getSound]==false){
+        sound=false;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -267,6 +284,7 @@ static bool sound;
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
