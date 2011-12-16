@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "AppDelegate.h"
 #import "SwitchViewController.h"
+#import "SettingsViewController.h"
 #import <stdlib.h>
 
 
@@ -25,12 +26,23 @@ static AVAudioPlayer *soundPlayer;
 static bool sound;
 
 -(IBAction)volumeToggle:(id)sender{
+    
+    
     if(sound){
+        if([AppDelegate getMusic]==true)
+            [AppDelegate toggleMusic];
+        if([AppDelegate getSound]==true)
+            [AppDelegate toggleSound];
         sound=false;
+        
         if([[AppDelegate getPlayer] isPlaying])
             [[AppDelegate getPlayer] stop];
     }else{
         sound=true;
+        if([AppDelegate getMusic]==false)
+            [AppDelegate toggleMusic];
+        if([AppDelegate getSound]==false)
+            [AppDelegate toggleSound];
         if([AppDelegate getMusic]&&[[AppDelegate getPlayer] isPlaying]==false){
             [[AppDelegate getPlayer] play];
         }
@@ -256,6 +268,10 @@ static bool sound;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    sound=true;
+    if([AppDelegate getMusic]==false&&[AppDelegate getSound]==false){
+        sound=false;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
+@property (retain,nonatomic)IBOutlet UISwitch *musicSwitch;
+@property (retain,nonatomic)IBOutlet UISwitch *soundSwitch;
 -(IBAction)backToMenu:(id)sender;
 -(IBAction)toggleMusic:(id)sender;
 -(IBAction)toggleSound:(id)sender;
