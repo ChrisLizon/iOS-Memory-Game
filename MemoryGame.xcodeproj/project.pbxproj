@@ -46,6 +46,7 @@
 		9AD06A60149129E0004FFC54 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD06A5F149129E0004FFC54 /* InfoViewController.xib */; };
 		9AD1D5871489553600D864EE /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1D5851489553600D864EE /* SwitchViewController.m */; };
 		9AD1D5881489553600D864EE /* SwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AD1D5861489553600D864EE /* SwitchViewController.xib */; };
+		AC0C788B149D46F10030895C /* lose.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC0C788A149D46F10030895C /* lose.caf */; };
 		AC0D141B149BC2BF0030AB71 /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0D141A149BC2BF0030AB71 /* sound.png */; };
 		AC11B110149A8F3A000D3FCB /* flop.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B10F149A8F3A000D3FCB /* flop.caf */; };
 		AC11B112149A8F41000D3FCB /* win.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC11B111149A8F41000D3FCB /* win.caf */; };
@@ -119,6 +120,7 @@
 		9AD1D5841489553600D864EE /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
 		9AD1D5851489553600D864EE /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		9AD1D5861489553600D864EE /* SwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchViewController.xib; sourceTree = "<group>"; };
+		AC0C788A149D46F10030895C /* lose.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lose.caf; sourceTree = "<group>"; };
 		AC0D141A149BC2BF0030AB71 /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
 		AC11B10F149A8F3A000D3FCB /* flop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flop.caf; sourceTree = "<group>"; };
 		AC11B111149A8F41000D3FCB /* win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.caf; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				ACB9869B149A88AF0045930B /* flip.caf */,
 				AC11B10F149A8F3A000D3FCB /* flop.caf */,
 				AC11B111149A8F41000D3FCB /* win.caf */,
+				AC0C788A149D46F10030895C /* lose.caf */,
 				AC576BE9149A5A130076D38A /* Theme.mp3 */,
 			);
 			name = Sounds;
@@ -482,6 +485,7 @@
 				ACEF96EA149BC8D3000ED8EF /* NetworkGameController.xib in Resources */,
 				AC0D141B149BC2BF0030AB71 /* sound.png in Resources */,
 				AC76D410149BF7020067E240 /* sound-off.png in Resources */,
+				AC0C788B149D46F10030895C /* lose.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
