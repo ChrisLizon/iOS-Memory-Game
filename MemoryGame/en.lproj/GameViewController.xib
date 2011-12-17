@@ -828,6 +828,14 @@
 					<int key="connectionID">109</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">muteButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="819236587"/>
+					</object>
+					<int key="connectionID">110</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">cardClicked:</string>
 						<reference key="source" ref="837770713"/>
@@ -1245,7 +1253,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">109</int>
+			<int key="maxID">110</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1273,6 +1281,7 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="bottomToolbar">UINavigationBar</string>
+						<string key="muteButton">UIBarButtonItem</string>
 						<string key="pairsFoundCounter">UILabel</string>
 						<string key="pairsFoundText">UILabel</string>
 						<string key="topToolbar">UINavigationBar</string>
@@ -1283,6 +1292,10 @@
 						<object class="IBToOneOutletInfo" key="bottomToolbar">
 							<string key="name">bottomToolbar</string>
 							<string key="candidateClassName">UINavigationBar</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="muteButton">
+							<string key="name">muteButton</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pairsFoundCounter">
 							<string key="name">pairsFoundCounter</string>

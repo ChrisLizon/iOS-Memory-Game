@@ -21,6 +21,7 @@
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
 @synthesize turnsTaken;
+@synthesize muteButton;
 
 
 static AVAudioPlayer *soundPlayer;
@@ -30,6 +31,8 @@ static bool sound;
     
     
     if(sound){
+        self.muteButton.image=[UIImage imageNamed:@"sound-off.png"];
+
         if([AppDelegate getMusic]==true)
             [AppDelegate toggleMusic];
         if([AppDelegate getSound]==true)
@@ -39,6 +42,7 @@ static bool sound;
         if([[AppDelegate getPlayer] isPlaying])
             [[AppDelegate getPlayer] stop];
     }else{
+        self.muteButton.image=[UIImage imageNamed:@"sound.png"];
         sound=true;
         if([AppDelegate getHardMusic]==true)
             [AppDelegate toggleMusic];
@@ -62,6 +66,7 @@ static bool sound;
 {
     sound=true;
     if([AppDelegate getMusic]==false&&[AppDelegate getSound]==false){
+        self.muteButton.image=[UIImage imageNamed:@"sound-off.png"];
         sound=false;
     }
     [super viewDidLoad];
