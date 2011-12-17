@@ -18,6 +18,7 @@
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
 
 @synthesize inputStream, outputStream;
+@synthesize nameInput;
 
 static bool sound;
 static AVAudioPlayer *soundPlayer;
@@ -208,7 +209,7 @@ static AVAudioPlayer *soundPlayer;
 - (void)initNetworkCommunication {
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"192.168.137.1", 9999, &readStream, &writeStream);
+    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"192.168.69.145", 9999, &readStream, &writeStream);
     inputStream = (__bridge NSInputStream *)readStream;
     outputStream = (__bridge NSOutputStream *)writeStream;
     
@@ -317,6 +318,7 @@ static AVAudioPlayer *soundPlayer;
             break;			
             
 		case NSStreamEventErrorOccurred:
+            //TELL THE USER THE CONNECTION DROPPED
 			NSLog(@"Can not connect to the host!");
 			break;
             

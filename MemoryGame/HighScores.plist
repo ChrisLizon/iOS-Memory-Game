@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>Score1</key>
+	<array>
+		<string></string>
+		<integer>0</integer>
+	</array>
+	<key>Score2</key>
+	<array>
+		<string></string>
+		<integer>0</integer>
+	</array>
+	<key>Score3</key>
+	<array>
+		<string></string>
+		<integer>0</integer>
+	</array>
+	<key>Score4</key>
+	<array>
+		<string></string>
+		<integer>0</integer>
+	</array>
+	<key>Score5</key>
+	<array>
+		<string></string>
+		<integer>0</integer>
+	</array>
+</dict>
 </plist>

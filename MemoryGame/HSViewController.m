@@ -11,6 +11,8 @@
 
 @implementation HSViewController
 
+@synthesize test;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,13 +44,30 @@
 }
 */
 
-/*
+-(void)viewWillAppear:(BOOL)animated{
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+    
+    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    
+    NSString *value;
+    value = [plistDict objectForKey:@"Score1"];
+    
+    printf("HELLO\n");
+    NSLog(@"%@",value);
+    test.text = value;
+    
+    [super viewWillAppear:animated];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
+   
     [super viewDidLoad];
 }
-*/
+
 
 - (void)viewDidUnload
 {

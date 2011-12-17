@@ -193,7 +193,8 @@ static bool sound;
             [soundPlayer play];
         }
     
-    UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:@"Enter a new high score?" message:nil delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
+    UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
     winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
     winAlert.tag = 1;
     [winAlert show];
@@ -237,11 +238,23 @@ static bool sound;
             
             //Get the textwritten from the text box
             NSString *name = [[alertView textFieldAtIndex:0] text];
-        
-          
+            NSString *scoreAndName = [NSString stringWithFormat:@"%s - %i",name,turnsTaken];
+            
+            printf("Saving to plist\n");
+            
+            NSString *plistFilePath = @"HighScores.plist";
+            NSMutableDictionary *pListDict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistFilePath];
+            
+            [pListDict setValue:scoreAndName forKey:@"Score1"];
+            [pListDict writeToFile:plistFilePath atomically:YES];
+            
+            printf("Done\n");
+            
+            //[self writePlist:self fileName:@"HighScores"];
         }
     }
 }
+
 
     
 - (void)viewDidUnload
@@ -290,6 +303,7 @@ static bool sound;
     [super viewWillAppear:animated];
 
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {

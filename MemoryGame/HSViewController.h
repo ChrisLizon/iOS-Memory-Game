@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HSViewController : UIViewController<UITableViewDelegate>
+@interface HSViewController : UIViewController{
+    UILabel *test;
+}
+
+@property (nonatomic,retain) IBOutlet UILabel *test;
 
 -(IBAction)backToMenu:(id)sender;
 
