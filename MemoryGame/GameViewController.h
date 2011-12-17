@@ -19,6 +19,7 @@
 @property (retain) IBOutlet UILabel *turnsTakenCounter;
 @property (retain) IBOutlet UILabel *pairsFoundText;
 @property (retain) IBOutlet UILabel *turnsTakenText;
+@property (retain) IBOutlet UITextField *nameInput;
 @property (retain) NSArray *cards;
 @property (retain) NSMutableArray *assignments;
 
@@ -34,5 +35,6 @@
 -(void)flipCardsBack;
 -(IBAction)quitGame:(id)sender;
 -(IBAction)volumeToggle:(id)sender;
+-(void)winGame;
 
 @end

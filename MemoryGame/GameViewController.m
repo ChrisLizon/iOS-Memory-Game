@@ -20,7 +20,7 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
-@synthesize turnsTaken;
+@synthesize turnsTaken,nameInput;
 
 
 static AVAudioPlayer *soundPlayer;
@@ -178,17 +178,26 @@ static bool sound;
         [[imageviews objectAtIndex:i]setEnabled:YES];
     }
     if(pairsFound==8){
-        [[AppDelegate getPlayer] stop];
-        
-        if(sound)
-            if([AppDelegate getMusic]){
-                NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
-                NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
-                soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-                soundPlayer.numberOfLoops=-1;
-                [soundPlayer play];
-            }
+        [self winGame];
     }
+}
+
+-(void)winGame{
+    [[AppDelegate getPlayer] stop];
+    if(sound)
+        if([AppDelegate getMusic]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=-1;
+            [soundPlayer play];
+        }
+    
+    UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:@"Enter a new high score?" message:nil delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    winAlert.tag = 1;
+    [winAlert show];
+    
 }
 
 - (IBAction)quitGame:(id)sender{
@@ -200,24 +209,41 @@ static bool sound;
                                               delegate:self
                                               cancelButtonTitle:@"Yes" 
                                               otherButtonTitles:@"No",nil];
+    alert.tag = 0;
     [alert show];
+    
+    
     
     //[alert dismissWithClickedButtonIndex:0 animated:NO];
         //[SwitchViewController switchToMenu];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex == [alertView cancelButtonIndex]){
-        if(sound)
-            if([AppDelegate getMusic]){
-                [soundPlayer stop];
-                [[AppDelegate getPlayer] play];
-            }
-        [SwitchViewController switchToMenu];
+   // printf("Alert tag: 
+    if( 0 == [alertView tag]){
+         //printf("HUEHUEHUEHUHUEHUE");
+        if(buttonIndex == [alertView cancelButtonIndex]){
+            if(sound)
+                if([AppDelegate getMusic]){
+                    [soundPlayer stop];
+                    [[AppDelegate getPlayer] play];
+                }
+            [SwitchViewController switchToMenu];
+        }
+    } else {
+        if(buttonIndex == [alertView cancelButtonIndex]){
+            
+            //SAVE INFORMATION ABOUT USER's HIGH SCORE, turns taken.
+            
+            //Get the textwritten from the text box
+            NSString *name = [[alertView textFieldAtIndex:0] text];
+        
+          
+        }
     }
 }
 
-
+    
 - (void)viewDidUnload
 {
     [super viewDidUnload];
