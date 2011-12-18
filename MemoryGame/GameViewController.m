@@ -224,14 +224,6 @@ static bool sound;
         
         //scores addObject:[NSNumber alloc [[plistDict objectForKey:data]objectAtIndex:1]] ;
     }
-
-
-    
-//    NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
-//    UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
-//    winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-//    winAlert.tag = 1;
-//    [winAlert show];
     
 }
 
@@ -271,17 +263,28 @@ static bool sound;
             
             //SAVE INFORMATION ABOUT USER's HIGH SCORE, turns taken.
             
-            //Get the textwritten from the text box
+            //Get the text written from the text box
             NSString *name = [[alertView textFieldAtIndex:0] text];
-            NSString *scoreAndName = [NSString stringWithFormat:@"%s - %i",name,turnsTaken];
-            
+                       
             printf("Saving to plist\n");
             
-            NSString *plistFilePath = @"HighScores.plist";
-            NSMutableDictionary *pListDict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistFilePath];
+            NSBundle *bundle = [NSBundle mainBundle];
+            NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+            NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
             
-            [pListDict setValue:scoreAndName forKey:@"Score1"];
-            [pListDict writeToFile:plistFilePath atomically:YES];
+            //go through the scores until we find were to put the new high score, put it in and scroll all the other down
+            NSString *turns = [NSString stringWithFormat:@"%i",turnsTaken];
+            
+            
+            //Format the data into an array to send it to the plist
+            NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:2];
+            [data addObject:name];
+            [data addObject:turns];
+            
+            //Update the plist with the new values properly
+            [plistDict setValue:data forKey:@"Score0"];
+            [plistDict writeToFile:filePath atomically:YES];
+            
             
             printf("Done\n");
             
