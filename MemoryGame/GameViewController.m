@@ -219,6 +219,7 @@ static bool sound;
         //[SwitchViewController switchToMenu];
 }
 
+
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
    // printf("Alert tag: 
     if( 0 == [alertView tag]){
