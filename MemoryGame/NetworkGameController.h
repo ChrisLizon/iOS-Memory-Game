@@ -34,6 +34,7 @@
 @property (assign) NSInteger lastCardIndex;
 @property (assign) NSInteger currentCardIndex;
 @property (assign) NSInteger pairsFound;
+@property (retain,nonatomic)IBOutlet UIBarButtonItem *muteButton;
 
 
 

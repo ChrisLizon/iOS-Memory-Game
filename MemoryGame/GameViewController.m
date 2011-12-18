@@ -20,7 +20,8 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
-@synthesize turnsTaken,nameInput,scoreInt,scores;
+@synthesize muteButton;
+@synthesize turnsTaken,scoreInt,scores;
 
 
 static AVAudioPlayer *soundPlayer;
@@ -30,6 +31,8 @@ static bool sound;
     
     
     if(sound){
+        self.muteButton.image=[UIImage imageNamed:@"sound-off.png"];
+
         if([AppDelegate getMusic]==true)
             [AppDelegate toggleMusic];
         if([AppDelegate getSound]==true)
@@ -39,6 +42,7 @@ static bool sound;
         if([[AppDelegate getPlayer] isPlaying])
             [[AppDelegate getPlayer] stop];
     }else{
+        self.muteButton.image=[UIImage imageNamed:@"sound.png"];
         sound=true;
         if([AppDelegate getHardMusic]==true)
             [AppDelegate toggleMusic];
@@ -62,6 +66,7 @@ static bool sound;
 {
     sound=true;
     if([AppDelegate getMusic]==false&&[AppDelegate getSound]==false){
+        self.muteButton.image=[UIImage imageNamed:@"sound-off.png"];
         sound=false;
     }
     [super viewDidLoad];
@@ -194,6 +199,7 @@ static bool sound;
         }
     
     
+    //SAVE SCORES TO HIGH SCORE
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
     NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
@@ -206,23 +212,11 @@ static bool sound;
     //if your score is worse than the last one in the highscores list
     //don't do anything, else prompt the user to enter his name to save the high score.
     if(!(turnsTaken > scoreInt)){
-        NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
-        UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+        NSString *highScore = [NSString stringWithFormat:@"%i Turns taken! New High Score!",turnsTaken];
+        UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Save" otherButtonTitles:@"Don't Save", nil];
         winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
         winAlert.tag = 1;
         [winAlert show];
-    }
-    
-    for (int i =0; i < 5; i++){
-        NSString *data = [NSString stringWithFormat:@"Score%i",i];
-        
-        NSString *score = [[plistDict objectForKey:data]objectAtIndex:1];
-        scoreInt = [score intValue];
-        
-        [scores addObject:[[NSNumber alloc] initWithInt:scoreInt] ];
-        
-        
-        //scores addObject:[NSNumber alloc [[plistDict objectForKey:data]objectAtIndex:1]] ;
     }
     
 }
@@ -238,9 +232,6 @@ static bool sound;
                                               otherButtonTitles:@"No",nil];
     alert.tag = 0;
     [alert show];
-    
-    
-    
     //[alert dismissWithClickedButtonIndex:0 animated:NO];
         //[SwitchViewController switchToMenu];
 }
@@ -281,12 +272,11 @@ static bool sound;
                 //NSNumber *oldScore = [[[plistDict objectForKey:data] objectAtIndex:1] intValue];
                 //printf("%i Value is %i\n",i,[[[plistDict objectForKey:data] objectAtIndex:1] intValue]);
                 if([[[plistDict objectForKey:data] objectAtIndex:1] intValue] >= turnsTaken){
-                    printf("%i FOUND! %i\n",i,i-1);
+                    //printf("%i FOUND! %i\n",i,i-1);
                     slot = i;
                     break;
                 }
             }
-            
             
             //Format the data into an array to send it to the plist
             NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:2];
@@ -306,8 +296,6 @@ static bool sound;
             [plistDict setValue:data forKey:[NSString stringWithFormat:@"Score%i",slot]];
             [plistDict writeToFile:filePath atomically:YES];
             
-            
-            //[self writePlist:self fileName:@"HighScores"];
         }
     }
 }

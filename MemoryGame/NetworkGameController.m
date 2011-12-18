@@ -16,6 +16,7 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
+@synthesize muteButton;
 
 @synthesize inputStream, outputStream;
 @synthesize nameInput;
@@ -25,6 +26,7 @@ static AVAudioPlayer *soundPlayer;
 
 -(IBAction)volumeToggle:(id)sender{
     if(sound){
+        self.muteButton.image=[UIImage imageNamed:@"sound-off.png"];
         if([AppDelegate getMusic]==true)
             [AppDelegate toggleMusic];
         if([AppDelegate getSound]==true)
@@ -34,6 +36,7 @@ static AVAudioPlayer *soundPlayer;
         if([[AppDelegate getPlayer] isPlaying])
             [[AppDelegate getPlayer] stop];
     }else{
+        self.muteButton.image=[UIImage imageNamed:@"sound.png"];
         sound=true;
         if([AppDelegate getMusic]==false)
             [AppDelegate toggleMusic];
@@ -62,6 +65,7 @@ static AVAudioPlayer *soundPlayer;
     
     sound=true;
     if([AppDelegate getMusic]==false&&[AppDelegate getSound]==false){
+        self.muteButton.image=[UIImage imageNamed:@"sound-off.png"];
         sound=false;
     }
     // Do any additional setup after loading the view from its nib.
@@ -196,12 +200,28 @@ static AVAudioPlayer *soundPlayer;
 }
 
 -(void)win{
-
+    if(sound)
+        if([AppDelegate getMusic]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"win" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=-1;
+            [[AppDelegate getPlayer] stop];
+            [soundPlayer play];
+        }
 
 }
 
 -(void)lose{
-
+    if(sound)
+        if([AppDelegate getMusic]){
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:@"lose" ofType:@"caf"];
+            NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filePath];
+            soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+            soundPlayer.numberOfLoops=-1;
+            [[AppDelegate getPlayer] stop];
+            [soundPlayer play];
+        }
 
 }
 
