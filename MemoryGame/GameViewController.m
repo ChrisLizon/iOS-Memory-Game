@@ -20,7 +20,7 @@
 @synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
-@synthesize turnsTaken,nameInput;
+@synthesize turnsTaken,nameInput,scoreInt,scores;
 
 
 static AVAudioPlayer *soundPlayer;
@@ -193,11 +193,45 @@ static bool sound;
             [soundPlayer play];
         }
     
-    NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
-    UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
-    winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    winAlert.tag = 1;
-    [winAlert show];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    
+    scores = [[NSMutableArray alloc] initWithCapacity:5];
+    
+    
+    NSString *lowestScore = [[plistDict objectForKey:@"Score4"] objectAtIndex:1];
+    scoreInt = [lowestScore intValue];
+    //if your score is worse than the last one in the highscores list
+    //don't do anything, else prompt the user to enter his name to save the high score.
+    if(!(turnsTaken > scoreInt)){
+        NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
+        UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+        winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        winAlert.tag = 1;
+        [winAlert show];
+    }
+    
+    for (int i =0; i < 5; i++){
+        NSString *data = [NSString stringWithFormat:@"Score%i",i];
+        
+        NSString *score = [[plistDict objectForKey:data]objectAtIndex:1];
+        scoreInt = [score intValue];
+        
+        [scores addObject:[[NSNumber alloc] initWithInt:scoreInt] ];
+        
+        
+        //scores addObject:[NSNumber alloc [[plistDict objectForKey:data]objectAtIndex:1]] ;
+    }
+
+
+    
+//    NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
+//    UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+//    winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+//    winAlert.tag = 1;
+//    [winAlert show];
     
 }
 

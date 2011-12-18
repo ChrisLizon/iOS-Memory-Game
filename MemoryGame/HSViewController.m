@@ -54,10 +54,10 @@
     
     NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     
-    NSString *tester = [[plistDict objectForKey:@"Score0"] objectAtIndex:0];
-    NSLog(@"%@",tester);
+//    NSString *tester = [[plistDict objectForKey:@"Score0"] objectAtIndex:0];
+//    NSLog(@"%@",tester);
     
-    NSInteger numberOfScores = 5;
+//    NSInteger numberOfScores = 5;
     
     name0.text = [[plistDict objectForKey:@"Score0"] objectAtIndex:0];
     score0.text = [[plistDict objectForKey:@"Score0"] objectAtIndex:1];
@@ -75,7 +75,8 @@
     score4.text = [[plistDict objectForKey:@"Score4"] objectAtIndex:1];
     
     
-    //ATTEMPTS TO STREAMLINE THIS, not a priority atm.
+////////////////ATTEMPTS TO STREAMLINE THIS, not a priority atm///////////////////
+    
 //    //NSMutableArray *nameLabelArray;
 //    
 //    

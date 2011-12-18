@@ -22,12 +22,15 @@
 @property (retain) IBOutlet UITextField *nameInput;
 @property (retain) NSArray *cards;
 @property (retain) NSMutableArray *assignments;
+@property (retain) NSMutableArray *scores;
+
 
 @property (assign) NSInteger flippedCards;
 @property (assign) NSInteger lastCardIndex;
 @property (assign) NSInteger currentCardIndex;
 @property (assign) NSInteger pairsFound;
 @property (assign) NSInteger turnsTaken;
+@property (assign) NSInteger scoreInt;
 
 
 
