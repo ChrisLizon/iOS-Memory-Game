@@ -214,7 +214,10 @@ static bool sound;
     if(!(turnsTaken > scoreInt)){
         NSString *highScore = [NSString stringWithFormat:@"%i Turns taken! New High Score!",turnsTaken];
         UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Save" otherButtonTitles:@"Don't Save", nil];
+        
+        //THIS CAUSES A PROBLEM WITH RUNNING THIS IN iOS 4 or older!
         winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        ///////////////////////////////////////////////////////////
         winAlert.tag = 1;
         [winAlert show];
     }
