@@ -195,7 +195,7 @@
 					<object class="IBUILabel" id="259237544">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{220, 219}, {70, 24}}</string>
+						<string key="NSFrame">{{220, 219}, {80, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="522622710"/>
@@ -216,7 +216,7 @@
 					<object class="IBUILabel" id="802964394">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{220, 265}, {70, 24}}</string>
+						<string key="NSFrame">{{220, 265}, {80, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="932730940"/>
@@ -237,7 +237,7 @@
 					<object class="IBUILabel" id="482896301">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{220, 310}, {70, 24}}</string>
+						<string key="NSFrame">{{220, 310}, {80, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="599357262"/>
@@ -258,7 +258,7 @@
 					<object class="IBUILabel" id="117600336">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{220, 355}, {70, 24}}</string>
+						<string key="NSFrame">{{220, 355}, {80, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="266664230"/>
@@ -279,10 +279,9 @@
 					<object class="IBUILabel" id="94937871">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{220, 400}, {70, 24}}</string>
+						<string key="NSFrame">{{220, 400}, {80, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:328</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>

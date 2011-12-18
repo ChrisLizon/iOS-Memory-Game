@@ -247,9 +247,7 @@ static bool sound;
 
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-   // printf("Alert tag: 
     if( 0 == [alertView tag]){
-         //printf("HUEHUEHUEHUHUEHUE");
         if(buttonIndex == [alertView cancelButtonIndex]){
             if(sound)
                 if([AppDelegate getMusic]){
@@ -265,15 +263,29 @@ static bool sound;
             
             //Get the text written from the text box
             NSString *name = [[alertView textFieldAtIndex:0] text];
-                       
-            printf("Saving to plist\n");
+                    
             
             NSBundle *bundle = [NSBundle mainBundle];
             NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
             NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
             
-            //go through the scores until we find were to put the new high score, put it in and scroll all the other down
+            //go through the scores until we find were to put the new high score
+            
+            //Format the turns taken into a string.
             NSString *turns = [NSString stringWithFormat:@"%i",turnsTaken];
+            
+            int slot; 
+            //Find out where the new score should go 
+            for (int i = 0; i < 5;i++){
+                NSString *data = [NSString stringWithFormat:@"Score%i",i];
+                //NSNumber *oldScore = [[[plistDict objectForKey:data] objectAtIndex:1] intValue];
+                //printf("%i Value is %i\n",i,[[[plistDict objectForKey:data] objectAtIndex:1] intValue]);
+                if([[[plistDict objectForKey:data] objectAtIndex:1] intValue] >= turnsTaken){
+                    printf("%i FOUND! %i\n",i,i-1);
+                    slot = i;
+                    break;
+                }
+            }
             
             
             //Format the data into an array to send it to the plist
@@ -281,12 +293,19 @@ static bool sound;
             [data addObject:name];
             [data addObject:turns];
             
+           
+            //Put the new high score in the correct position and scroll the other elements down
+            for(int i = 4; i>slot; i--){
+                NSString *currScore = [NSString stringWithFormat:@"Score%i",i];
+                NSString *prevScore = [NSString stringWithFormat:@"Score%i",i-1];
+                
+                [plistDict setValue:[plistDict objectForKey:prevScore] forKey:currScore];
+            }
+            
             //Update the plist with the new values properly
-            [plistDict setValue:data forKey:@"Score0"];
+            [plistDict setValue:data forKey:[NSString stringWithFormat:@"Score%i",slot]];
             [plistDict writeToFile:filePath atomically:YES];
             
-            
-            printf("Done\n");
             
             //[self writePlist:self fileName:@"HighScores"];
         }
