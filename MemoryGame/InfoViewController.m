@@ -51,8 +51,9 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return(interfaceOrientation!=UIInterfaceOrientationPortraitUpsideDown);
 }
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	//See if touch was inside the label

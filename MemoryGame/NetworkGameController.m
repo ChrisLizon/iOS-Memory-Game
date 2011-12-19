@@ -13,7 +13,7 @@
 
 @implementation NetworkGameController
 
-@synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
+@synthesize imageviews, topToolbar, playerTurnToolbar, opponentTurnToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
 @synthesize muteButton;
@@ -103,6 +103,9 @@ static AVAudioPlayer *soundPlayer;
         soundPlayer.numberOfLoops=0;
         [soundPlayer prepareToPlay];
     }
+    
+    [playerTurnToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+    [self disableCards];
 }
 
 - (IBAction)cardClicked:(id)sender{
@@ -158,6 +161,8 @@ static AVAudioPlayer *soundPlayer;
         [[imageviews objectAtIndex:i] setEnabled:NO];
         
     }
+    playerTurnToolbar.hidden  = YES;
+    opponentTurnToolbar.hidden = NO;
 }
 
 - (void) enableCards{
@@ -166,6 +171,9 @@ static AVAudioPlayer *soundPlayer;
         [[imageviews objectAtIndex:i] setEnabled:YES];
         
     }
+
+    playerTurnToolbar.hidden  = NO;
+    opponentTurnToolbar.hidden = YES;
 }
 
 - (void) removeCardsAtIndex:(int)index1 andIndex:(int)index2{
@@ -229,7 +237,7 @@ static AVAudioPlayer *soundPlayer;
 - (void)initNetworkCommunication {
     CFReadStreamRef readStream;
     CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"192.168.69.145", 9999, &readStream, &writeStream);
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)[SwitchViewController getHost], [SwitchViewController getPort], &readStream, &writeStream);
     inputStream = (__bridge NSInputStream *)readStream;
     outputStream = (__bridge NSOutputStream *)writeStream;
     

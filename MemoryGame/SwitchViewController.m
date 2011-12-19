@@ -27,6 +27,9 @@
 
 static SwitchViewController *instance = NULL;
 
+static NSInteger port;
+static NSString *host;
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -48,6 +51,8 @@ static SwitchViewController *instance = NULL;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        port = 9999;
+        host = @"192.168.69.145";
     }
     return self;
 }
@@ -286,6 +291,25 @@ static SwitchViewController *instance = NULL;
         } completion:nil];
     }
 }
+
+
++ (NSString*)getHost{
+
+    return host;
+}
++ (void)setHost:(NSString*)hostname{
+
+    host = hostname;
+}
++ (NSInteger)getPort{
+
+    return port;
+}
+
++ (void)setPort:(NSInteger)portNumber{
+    port = portNumber;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

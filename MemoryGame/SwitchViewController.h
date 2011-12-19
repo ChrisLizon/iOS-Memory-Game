@@ -30,7 +30,7 @@
 @property (retain, nonatomic) InfoViewController *infoViewController;
 @property (retain, nonatomic) MPViewController *mpViewController;
 @property (retain, nonatomic) NetworkGameController *netGameController;
-@property (retain,nonatomic) SettingsViewController *settingsViewController;
+@property (retain, nonatomic) SettingsViewController *settingsViewController;
 @property (retain, nonatomic) HSViewController *hsViewController;
 
 
@@ -41,6 +41,11 @@
 + (void)switchToNetworkGame;
 + (void)switchToSettings;
 + (void)switchToHighScore;
+
++ (NSString*)getHost;
++ (void)setHost:(NSString*)hostname;
++ (NSInteger)getPort;
++ (void)setPort:(NSInteger)portNumber;
 
 
 @end

@@ -17,7 +17,7 @@
 @implementation GameViewController
 
 
-@synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
+@synthesize imageviews, topToolbar, opponentTurnToolbar, playerTurnToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
 @synthesize muteButton;
@@ -88,7 +88,7 @@ static bool sound;
 
     
     
-    [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+    [playerTurnToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
     
     if([AppDelegate getSound]){
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
@@ -220,6 +220,11 @@ static bool sound;
         ///////////////////////////////////////////////////////////
         winAlert.tag = 1;
         [winAlert show];
+    } else {
+        UIAlertView *playAgain = [[UIAlertView alloc] initWithTitle:@"Play again?" message:nil delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No",nil];
+        playAgain.tag = 2;
+        
+        [playAgain show];
     }
     
 }
@@ -241,6 +246,7 @@ static bool sound;
 
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    //Alert to quit the game after pressing the Main menu button
     if( 0 == [alertView tag]){
         if(buttonIndex == [alertView cancelButtonIndex]){
             if(sound)
@@ -250,10 +256,11 @@ static bool sound;
                 }
             [SwitchViewController switchToMenu];
         }
-    } else {
+    //Alert to save the high score if the user presses yes
+    } else if (1 == [alertView tag]){
         if(buttonIndex == [alertView cancelButtonIndex]){
             
-            //SAVE INFORMATION ABOUT USER's HIGH SCORE, turns taken.
+            //SAVE INFORMATION ABOUT USER's HIGH SCORE: turns taken.
             
             //Get the text written from the text box
             NSString *name = [[alertView textFieldAtIndex:0] text];
@@ -298,7 +305,18 @@ static bool sound;
             //Update the plist with the new values properly
             [plistDict setValue:data forKey:[NSString stringWithFormat:@"Score%i",slot]];
             [plistDict writeToFile:filePath atomically:YES];
-            
+        }
+        UIAlertView *playAgain = [[UIAlertView alloc] initWithTitle:@"Play again?" message:nil delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No",nil];
+        playAgain.tag = 2;
+        
+        [playAgain show];
+    //Alert to play the game again after the user is done
+    } else {
+        //If yes
+        if(buttonIndex == [alertView cancelButtonIndex]){
+            [self viewWillAppear:NO];
+        } else {
+            [SwitchViewController switchToMenu];
         }
     }
 }

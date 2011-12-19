@@ -55,11 +55,23 @@
 }
 
 -(IBAction)startGame:(id)sender{
+    [SwitchViewController setHost:@"127.0.0.1"];
+    [SwitchViewController setPort:9999];
     [SwitchViewController switchToNetworkGame];
 }
 -(IBAction)joinGame:(id)sender{
-    printf("Hello World\n");
-    [SwitchViewController switchToNetworkGame];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    NSString * hostname = ipField.text;
+    NSInteger port = [[f numberFromString:portField.text] intValue];
+    
+    if(port != 0){
+        [SwitchViewController setHost:hostname];
+        [SwitchViewController setPort:port];
+        
+        [SwitchViewController switchToNetworkGame];
+    }
 }
 
 
@@ -85,6 +97,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [sControl setSelectedSegmentIndex:1];
+    //[sControl 
+    
 }
 
 

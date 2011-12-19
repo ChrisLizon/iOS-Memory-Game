@@ -14,7 +14,8 @@
 
 @property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *imageviews;
 @property (retain) IBOutlet UINavigationBar *topToolbar;
-@property (retain) IBOutlet UINavigationBar *bottomToolbar;
+@property (retain) IBOutlet UINavigationBar *playerTurnToolbar;
+@property (retain) IBOutlet UINavigationBar *opponentTurnToolbar;
 @property (retain) IBOutlet UILabel *pairsFoundCounter;
 @property (retain) IBOutlet UILabel *turnsTakenCounter;
 @property (retain) IBOutlet UILabel *pairsFoundText;

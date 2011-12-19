@@ -88,23 +88,6 @@
 							</object>
 						</array>
 					</object>
-					<object class="IBUINavigationBar" id="187578719">
-						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
-						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
-						<string key="NSReuseIdentifierKey">_NS:260</string>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<array key="IBUIItems">
-							<object class="IBUINavigationItem" id="293406760">
-								<reference key="IBUINavigationBar" ref="187578719"/>
-								<string key="IBUITitle">Your Turn</string>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-							</object>
-						</array>
-					</object>
 					<object class="IBUIButton" id="748504337">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
@@ -608,6 +591,38 @@
 						<reference key="IBUIFontDescription" ref="409733212"/>
 						<reference key="IBUIFont" ref="748882271"/>
 					</object>
+					<object class="IBUINavigationBar" id="681063266">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">290</int>
+						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:260</string>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<array key="IBUIItems">
+							<object class="IBUINavigationItem" id="559100974">
+								<reference key="IBUINavigationBar" ref="681063266"/>
+								<string key="IBUITitle"/>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+						</array>
+					</object>
+					<object class="IBUINavigationBar" id="187578719">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">290</int>
+						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:260</string>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<array key="IBUIItems">
+							<object class="IBUINavigationItem" id="293406760">
+								<reference key="IBUINavigationBar" ref="187578719"/>
+								<string key="IBUITitle">Your Turn</string>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+						</array>
+					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
@@ -628,14 +643,6 @@
 						<reference key="destination" ref="774585933"/>
 					</object>
 					<int key="connectionID">7</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">bottomToolbar</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="187578719"/>
-					</object>
-					<int key="connectionID">44</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
@@ -838,6 +845,22 @@
 					<int key="connectionID">110</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">opponentTurnToolbar</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="681063266"/>
+					</object>
+					<int key="connectionID">113</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">playerTurnToolbar</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="187578719"/>
+					</object>
+					<int key="connectionID">114</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">cardClicked:</string>
 						<reference key="source" ref="837770713"/>
@@ -1021,7 +1044,6 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="187578719"/>
 							<reference ref="861422845"/>
 							<reference ref="963820451"/>
 							<reference ref="748504337"/>
@@ -1045,6 +1067,8 @@
 							<reference ref="240527188"/>
 							<reference ref="626658290"/>
 							<reference ref="475579458"/>
+							<reference ref="187578719"/>
+							<reference ref="681063266"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1198,6 +1222,19 @@
 						<reference key="object" ref="819236587"/>
 						<reference key="parent" ref="255004995"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">111</int>
+						<reference key="object" ref="681063266"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="559100974"/>
+						</array>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">112</int>
+						<reference key="object" ref="559100974"/>
+						<reference key="parent" ref="681063266"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1211,6 +1248,8 @@
 				<string key="103.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="104.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="111.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="112.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<real value="0.0" key="46.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
@@ -1255,7 +1294,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">110</int>
+			<int key="maxID">114</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1282,22 +1321,23 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="bottomToolbar">UINavigationBar</string>
 						<string key="muteButton">UIBarButtonItem</string>
+						<string key="opponentTurnToolbar">UINavigationBar</string>
 						<string key="pairsFoundCounter">UILabel</string>
 						<string key="pairsFoundText">UILabel</string>
+						<string key="playerTurnToolbar">UINavigationBar</string>
 						<string key="topToolbar">UINavigationBar</string>
 						<string key="turnsTakenCounter">UILabel</string>
 						<string key="turnsTakenText">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="bottomToolbar">
-							<string key="name">bottomToolbar</string>
-							<string key="candidateClassName">UINavigationBar</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="muteButton">
 							<string key="name">muteButton</string>
 							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="opponentTurnToolbar">
+							<string key="name">opponentTurnToolbar</string>
+							<string key="candidateClassName">UINavigationBar</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pairsFoundCounter">
 							<string key="name">pairsFoundCounter</string>
@@ -1306,6 +1346,10 @@
 						<object class="IBToOneOutletInfo" key="pairsFoundText">
 							<string key="name">pairsFoundText</string>
 							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="playerTurnToolbar">
+							<string key="name">playerTurnToolbar</string>
+							<string key="candidateClassName">UINavigationBar</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="topToolbar">
 							<string key="name">topToolbar</string>
