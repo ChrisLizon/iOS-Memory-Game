@@ -5,6 +5,8 @@
 //  Created by Guest User on 11-12-16.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  View controller that mainly manages the network communication over sockets between
+//  the phone and a server
 
 #import "NetworkGameController.h"
 #import "SwitchViewController.h"
@@ -252,6 +254,8 @@ static AVAudioPlayer *soundPlayer;
     
 }
 
+
+//Handle all the networking messages
 - (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent {
     
 	switch (streamEvent) {

@@ -5,6 +5,8 @@
 //  Created by Guest User on 11-12-08.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  View controller for the information view controller. Has the labels with the team names 
+//  and a link that launches safari into the team's website.
 
 #import "InfoViewController.h"
 #import "SwitchViewController.h"

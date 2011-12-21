@@ -5,8 +5,6 @@
 //  Created by Guest User on 11-11-15.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
-//  This class contains the game logic and handles the events for when the user plays a single player game.
-//
 
 #import "GameViewController.h"
 #import "AppDelegate.h"
@@ -19,11 +17,15 @@
 @implementation GameViewController
 
 
-@synthesize imageviews, topToolbar, opponentTurnToolbar, playerTurnToolbar, cards, assignments;
+@synthesize imageviews, topToolbar, bottomToolbar, cards, assignments;
 @synthesize flippedCards, lastCardIndex, pairsFound, currentCardIndex;
 @synthesize turnsTakenCounter,pairsFoundCounter,turnsTakenText, pairsFoundText;
+<<<<<<< HEAD
+@synthesize turnsTaken,nameInput,scoreInt,scores;
+=======
+@synthesize turnsTaken;
 @synthesize muteButton;
-@synthesize turnsTaken,scoreInt,scores;
+>>>>>>> master
 
 
 static AVAudioPlayer *soundPlayer;
@@ -90,7 +92,7 @@ static bool sound;
 
     
     
-    [playerTurnToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
+    [bottomToolbar setTintColor:[[UIColor alloc] initWithRed:.1 green:1 blue:.1 alpha:1]];
     
     if([AppDelegate getSound]){
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flip" ofType:@"caf"];
@@ -201,7 +203,6 @@ static bool sound;
         }
     
     
-    //SAVE SCORES TO HIGH SCORE
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
     NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
@@ -214,19 +215,23 @@ static bool sound;
     //if your score is worse than the last one in the highscores list
     //don't do anything, else prompt the user to enter his name to save the high score.
     if(!(turnsTaken > scoreInt)){
-        NSString *highScore = [NSString stringWithFormat:@"%i Turns taken! New High Score!",turnsTaken];
-        UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Save" otherButtonTitles:@"Don't Save", nil];
-        
-        //THIS CAUSES A PROBLEM WITH RUNNING THIS IN iOS 4 or older!
+        NSString *highScore = [NSString stringWithFormat:@"Save your score of %i turns?",turnsTaken];
+        UIAlertView *winAlert = [[UIAlertView alloc] initWithTitle:highScore message:@"Enter your name:" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
         winAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        ///////////////////////////////////////////////////////////
         winAlert.tag = 1;
         [winAlert show];
-    } else {
-        UIAlertView *playAgain = [[UIAlertView alloc] initWithTitle:@"Play again?" message:nil delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No",nil];
-        playAgain.tag = 2;
+    }
+    
+    for (int i =0; i < 5; i++){
+        NSString *data = [NSString stringWithFormat:@"Score%i",i];
         
-        [playAgain show];
+        NSString *score = [[plistDict objectForKey:data]objectAtIndex:1];
+        scoreInt = [score intValue];
+        
+        [scores addObject:[[NSNumber alloc] initWithInt:scoreInt] ];
+        
+        
+        //scores addObject:[NSNumber alloc [[plistDict objectForKey:data]objectAtIndex:1]] ;
     }
     
 }
@@ -242,13 +247,15 @@ static bool sound;
                                               otherButtonTitles:@"No",nil];
     alert.tag = 0;
     [alert show];
+    
+    
+    
     //[alert dismissWithClickedButtonIndex:0 animated:NO];
         //[SwitchViewController switchToMenu];
 }
 
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    //Alert to quit the game after pressing the Main menu button
     if( 0 == [alertView tag]){
         if(buttonIndex == [alertView cancelButtonIndex]){
             if(sound)
@@ -258,11 +265,10 @@ static bool sound;
                 }
             [SwitchViewController switchToMenu];
         }
-    //Alert to save the high score if the user presses yes
-    } else if (1 == [alertView tag]){
+    } else {
         if(buttonIndex == [alertView cancelButtonIndex]){
             
-            //SAVE INFORMATION ABOUT USER's HIGH SCORE: turns taken.
+            //SAVE INFORMATION ABOUT USER's HIGH SCORE, turns taken.
             
             //Get the text written from the text box
             NSString *name = [[alertView textFieldAtIndex:0] text];
@@ -284,11 +290,12 @@ static bool sound;
                 //NSNumber *oldScore = [[[plistDict objectForKey:data] objectAtIndex:1] intValue];
                 //printf("%i Value is %i\n",i,[[[plistDict objectForKey:data] objectAtIndex:1] intValue]);
                 if([[[plistDict objectForKey:data] objectAtIndex:1] intValue] >= turnsTaken){
-                    //printf("%i FOUND! %i\n",i,i-1);
+                    printf("%i FOUND! %i\n",i,i-1);
                     slot = i;
                     break;
                 }
             }
+            
             
             //Format the data into an array to send it to the plist
             NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:2];
@@ -307,18 +314,9 @@ static bool sound;
             //Update the plist with the new values properly
             [plistDict setValue:data forKey:[NSString stringWithFormat:@"Score%i",slot]];
             [plistDict writeToFile:filePath atomically:YES];
-        }
-        UIAlertView *playAgain = [[UIAlertView alloc] initWithTitle:@"Play again?" message:nil delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No",nil];
-        playAgain.tag = 2;
-        
-        [playAgain show];
-    //Alert to play the game again after the user is done
-    } else {
-        //If yes
-        if(buttonIndex == [alertView cancelButtonIndex]){
-            [self viewWillAppear:NO];
-        } else {
-            [SwitchViewController switchToMenu];
+            
+            
+            //[self writePlist:self fileName:@"HighScores"];
         }
     }
 }

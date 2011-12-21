@@ -5,6 +5,8 @@
 //  Created by Guest User on 11-12-02.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  This class controls the switching of every single view in the game
+//
 
 #import "SwitchViewController.h"
 #import "MenuViewController.h"
@@ -209,23 +211,26 @@ static NSString *host;
     if (instance.netGameController.view.superview == nil)
     {
         
-        if (instance.netGameController == nil)
-        {
-            instance.netGameController =
+        //if (instance.netGameController == nil)
+//        {
+//            instance.netGameController =
+//            [[NetworkGameController alloc] initWithNibName:@"GameViewController" bundle:nil];
+//            
+//        }
+        
+        instance.netGameController =
             [[NetworkGameController alloc] initWithNibName:@"GameViewController" bundle:nil];
-            
-        }
         
         [UIView transitionWithView:instance.view duration:0.5 options: UIViewAnimationOptionTransitionFlipFromRight animations:^{
             
             [instance.mpViewController viewWillDisappear:YES];
-            [instance.netGameController viewWillAppear:YES];
+            //[instance.netGameController viewWillAppear:YES];
             
             [instance.mpViewController.view removeFromSuperview];
             [instance.view insertSubview:instance.netGameController.view atIndex:0];
             
             [instance.mpViewController viewDidDisappear:YES];
-            [instance.netGameController viewDidAppear:YES];
+            //[instance.netGameController viewDidAppear:YES];
 
             
         } completion:nil];

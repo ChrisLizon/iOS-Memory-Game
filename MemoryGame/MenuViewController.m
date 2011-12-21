@@ -5,6 +5,8 @@
 //  Created by HerpDerp on 11/30/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  View controller for the main menu view, allows you to access the five other view available.
+//
 
 #import "MenuViewController.h"
 //#import "GameViewController.h"

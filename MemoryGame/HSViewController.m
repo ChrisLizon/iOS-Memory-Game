@@ -5,6 +5,8 @@
 //  Created by HerpDerp on 12/16/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  View controller for the high score view. Saves high scores into the Highscores.plist file.
+//  and handles the logic of how to save high scores properly
 
 #import "HSViewController.h"
 #import "SwitchViewController.h"

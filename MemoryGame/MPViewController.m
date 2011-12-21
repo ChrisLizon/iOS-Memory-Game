@@ -5,6 +5,9 @@
 //  Created by HerpDerp on 12/15/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  View controller for the multiplayer menu where the user joins a server. Allows the
+//  user to input an IP and join a game. Hosting is not implemented yet.
+
 
 #import "MPViewController.h"
 #import "SwitchViewController.h"
