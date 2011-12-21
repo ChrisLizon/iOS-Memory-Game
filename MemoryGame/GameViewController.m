@@ -315,6 +315,11 @@ static bool sound;
     //Alert to play the game again after the user is done
     } else {
         //If yes
+        if(sound)
+            if([AppDelegate getMusic]){
+                [soundPlayer stop];
+                [[AppDelegate getPlayer] play];
+            }
         if(buttonIndex == [alertView cancelButtonIndex]){
             [self viewWillAppear:NO];
         } else {
