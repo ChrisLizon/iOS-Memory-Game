@@ -1,0 +1,8 @@
+--- iOS-Memory-Game (GitHub) ---
+
+Description: I found this game on GitHub.  It's a simple memory card matching game.
+
+Updates:
+	- iPhone 5 screensize update (including updating image resolutions
+	- fix highscore saving (currently doesn't save highscores)
+	- Add erase highscores option to settings

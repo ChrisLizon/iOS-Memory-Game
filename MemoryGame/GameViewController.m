@@ -42,6 +42,25 @@ This file is part of iOS-Memory-Game.
 static AVAudioPlayer *soundPlayer;
 static bool sound;
 
+- (void)loadView
+{
+    [super viewDidLoad];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            [[NSBundle mainBundle] loadNibNamed:@"GameViewController" owner:self options:nil];
+        }
+        if(result.height == 568)
+        {
+            // iPhone 5
+            [[NSBundle mainBundle] loadNibNamed:@"GameViewController-5" owner:self options:nil];
+        }
+    }
+}
+
 -(IBAction)volumeToggle:(id)sender{
     
     
@@ -272,29 +291,36 @@ static bool sound;
             
             //Get the text written from the text box
             NSString *name = [[alertView textFieldAtIndex:0] text];
-                    
             
-            NSBundle *bundle = [NSBundle mainBundle];
-            NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+//            NSBundle *bundle = [NSBundle mainBundle];
+//            NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+            
+            NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString* documentsDirectory = [paths objectAtIndex:0];
+            NSString *filePath =  [documentsDirectory stringByAppendingPathComponent:@"/HighScores.plist"];
+            
             NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
             
             //go through the scores until we find were to put the new high score
             
             //Format the turns taken into a string.
-            NSString *turns = [NSString stringWithFormat:@"%i",turnsTaken];
+            NSString *turns = [NSString stringWithFormat:@"%d",turnsTaken];
+            NSLog(@"Saving %@'s highscore of %@", name, turns);
             
             int slot; 
             //Find out where the new score should go 
             for (int i = 0; i < 5;i++){
-                NSString *data = [NSString stringWithFormat:@"Score%i",i];
+                NSString *data = [NSString stringWithFormat:@"Score%d",i];
                 //NSNumber *oldScore = [[[plistDict objectForKey:data] objectAtIndex:1] intValue];
-                //printf("%i Value is %i\n",i,[[[plistDict objectForKey:data] objectAtIndex:1] intValue]);
+                printf("%i Value is %i\n",i,[[[plistDict objectForKey:data] objectAtIndex:1] intValue]);
                 if([[[plistDict objectForKey:data] objectAtIndex:1] intValue] >= turnsTaken){
-                    //printf("%i FOUND! %i\n",i,i-1);
+                    printf("%i FOUND! %i\n",i,i-1);
                     slot = i;
                     break;
                 }
             }
+            
+            NSLog(@"Assigning score to slot %d...", slot);
             
             //Format the data into an array to send it to the plist
             NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:2];
@@ -304,21 +330,43 @@ static bool sound;
            
             //Put the new high score in the correct position and scroll the other elements down
             for(int i = 4; i>slot; i--){
-                NSString *currScore = [NSString stringWithFormat:@"Score%i",i];
-                NSString *prevScore = [NSString stringWithFormat:@"Score%i",i-1];
+                NSString *currScore = [NSString stringWithFormat:@"Score%d",i];
+                NSString *prevScore = [NSString stringWithFormat:@"Score%d",i-1];
                 
                 [plistDict setValue:[plistDict objectForKey:prevScore] forKey:currScore];
             }
             
             //Update the plist with the new values properly
-            [plistDict setValue:data forKey:[NSString stringWithFormat:@"Score%i",slot]];
-            [plistDict writeToFile:filePath atomically:YES];
+            [plistDict setValue:data forKey:[NSString stringWithFormat:@"Score%d",slot]];
+            
+            // Write to sandbox
+            BOOL didWriteToFile = [plistDict writeToFile:filePath atomically:YES];
+
+            // TESTING CODE - Make sure the scores are saved to correct indexes 
+            NSString *nameTest = [[plistDict objectForKey:@"Score0"] objectAtIndex:0];
+            NSString *scoreTest = [[plistDict objectForKey:@"Score0"] objectAtIndex:1];
+            NSLog(@"Name: %@", nameTest);
+            NSLog(@"Score: %@", scoreTest);
+            NSLog(@"From plistDict: %@", plistDict);
+            
+            if (didWriteToFile) {
+                NSLog(@"Write to file a SUCCESS!");
+            } else {
+                NSLog(@"Write to file a FAILURE!");
+            }
             
         }
     }
 }
 
-
+-(BOOL)writeToPlistFile:(NSString*)filename{
+    NSData * data = [NSKeyedArchiver archivedDataWithRootObject:self];
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentsDirectory = [paths objectAtIndex:0];
+    NSString * path = [documentsDirectory stringByAppendingPathComponent:filename];
+    BOOL didWriteSuccessfull = [data writeToFile:path atomically:YES];
+    return didWriteSuccessfull;
+}
     
 - (void)viewDidUnload
 {

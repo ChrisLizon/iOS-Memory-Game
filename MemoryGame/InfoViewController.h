@@ -25,6 +25,7 @@ This file is part of iOS-Memory-Game.
 
 @interface InfoViewController : UIViewController
 @property(retain,nonatomic)IBOutlet UILabel *mobiLabel;
+
 -(IBAction)backToMenu:(id)sender;
 
 @end
