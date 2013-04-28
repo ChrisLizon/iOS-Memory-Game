@@ -53,7 +53,21 @@ This file is part of iOS-Memory-Game.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [super viewDidLoad];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            [[NSBundle mainBundle] loadNibNamed:@"InfoViewController" owner:self options:nil];
+        }
+        if(result.height == 568)
+        {
+            // iPhone 5
+            [[NSBundle mainBundle] loadNibNamed:@"InfoViewController-5" owner:self options:nil];
+        }
+    }
 }
 
 - (void)viewDidUnload

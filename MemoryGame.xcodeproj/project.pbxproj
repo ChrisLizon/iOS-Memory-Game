@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8581BF1726E33B0086D4B3 /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581BE1726E33B0086D4B3 /* Default-568@2x.png */; };
+		2D8581C11726E3470086D4B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581C01726E3470086D4B3 /* Default-568h@2x.png */; };
+		2D8581C31726E49B0086D4B3 /* MenuView-5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581C21726E49A0086D4B3 /* MenuView-5.xib */; };
+		2D8581C51726E5520086D4B3 /* menubackground-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581C41726E5520086D4B3 /* menubackground-568@2x.png */; };
+		2D8581C71726E8920086D4B3 /* GameViewController-5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581C61726E8920086D4B3 /* GameViewController-5.xib */; };
+		2D8581C91726E94D0086D4B3 /* gamebackground-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581C81726E94D0086D4B3 /* gamebackground-568@2x.png */; };
+		2D8581CD1726F3680086D4B3 /* SettingsViewController-5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8581CC1726F3680086D4B3 /* SettingsViewController-5.xib */; };
+		2D959E9F172B63EA00F68D5E /* InfoViewController-5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D959E9E172B63EA00F68D5E /* InfoViewController-5.xib */; };
+		2D959EA1172B69C200F68D5E /* MPViewController-5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D959EA0172B69C200F68D5E /* MPViewController-5.xib */; };
+		2D959EA3172B6CCA00F68D5E /* HSViewController-5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D959EA2172B6CCA00F68D5E /* HSViewController-5.xib */; };
 		4005F472149A7C8100039B35 /* MPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005F471149A7C8100039B35 /* MPViewController.m */; };
 		4005F474149A7CD400039B35 /* MPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4005F473149A7CD400039B35 /* MPViewController.xib */; };
 		404D3D331486D25800998730 /* Card0.png in Resources */ = {isa = PBXBuildFile; fileRef = 404D3D2A1486D25800998730 /* Card0.png */; };
@@ -74,6 +84,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D8581BE1726E33B0086D4B3 /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
+		2D8581C01726E3470086D4B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2D8581C21726E49A0086D4B3 /* MenuView-5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MenuView-5.xib"; sourceTree = "<group>"; };
+		2D8581C41726E5520086D4B3 /* menubackground-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubackground-568@2x.png"; sourceTree = "<group>"; };
+		2D8581C61726E8920086D4B3 /* GameViewController-5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GameViewController-5.xib"; sourceTree = "<group>"; };
+		2D8581C81726E94D0086D4B3 /* gamebackground-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gamebackground-568@2x.png"; sourceTree = "<group>"; };
+		2D8581CC1726F3680086D4B3 /* SettingsViewController-5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsViewController-5.xib"; sourceTree = "<group>"; };
+		2D959E9E172B63EA00F68D5E /* InfoViewController-5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "InfoViewController-5.xib"; sourceTree = "<group>"; };
+		2D959EA0172B69C200F68D5E /* MPViewController-5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MPViewController-5.xib"; sourceTree = "<group>"; };
+		2D959EA2172B6CCA00F68D5E /* HSViewController-5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "HSViewController-5.xib"; sourceTree = "<group>"; };
 		4005F470149A7C8100039B35 /* MPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPViewController.h; sourceTree = "<group>"; };
 		4005F471149A7C8100039B35 /* MPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPViewController.m; sourceTree = "<group>"; };
 		4005F473149A7CD400039B35 /* MPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPViewController.xib; sourceTree = "<group>"; };
@@ -174,6 +194,7 @@
 				9A1A6F2F1472EEA80045588E /* GameViewController.h */,
 				9A1A6F301472EEA80045588E /* GameViewController.m */,
 				9A1A6F321472EEA80045588E /* GameViewController.xib */,
+				2D8581C61726E8920086D4B3 /* GameViewController-5.xib */,
 			);
 			name = GameView;
 			sourceTree = "<group>";
@@ -184,6 +205,7 @@
 				4005F470149A7C8100039B35 /* MPViewController.h */,
 				4005F471149A7C8100039B35 /* MPViewController.m */,
 				4005F473149A7CD400039B35 /* MPViewController.xib */,
+				2D959EA0172B69C200F68D5E /* MPViewController-5.xib */,
 			);
 			name = MultiplayerView;
 			sourceTree = "<group>";
@@ -210,6 +232,7 @@
 				404D3D481486DDB800998730 /* MenuViewController.h */,
 				404D3D491486DDB800998730 /* MenuViewController.m */,
 				404D3D461486DCB300998730 /* MenuView.xib */,
+				2D8581C21726E49A0086D4B3 /* MenuView-5.xib */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -229,6 +252,7 @@
 				40D964E0149BDC0800EB6D56 /* HSViewController.h */,
 				40D964E1149BDC0800EB6D56 /* HSViewController.m */,
 				40D964E5149BDC2700EB6D56 /* HSViewController.xib */,
+				2D959EA2172B6CCA00F68D5E /* HSViewController-5.xib */,
 			);
 			name = HighScoreView;
 			sourceTree = "<group>";
@@ -236,8 +260,10 @@
 		9A1A6F0E1472EEA70045588E = {
 			isa = PBXGroup;
 			children = (
+				2D8581C01726E3470086D4B3 /* Default-568h@2x.png */,
 				AC93094214993EA000C31263 /* AVFoundation.framework */,
 				41CD8E72148975B600E39D65 /* Default@2x.png */,
+				2D8581BE1726E33B0086D4B3 /* Default-568@2x.png */,
 				41CD8E6E1489753200E39D65 /* Default.png */,
 				9A1A6F851472F3950045588E /* App_Store_Icon.png */,
 				9A1A6F711472F2DC0045588E /* Application_Icon_HR.png */,
@@ -335,7 +361,9 @@
 				AC0D141A149BC2BF0030AB71 /* sound.png */,
 				9AAA673E14912C0C00CA2FBF /* Team615-Info */,
 				41CD8E701489759600E39D65 /* menubackground@2x.png */,
+				2D8581C41726E5520086D4B3 /* menubackground-568@2x.png */,
 				41CD8E6B148974B800E39D65 /* menubackground.png */,
+				2D8581C81726E94D0086D4B3 /* gamebackground-568@2x.png */,
 				404D3D291486D25800998730 /* Icons */,
 			);
 			name = Images;
@@ -356,6 +384,7 @@
 				9AD06A5C149129D3004FFC54 /* InfoViewController.h */,
 				9AD06A5D149129D3004FFC54 /* InfoViewController.m */,
 				9AD06A5F149129E0004FFC54 /* InfoViewController.xib */,
+				2D959E9E172B63EA00F68D5E /* InfoViewController-5.xib */,
 			);
 			name = InfoView;
 			sourceTree = "<group>";
@@ -376,6 +405,7 @@
 				AC286D92149BA76F0041FC93 /* SettingsViewController.h */,
 				AC286D93149BA76F0041FC93 /* SettingsViewController.m */,
 				AC286D94149BA76F0041FC93 /* SettingsViewController.xib */,
+				2D8581CC1726F3680086D4B3 /* SettingsViewController-5.xib */,
 			);
 			name = SettingsView;
 			sourceTree = "<group>";
@@ -507,6 +537,16 @@
 				AC0C788B149D46F10030895C /* lose.caf in Resources */,
 				40D964E6149BDC2700EB6D56 /* HSViewController.xib in Resources */,
 				40D964EC149BEF9C00EB6D56 /* HighScores.plist in Resources */,
+				2D8581BF1726E33B0086D4B3 /* Default-568@2x.png in Resources */,
+				2D8581C11726E3470086D4B3 /* Default-568h@2x.png in Resources */,
+				2D8581C31726E49B0086D4B3 /* MenuView-5.xib in Resources */,
+				2D8581C51726E5520086D4B3 /* menubackground-568@2x.png in Resources */,
+				2D8581C71726E8920086D4B3 /* GameViewController-5.xib in Resources */,
+				2D8581C91726E94D0086D4B3 /* gamebackground-568@2x.png in Resources */,
+				2D8581CD1726F3680086D4B3 /* SettingsViewController-5.xib in Resources */,
+				2D959E9F172B63EA00F68D5E /* InfoViewController-5.xib in Resources */,
+				2D959EA1172B69C200F68D5E /* MPViewController-5.xib in Resources */,
+				2D959EA3172B6CCA00F68D5E /* HSViewController-5.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,11 +702,15 @@
 		9A1A6F501472EEA80045588E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Carlson (WP986B4J78)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Carlson (WP986B4J78)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemoryGame/MemoryGame-Prefix.pch";
 				INFOPLIST_FILE = "MemoryGame/MemoryGame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0D91714D-7D43-4BF9-9D18-A9C37EE50A59";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D91714D-7D43-4BF9-9D18-A9C37EE50A59";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -675,11 +719,15 @@
 		9A1A6F511472EEA80045588E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Carlson (WP986B4J78)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Carlson (WP986B4J78)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemoryGame/MemoryGame-Prefix.pch";
 				INFOPLIST_FILE = "MemoryGame/MemoryGame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0D91714D-7D43-4BF9-9D18-A9C37EE50A59";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D91714D-7D43-4BF9-9D18-A9C37EE50A59";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

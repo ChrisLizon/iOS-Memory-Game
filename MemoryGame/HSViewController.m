@@ -64,8 +64,13 @@ This file is part of iOS-Memory-Game.
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+//    NSBundle *bundle = [NSBundle mainBundle];
+//    NSString *filePath = [bundle pathForResource:@"HighScores" ofType:@"plist"];
+    
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath =  [documentsDirectory stringByAppendingPathComponent:@"/HighScores.plist"];
+    NSLog(@"plist location: %@", filePath);
     
     NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     
@@ -91,8 +96,21 @@ This file is part of iOS-Memory-Game.
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-   
     [super viewDidLoad];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            [[NSBundle mainBundle] loadNibNamed:@"HSViewController" owner:self options:nil];
+        }
+        if(result.height == 568)
+        {
+            // iPhone 5
+            [[NSBundle mainBundle] loadNibNamed:@"HSViewController-5" owner:self options:nil];
+        }
+    }
 }
 
 

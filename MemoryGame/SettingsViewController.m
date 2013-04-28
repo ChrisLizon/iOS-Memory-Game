@@ -28,7 +28,6 @@ This file is part of iOS-Memory-Game.
 @implementation SettingsViewController
 @synthesize musicSwitch,soundSwitch;
 
-
 -(IBAction)backToMenu:(id)sender{
     [SwitchViewController switchToMenu];
 }
@@ -73,10 +72,45 @@ This file is part of iOS-Memory-Game.
 
 #pragma mark - View lifecycle
 
+//- (void)loadView
+//{
+//    [super viewDidLoad];
+//    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+//    {
+//        CGSize result = [[UIScreen mainScreen] bounds].size;
+//        if(result.height == 480)
+//        {
+//            // iPhone Classic
+//            [[NSBundle mainBundle] loadNibNamed:@"SettingsViewController" owner:self options:nil];
+//        }
+//        if(result.height == 568)
+//        {
+//            // iPhone 5
+//            [[NSBundle mainBundle] loadNibNamed:@"SettingsViewController-5" owner:self options:nil];
+//        }
+//    }
+//}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            [[NSBundle mainBundle] loadNibNamed:@"SettingsViewController" owner:self options:nil];
+        }
+        if(result.height == 568)
+        {
+            // iPhone 5
+            [[NSBundle mainBundle] loadNibNamed:@"SettingsViewController-5" owner:self options:nil];
+        }
+    }
+    
     if(![AppDelegate getMusic]){
         self.musicSwitch.on=false;
     }else{
@@ -90,6 +124,7 @@ This file is part of iOS-Memory-Game.
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:true];
+    
     if(![AppDelegate getMusic]){
         self.musicSwitch.on=false;
     }else{
