@@ -30,6 +30,25 @@ This file is part of iOS-Memory-Game.
 
 @synthesize playButton;
 
+- (void)loadView
+{
+    [super viewDidLoad];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            [[NSBundle mainBundle] loadNibNamed:@"MenuView" owner:self options:nil];
+        }
+        if(result.height == 568)
+        {
+            // iPhone 5
+            [[NSBundle mainBundle] loadNibNamed:@"MenuView-5" owner:self options:nil];
+        }
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,7 +78,12 @@ This file is part of iOS-Memory-Game.
 }
 
 -(IBAction)mpScreen:(id)sender{
-    [SwitchViewController switchToMultiplayer];
+    //[SwitchViewController switchToMultiplayer];
+    
+    // Keep alert until Multiplayer is finished.  Currently is not fully implemented. 
+    UIAlertView *mpAlert = [[UIAlertView alloc] initWithTitle:@"Multiplayer Coming Soon!" message:@"Multiplayer is currently in development.  Please check back soon!" delegate:self cancelButtonTitle:@"Okay!" otherButtonTitles:nil, nil];
+    
+    [mpAlert show];
 }
 
 -(IBAction)hsScreen:(id)sender{
@@ -74,6 +98,28 @@ This file is part of iOS-Memory-Game.
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)createEditableCopyOfPlistIfNeeded
+{
+    // First, test for existence.
+    BOOL success;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writablePath = [documentsDirectory stringByAppendingPathComponent:@"HighScores.plist"];
+    success = [fileManager fileExistsAtPath:writablePath];
+    
+    if (success)
+        return;
+    
+    // The writable file does not exist, so copy from the bundle to the appropriate location.
+    NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"HighScores.plist"];
+    success = [fileManager copyItemAtPath:defaultPath toPath:writablePath error:&error];
+    if (!success)
+        NSAssert1(0, @"Failed to create writable file with message '%@'.", [error localizedDescription]);
+}
+
 #pragma mark - View lifecycle
 
 /*
@@ -83,13 +129,13 @@ This file is part of iOS-Memory-Game.
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self createEditableCopyOfPlistIfNeeded];
 }
-*/
+
 
 - (void)viewDidUnload
 {

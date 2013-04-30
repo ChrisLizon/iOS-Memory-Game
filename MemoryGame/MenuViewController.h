@@ -24,7 +24,10 @@ This file is part of iOS-Memory-Game.
 #import <UIKit/UIKit.h>
 //#import "GameViewController.h"
 
-@interface MenuViewController : UIViewController;
+@interface MenuViewController : UIViewController <UIAlertViewDelegate>
+{
+    
+}
 
 
 @property (retain,nonatomic)IBOutlet UIButton *playButton;
